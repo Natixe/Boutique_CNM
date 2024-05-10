@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Independent Rectangles</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    .rectangle {
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .green-rectangle {
+        background-color: green;
+        top: 0;
+    }
+    .red-rectangle {
+        background-color: red;
+        top: 50%;
+    }
+</style>
+</head>
+<body>
+    <div class="rectangle green-rectangle">Green Rectangle</div>
+    <div class="rectangle red-rectangle">Red Rectangle</div>
+</body>
+</html>

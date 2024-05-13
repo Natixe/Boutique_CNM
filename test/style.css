@@ -1,0 +1,22 @@
+
+body, html {
+    overflow: hidden; /* Hide scrollbars */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #D3D3D3;
+  
+}
+
+
+.test {
+    width: 12%; /* Set width as a percentage */
+    height: 10%; /* Set height as a percentage */
+    background-color: green; /* Change the background color to green */
+    position: fixed;
+    top: 0;
+    left: 20;
+}

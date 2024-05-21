@@ -1,140 +1,87 @@
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import image1 from './images/image1.jpg';
+import image2 from './images/image2.jpg';
+import image3 from './images/image3.jpg';
+import image4 from './images/image4.jpg';
+import image5 from './images/image5.jpg';
+import image6 from './images/image6.jpg';
 import "./styles.css";
-import * as React from "react";
-import { useLocation, useRoutes, Link  } from "react-router-dom";
-import { useState, useEffect } from "react";
 
+
+const rectangles = [
+  { id: 1, color: 'red', blur: false },
+  { id: 2, color: 'blue', blur: true },
+  { id: 3, color: 'magenta', blur: true },
+  { id: 4, color: 'cyan', blur: true },
+  { id: 5, color: 'yellow', blur: true },
+  { id: 6, color: 'green', blur: true },
+  { id: 7, color: 'orange', blur: true },
+  { id: 8, color: 'purple', blur: true },
+];
+
+const positions = [
+  { top: '56.38%', left: '32.29%' }, /*jaune */
+  { top: '38.33%', left: '26.66%' }, /*vert */
+  { top: '19.81%', left: '33.02%' },/*vomi */
+  { top: '13.89%', left: '44.84%' },/*violet foncée */
+  { top: '19.81%', left: '56.56%' },/*rouge */
+  { top: '38.33%', left: '63.02%' },
+  { top: '57.59%', left: '56.09%' },
+  { top: '62.96%', left: '44.98%' },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-  const location = useLocation(); 
+  const [items, setItems] = useState(rectangles);
 
-  const [showLogoStart, setShowLogoStart] = useState(true);
-  const [showLogoAfterStart, setShowLogoAfterStart] = useState(false);
-  const [showRectagleStart, setshowRectagleStart] = useState(true);
-  const [showLogoLeftUp, setshowLogoLeftUp] = useState(true);
-  const [showLogoLeftUpset, setshowLogoLeftUpset] = useState(false);
+  const handleRightClick = () => {
+    setItems(prev => {
+      const newItems = [prev[prev.length - 1], ...prev.slice(0, -1)];
+      return newItems.map((item, index) => ({
+        ...item,
+        blur: index !== 7,
+      }));
+    });
+  };
 
-
-  useEffect(() => {
-
-    const timerLogo = setTimeout(() => {
-      setShowLogoAfterStart(true);
-      setshowLogoStart(false);
-    }, 1150);
-
-    const timerRectagle = setTimeout(() => {
-      setshowRectagleStart(false);
-    }, 1955);
-
-
-    const timerLogoLeftuP = setTimeout(() => {
-      setshowLogoLeftUp(false);
-      setshowLogoLeftUpset (true)
-    }, 3600);
-
-
-    return () => clearTimeout(timerLogo,timerLogoLeftuP,timerRectagle);
-  }, []); 
-
-
-
+  const handleLeftClick = () => {
+    setItems(prev => {
+      const newItems = [...prev.slice(1), prev[0]];
+      return newItems.map((item, index) => ({
+        ...item,
+        blur: index !== 7,
+      }));
+    });
+  };
   return (
     <>
-      <div className='Start'>
-              {showRectagleStart && (
-                <motion.div 
-                  className="RectangleStart BoxStartUp"
-                  initial={{ y: "0%", opacity: 1 }}
-                  animate={{ y: "-100%", opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ 
-                    duration: 0.55,
-                    delay: 1.4,
-                    ease: [1, 0.0, 0.5, 1.0]
-                  }}
-                />
-              )}
-              {showRectagleStart && (
-                <motion.div className="RectangleStart BoxStartDown"
-                  initial={{ y: "0%", opacity: 1 }}
-                  animate={{ y: "100%", opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{
-                    duration: 0.55,
-                    delay: 1.4,
-                    ease: [1, 0.0, 0.5, 1.0]
-                  }}
-                />
-              )}
+      <div className="container">
+        <button className="arrow arrow-left" onClick={handleLeftClick}>◀</button>
 
+        <AnimatePresence>
+          {items.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, top: positions[index].top, left: positions[index].left }}
+              exit={{ opacity: 0 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 100, 
+                damping: 10 }}
+              className="rectangle"
+              style={{
+                backgroundColor: item.color,
+                filter: item.blur ? 'blur(5px)' : 'none',
+              }}
+            >
+              {item.id}
+            </motion.div>
+          ))}
+        </AnimatePresence>
 
-              {showLogoStart && (
-                <div className="PosLogoStart">  
-                  <div className="LogoStartContrainer">
-                    <div className="LogoStart">
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              
-              <motion.div
-                className="BlurLogoAfterStart"
-                initial={{ filter: "blur(0px)"}}
-                animate={{ filter: "blur(3.5px)", opacity: 0.4}}
-                transition={{
-                  duration: 1.5,
-                  delay: 1.6,
-                  ease: [0.66, 0, 0.78, 0.9]
-                }}
-              >
-                  {showLogoAfterStart && (
-                    <motion.div
-                      className="LogoAfterStart"
-                      initial={{ opacity: 0, scale: 1, y: "-2.2%"}}
-                      animate={{ opacity: 1, scale: 0.8, y: "-2.2%", opacity: 0.8 }}
-                      transition={{
-                        duration: 1.2,
-                        delay: 0.50,
-                        ease: [0.37, 0, 0.37, 1]
-                      }}
-                    />
-                  )}
-                </motion.div>
-                
-
-
-                  {showLogoLeftUp && (
-                    <motion.div 
-                      className="CnmLogo"
-                      initial={{ y: "-150%", x: "-100%"}}
-                      animate={{ y: "50%", x: "-100%"}}
-                      whileHover={{ scale: 1.8 }}
-                      transition={{ 
-                        duration: 0.6,
-                        delay: 2.8,
-                        ease: [0, 0, 0.5, 1.0]
-                      }}
-                    />
-                  )} 
-                  {showLogoLeftUpset && (
-                    <motion.div 
-                      className="CnmLogo"
-                      initial={{ y: "50%", x: "-100%"}}
-                      animate={{ y: "50%", x: "-100%"}}
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 0.9 }}
-                      transition={{ 
-                        type: "spring", 
-                        stiffness: 400, 
-                        damping: 17 }}
-                    />
-                  )}                               
- 
+        <button className="arrow arrow-right" onClick={handleRightClick}>▶</button>
       </div>
-      
-
     </>
   );
 }

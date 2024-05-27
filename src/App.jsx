@@ -9,7 +9,7 @@ import "./index.css";
 import LogoStartMid from './assets/LogoStartMid.svg';
 import LogoApresL_intro from './assets/LogoApresL_intro.svg';
 import LogoCNM from './assets/LogoCNM.svg';
-import RectangleFormation1 from './assets/qfdswx.png';
+import RectangleFormation1 from './assets/FormationCarte1.png';
 
 
 const rectangles = [
@@ -24,11 +24,11 @@ const rectangles = [
 ];
 
 const positions = [
-  { top: '56.38%', left: '32.29%' }, /*jaune */
-  { top: '38.33%', left: '26.66%' }, /*vert */
-  { top: '19.81%', left: '33.02%' },/*vomi */
-  { top: '13.89%', left: '44.84%' },/*violet foncée */
-  { top: '19.81%', left: '56.56%' },/*rouge */
+  { top: '56.38%', left: '32.29%' },
+  { top: '38.33%', left: '26.66%' },
+  { top: '19.81%', left: '33.02%' },
+  { top: '13.89%', left: '44.84%' },
+  { top: '19.81%', left: '56.56%' },
   { top: '38.33%', left: '63.02%' },
   { top: '57.59%', left: '56.09%' },
   { top: '62.96%', left: '44.98%' },
@@ -242,12 +242,13 @@ function App() {
                 exit={{ opacity: 0 }}
                 transition={{ 
                   type: "spring", 
-                  stiffness: 100, 
-                  damping: 10 
+                  stiffness: 120, 
+                  damping: 18, 
+
                 }}
                 style={{
                   backgroundImage: `url(${item.image})`,
-                  filter: item.blur ? 'blur(5px)' : 'none',
+                  filter: item.blur ? 'blur(4px)' : 'none',
                   backgroundSize: 'cover',
                 }}
               >

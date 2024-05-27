@@ -1,5 +1,6 @@
 html {
   overflow: hidden; /* Hide scrollbars */
+  /*background: url("./assets/testecentre.jpg") no-repeat top;*/
   background-color: #D3D3D3;
 }
 
@@ -156,7 +157,7 @@ html {
 @media screen and (max-width: 2561px) {
   .LogoCnmAfterStartContainer {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%; left: 48%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
@@ -338,18 +339,177 @@ html {
   }
 }
 /*------------------------------------------------------------------------------------------------*/
+
 /*Rectangle Mid Formation*/
 
+
 .containerFormationRectangle {
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 100vh;
+  top: 50%; left: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -3vh;
+  margin-top: 0vh;
+  z-index: 3;
+
+}  
+
+
+@media screen and (max-width: 1921px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 48%; left: 49.8%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
+@media screen and (max-width: 1440px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 50%; left: 48.6%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
 }
 
+@media screen and (max-width: 1025px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 150vw;
+    height: 80vh;
+    top: 50%; left: 47%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
+
+@media screen and (max-width: 821px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 160vw;
+    height: 75vh;
+    top: 48.5%; left: 46.8%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
+
+@media screen and (max-width: 768px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 50%; left: 43%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
+
+@media screen and (max-width: 431px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 180vw;
+    height: 70vh;
+    top: 50%; left: 45%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
+
+@media screen and (max-width: 414px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 180vw;
+    height: 70vh;
+    top: 50%; left: 44.3%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
+
+@media screen and (max-width: 391px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 180vw;
+    height: 70vh;
+    top: 50%; left: 43.7%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
+
+@media screen and (max-width: 360px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 180vw;
+    height: 60vh;
+    top: 50%; left: 42.5%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: 3;
+  
+  }  
+}
 
 .FormationRectangle {
   position: absolute;
@@ -359,8 +519,53 @@ html {
   justify-content: center;
   align-items: center;
   z-index: 3;
-
 }
+@media screen and (max-width: 1921px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+}
+@media screen and (max-width: 1441px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 184px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 184px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+}
+@media screen and (max-width: 479px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 120px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+}
+
+
 
 .arrow-left, .arrow-right {
   position: absolute;

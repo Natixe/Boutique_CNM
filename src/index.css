@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Alexana';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./Typeface/Alexana.woff') format('woff');
+}
+
+
+
 html {
   overflow: hidden; /* Hide scrollbars */
   /*background: url("./assets/testecentre.jpg") no-repeat top;*/
@@ -338,6 +347,25 @@ html {
       width: 108px;
   }
 }
+
+
+/*Plus d'offre en haut a droite*/
+.MoreProducts {
+  left: 50%;
+  width: 150px;
+  height: 33px;
+  background-color: #C25B4B;
+  float: right;
+  margin-top: -4vh;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.MoreProductsText{
+  margin-top: 1.2vh;
+  font-family: 'Alexana';
+  font-size: 13px;
+}
 /*------------------------------------------------------------------------------------------------*/
 
 /*Rectangle Mid Formation*/
@@ -529,6 +557,7 @@ html {
     justify-content: center;
     align-items: center;
     z-index: 3;
+
   }
 }
 @media screen and (max-width: 1441px) {

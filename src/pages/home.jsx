@@ -2,8 +2,6 @@ import * as React from "react";
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 
 
@@ -44,7 +42,7 @@ const positions = [
 ];
 
 
-function Home() {
+export const  Home = () => {
   const [count, setCount] = useState(0)
   const [showRectagleStart, setshowRectagleStart] = useState(true);
   const [showLogoStartMid, setshowLogoStartMid] = useState(true);
@@ -54,7 +52,10 @@ function Home() {
   const [showFormationRectangle, setshowFormationRectangle] = useState(false);
   const [items, setItems] = useState(rectangles);
 
-  
+  useEffect(() => {
+    console.log('MainPage loaded');
+  }, []);
+
   useEffect(() => {
     
     /*Supprime les rectangle de l'intro*/
@@ -87,7 +88,14 @@ function Home() {
       setshowFormationRectangle(true);
     }, 3300);
     
-    return () => clearTimeout(timerRectagle,timerLogoStartMid,timerLogoApresL_intro,timerLogoAnimeLeftUp,timerLogoLeftUp,FormationRectangle);
+    return () => {
+      clearTimeout(timerRectagle);
+      clearTimeout(timerLogoStartMid);
+      clearTimeout(timerLogoApresL_intro);
+      clearTimeout(timerLogoAnimeLeftUp);
+      clearTimeout(timerLogoLeftUp);
+      clearTimeout(FormationRectangle);
+    };
   }, []); 
 
   const handleRightClick = () => {
@@ -110,11 +118,9 @@ function Home() {
     });
   };
 
-  const navigate = useNavigate()
   
   return (
     <>
-    
       {/*Logo au centre au tout debut qui va vers le bas*/}
       {showLogoStartMid && (
         <div className="LogoCnmStartContainer">
@@ -161,136 +167,34 @@ function Home() {
           </div>
         )}
       {/*----------------------------------------------*/}
-
       {/*Logo Centré apres l'intro du site*/}
       {showLogoApresL_intro && (
         <div className="LogoCnmAfterStartContainer">
           <motion.div
-              className="BlurLogoAfterStart"
-              initial={{ filter: "blur(0px)"}}
-              animate={{ filter: "blur(3.5px)", opacity: 0.4}}
-              transition={{
-                duration: 1.7,
-                delay: -0.5,
-                ease: [0.66, 0, 0.78, 0.9]
-              }}
-            >
-              <motion.img 
-              className="LogoCnmAfterStart"
-              src={LogoApresL_intro}
-              initial={{ opacity: 0, scale: 1, y: "-2.2%"}}
-              animate={{ opacity: 0.8, scale: 0.8, y: "-2.2%"}}
-              transition={{
-                duration: 1.2,
-                delay: -0.3,
-                ease: [0.37, 0, 0.37, 1]
-              }}
-              />
-            </motion.div>
-          </div>
-        )}
-        {/*----------------------------------------------*/}
-
-        {/*Intro Nav Bar*/}
-        {/*Logo en haut a gauche*/}
-        {showAnimeLogoLeftUpset && (      
-          <nav className="nav w-clearfix">
-            <div 
-              className="hero-link w-inline-block w--current"
-              > 
-                <motion.a
-                href="#"
-                className="ButtonLogoCNMLeftUp"
-                
-                >
-                  <motion.img
-                    className="CNM-logo" 
-                    initial={{ y: "-250%"}}
-                    animate={{ y: "0%"}}
-                    transition={{ 
-                      duration: 0.6,
-                      delay: 0.7,
-                      ease: [0, 0, 0.5, 1.0]
-                    }}
-                    src={LogoCNM} 
-                    alt="" 
-                  />
-                </motion.a>                  
-            </div>
-            <div>
-                <motion.div
-                  className="MoreProducts"
-                  initial={{ y: "-250%"}}
-                  animate={{ y: "0%"}}
-                  transition={{ 
-                    duration: 0.6,
-                    delay: 0.8,
-                    ease: [0, 0, 0.5, 1.0]
-                  }}
-                >
-                  <h1 className="MoreProductsText">
-                  Plus d'offre
-                  </h1>
-                </motion.div>
-            </div>
-          </nav>
-        )}
-        {/*Nav Bar Apres intro*/}
-        {/*Logo en haut a gauche */}
-        {showLogoLeftUpset && (        
-          <nav className="nav w-clearfix">
-            <div 
-              className="hero-link w-inline-block w--current"
-              > 
-                <motion.a
-                href="#"
-                onClick={() => {
-                  navigate("/");
-                }}
-                className="ButtonLogoCNMLeftUp"
-                >
-                  <motion.img
-                    className="CNM-logo" 
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ 
-                      type: "spring", 
-                      stiffness: 400, 
-                      damping: 17 }}
-                    src={LogoCNM} 
-                    alt="" 
-                  />
-                </motion.a>                  
-            </div>
-
-            {/*Plus d'offre en haut a droite*/}
-            <div
-              className="MoreProductsContainer"
-              onClick={() => {
-                navigate("checkout");
-              }}
-            >
-                <motion.div
-                  className="MoreProducts"
-                  whileHover={{ scale: 1.15 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ 
-                    type: "spring", 
-                    stiffness: 400, 
-                    damping: 17 }
-                  }
-                  
-                >
-                  <h1 className="MoreProductsText">
-                  Plus d'offre
-                  </h1>
-                </motion.div>
-            </div>
-          </nav>
-          
-        )}
+            className="BlurLogoAfterStart"
+            initial={{ filter: "blur(0px)"}}
+            animate={{ filter: "blur(3.5px)", opacity: 0.4}}
+            transition={{
+              duration: 1.7,
+              delay: -0.5,
+              ease: [0.66, 0, 0.78, 0.9]
+            }}
+          >
+            <motion.img 
+            className="LogoCnmAfterStart"
+            src={LogoApresL_intro}
+            initial={{ opacity: 0, scale: 1, y: "-2.2%"}}
+            animate={{ opacity: 0.8, scale: 0.7, y: "-2.2%"}}
+            transition={{
+              duration: 1.2,
+              delay: -0.3,
+              ease: [0.37, 0, 0.37, 1]
+            }}
+            />
+          </motion.div>
+        </div>
+      )}      
       {/* --------------------------------------- */}
-
       {/* Rectangle formation mid */}
       {showFormationRectangle && (
         <div className="containerFormationRectangle">
@@ -325,4 +229,3 @@ function Home() {
   )
 }
 
-export default Home

@@ -358,7 +358,7 @@ html {
   width: 150px;
   height: 33px;
   background-color: #C25B4B;
-  margin-top: -4vh;
+  margin-top: 0.5vh;
   border-radius: 10px;
   text-align: center;
 }
@@ -367,6 +367,7 @@ html {
   margin-top: 1.2vh;
   font-family: 'Alexana';
   font-size: 13px;
+  color: black;
 }
 /*------------------------------------------------------------------------------------------------*/
 

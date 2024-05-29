@@ -350,12 +350,14 @@ html {
 
 
 /*Plus d'offre en haut a droite*/
+
 .MoreProducts {
-  left: 50%;
+  position: absolute;
+  top: 105%;
+  left: 87%;
   width: 150px;
   height: 33px;
   background-color: #C25B4B;
-  float: right;
   margin-top: -4vh;
   border-radius: 10px;
   text-align: center;

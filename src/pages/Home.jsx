@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -108,6 +109,9 @@ function Home() {
       }));
     });
   };
+
+  const navigate = useNavigate()
+  
   return (
     <>
     
@@ -193,30 +197,34 @@ function Home() {
           <nav className="nav w-clearfix">
             <div 
               className="hero-link w-inline-block w--current"
-              >
-                <motion.img 
-                  className="CNM-logo"
-                  initial={{ y: "-250%"}}
-                  animate={{ y: "0%"}}
-                  src={LogoCNM} 
-                  alt="" 
-                  transition={{ 
-                    duration: 0.6,
-                    delay: 0.7,
-                    ease: [0, 0, 0.5, 1.0]
-                  }}
-                />
+              > 
+                <motion.a
+                href="#"
+                className="ButtonLogoCNMLeftUp"
+                
+                >
+                  <motion.img
+                    className="CNM-logo" 
+                    initial={{ y: "-250%"}}
+                    animate={{ y: "0%"}}
+                    transition={{ 
+                      duration: 0.6,
+                      delay: 0.7,
+                      ease: [0, 0, 0.5, 1.0]
+                    }}
+                    src={LogoCNM} 
+                    alt="" 
+                  />
+                </motion.a>                  
             </div>
-            <div 
-              className=""
-              >
+            <div>
                 <motion.div
                   className="MoreProducts"
                   initial={{ y: "-250%"}}
                   animate={{ y: "0%"}}
                   transition={{ 
                     duration: 0.6,
-                    delay: 0.7,
+                    delay: 0.8,
                     ease: [0, 0, 0.5, 1.0]
                   }}
                 >
@@ -227,7 +235,6 @@ function Home() {
             </div>
           </nav>
         )}
-
         {/*Nav Bar Apres intro*/}
         {/*Logo en haut a gauche */}
         {showLogoLeftUpset && (        
@@ -237,6 +244,9 @@ function Home() {
               > 
                 <motion.a
                 href="#"
+                onClick={() => {
+                  navigate("/");
+                }}
                 className="ButtonLogoCNMLeftUp"
                 >
                   <motion.img
@@ -252,11 +262,18 @@ function Home() {
                   />
                 </motion.a>                  
             </div>
-            <div>
+
+            {/*Plus d'offre en haut a droite*/}
+            <div
+              className="MoreProductsContainer"
+              onClick={() => {
+                navigate("checkout");
+              }}
+            >
                 <motion.div
                   className="MoreProducts"
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
                   transition={{ 
                     type: "spring", 
                     stiffness: 400, 

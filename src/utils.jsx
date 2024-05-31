@@ -1,5 +1,5 @@
 let lastReloadTime = 0;
-const RELOAD_INTERVAL = 5000; // 5 secondes pour prévenir les boucles infinies
+const RELOAD_INTERVAL = 1000; // 5 secondes pour prévenir les boucles infinies
 
 export const reloadMainPage = (navigate) => {
   const now = Date.now();

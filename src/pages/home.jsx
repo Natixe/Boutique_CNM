@@ -42,7 +42,7 @@ const positions = [
 ];
 
 
-export const  Home = () => {
+export const Home = () => {
   const [count, setCount] = useState(0)
   const [showRectagleStart, setshowRectagleStart] = useState(true);
   const [showLogoStartMid, setshowLogoStartMid] = useState(true);
@@ -120,7 +120,7 @@ export const  Home = () => {
 
   
   return (
-    <>
+    <div className="ContainerSite">
       {/*Logo au centre au tout debut qui va vers le bas*/}
       {showLogoStartMid && (
         <div className="LogoCnmStartContainer">
@@ -225,7 +225,7 @@ export const  Home = () => {
           <button className="arrow arrow-right" onClick={handleRightClick}>▶</button>
         </div>
       )}
-    </>
+    </div>
   )
 }
 

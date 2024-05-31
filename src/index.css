@@ -8,9 +8,20 @@
 
 
 html {
-  overflow: hidden; /* Hide scrollbars */
   /*background: url("./assets/testecentre.jpg") no-repeat top;*/
   background-color: #D3D3D3;
+}
+
+.ContainerSite {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -30px;
+  bottom: 0;	
+  padding-right: 15px;
+  overflow-y: scroll;
+  z-index: -1;
+
 }
 
 /*------------------------------------------------------------------------------------------------*/
@@ -149,7 +160,7 @@ html {
   transform: translateY(-50%);
   transform: translate(-50%, -50%);
   margin-top: 0vh;
-  z-index: 3;
+  z-index: -3;
 }
 
 
@@ -170,7 +181,7 @@ html {
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   }
 }
 
@@ -197,7 +208,7 @@ html {
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   }
 }
 
@@ -223,7 +234,7 @@ html {
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   }
 }
 
@@ -251,7 +262,7 @@ html {
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   }
 }
 
@@ -266,108 +277,6 @@ html {
     will-change: transform;
 
   }
-}
-/*------------------------------------------------------------------------------------------------*/
-/*Logo en haut a gauche*/
-
-.ButtonLogoCNMLeftUp {
-  background-color: transparent;
-}
-
-.w-clearfix:before, .w-clearfix:after {
-  display: table;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-column-end: 2;
-  grid-row-end: 2;
-}
-
-.w-clearfix:after {
-  clear: both;
-}
-
-.nav {
-  position: fixed;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: auto;
-  z-index: 997;
-  padding-top: 40px;
-  padding-right: 50px;
-  padding-left: 50px;
-}
-
-@media screen and (max-width: 767px) {
-  .nav {
-      padding-top: 20px;
-      padding-right: 30px;
-      padding-left: 30px;
-  }
-}
-
-
-.hero-link {
-  display: inline-block;
-}
-
-
-@media screen and (max-width: 767px) {
-  .hero-link {
-      margin-top: 5px;
-  }
-}
-
-
-@media screen and (max-width: 479px) {
-  .hero-link {
-      margin-top: 3px;
-  }
-}
-
-
-.w-inline-block {
-  max-width: 100%;
-  display: inline-block;
-}
-
-.CNM-logo {
-  width: 140px;
-}
-
-@media screen and (max-width: 1441px) {
-  .CNM-logo {
-    width: 140px;
-    padding-top: 5px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .CNM-logo {
-      width: 108px;
-  }
-}
-
-
-/*Plus d'offre en haut a droite*/
-
-.MoreProducts {
-  position: absolute;
-  top: 105%;
-  left: 87%;
-  width: 150px;
-  height: 33px;
-  background-color: #C25B4B;
-  margin-top: 0.5vh;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.MoreProductsText{
-  margin-top: 1.2vh;
-  font-family: 'Alexana';
-  font-size: 13px;
-  color: black;
 }
 /*------------------------------------------------------------------------------------------------*/
 
@@ -385,7 +294,7 @@ html {
   justify-content: center;
   align-items: center;
   margin-top: 0vh;
-  z-index: 3;
+  z-index: -3;
 
 }  
 
@@ -402,7 +311,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -418,7 +327,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -435,7 +344,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -452,7 +361,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -469,7 +378,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -486,7 +395,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -503,7 +412,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -520,7 +429,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -537,7 +446,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 0vh;
-    z-index: 3;
+    z-index: -3;
   
   }  
 }
@@ -549,7 +458,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: -3;
 }
 @media screen and (max-width: 1921px) {
   .FormationRectangle {
@@ -559,7 +468,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: -3;
 
   }
 }
@@ -571,7 +480,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: -3;
   }
 }
 @media screen and (max-width: 768px) {
@@ -582,7 +491,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: -3;
   }
 }
 @media screen and (max-width: 479px) {
@@ -593,7 +502,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: -3;
   }
 }
 
@@ -605,17 +514,17 @@ html {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  z-index: 3;
+  z-index: -2;
 }
 
 .arrow-left {
   top: 75vh;
   left: 89vh;
-  z-index: 4;
+  z-index: -2;
 }
 
 .arrow-right {
   top: 75vh;
   right: 88vh;
-  z-index: 4;
+  z-index: -2;
 }

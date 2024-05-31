@@ -12,6 +12,12 @@ export const Logocnm = () => {
     const [showAnimeLogoLeftUpset, setshowAnimeLogoLeftUpset] = useState(false);
     const [showLogoLeftUpset, setshowLogoLeftUpset] = useState(false);
 
+    const handleClick = () => {
+      reloadMainPage(navigate);
+    }; 
+
+
+
     useEffect(() => {
     
         /*Ajoute le Logo cnm en haut a gauche puis Supprime le logo CNM en haut a gauche*/
@@ -26,6 +32,8 @@ export const Logocnm = () => {
         }, 3300);
         
         return () => clearTimeout(timerLogoAnimeLeftUp,timerLogoLeftUp);
+
+        
     }, []); 
     
    return ( 
@@ -33,50 +41,39 @@ export const Logocnm = () => {
         {/*Intro Nav Bar*/}
         {/*Logo en haut a gauche*/}
         {showAnimeLogoLeftUpset && (      
-          <nav className="nav w-clearfix">
-            <div 
-              className="hero-link w-inline-block w--current"
-              > 
-                <motion.div
-                className="ButtonLogoCNMLeftUp">
-                  <motion.img
-                    className="CNM-logo" 
-                    initial={{ y: "-250%"}}
-                    animate={{ y: "0%"}}
-                    transition={{ 
-                      duration: 0.6,
-                      delay: 0.7,
-                      ease: [0, 0, 0.5, 1.0]
-                    }}
-                    src={LogoCNM} 
-                    alt="" 
-                  />
-                </motion.div>                  
-            </div>
-          </nav>
+          <motion.div
+          className="ButtonLogoCNMLeftUp">
+            <motion.img
+              className="CNM-logo" 
+              initial={{ y: "-250%"}}
+              animate={{ y: "0%"}}
+              transition={{ 
+                duration: 0.6,
+                delay: 0.7,
+                ease: [0, 0, 0.5, 1.0]
+              }}
+              src={LogoCNM} 
+              alt="" 
+            />
+          </motion.div>                  
         )}
         {/*Nav Bar Apres intro*/}
         {/*Logo en haut a gauche */}
         {showLogoLeftUpset && (        
-          <nav className="nav w-clearfix">
-            <div 
-              className="hero-link w-inline-block w--current"
-              > 
-                <motion.div className="ButtonLogoCNMLeftUp">
-                  <motion.img
-                    className="CNM-logo" 
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ 
-                      type: "spring", 
-                      stiffness: 400, 
-                      damping: 17 }}
-                    src={LogoCNM} 
-                    alt="" 
-                  />
-                </motion.div>                  
-            </div>
-          </nav>
+          <motion.div className="ButtonLogoCNMLeftUp">
+            <motion.img
+              onClick={handleClick}
+              className="CNM-logo" 
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 400, 
+                damping: 17 }}
+              src={LogoCNM} 
+              alt="" 
+            />
+          </motion.div>                  
         )}
       {/* --------------------------------------- */}
 

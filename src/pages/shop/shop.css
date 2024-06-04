@@ -1,8 +1,19 @@
+
+@font-face {
+  font-family: 'Myriad Apple';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../Typeface/MYRIADAT.woff') format('woff');
+}
+
+
 html {
   overflow: hidden;
   /*background: url("./assets/testecentre.jpg") no-repeat top;*/
   background-color: #D3D3D3;
 }
+
+
 
 .ContainerHome {
   position: absolute;
@@ -12,22 +23,50 @@ html {
   bottom: 0;	
   padding-right: 15px;
   overflow-y: scroll;
-  z-index: -1;
+  z-index: 0;
+  top: 0%;
+  
 }
 
 .shopTitle {
-  margin-top: 20%;
+  position: absolute;
+  left: 9.7%;
+  margin-top: -48.5%;
   text-align: center;
-  font-size: 40px;
+  font-family: 'Myriad Apple';
+  font-size: 80px;
+  z-index: 1;
+  line-height: 1.05;
+  font-weight: 600;
+  Letter-spacing: -0.015em;
 }
+
+.shopSubTitle {
+  position: absolute;
+  left: 76.5%;
+  margin-top: -46.3%;
+  text-align: center;
+  font-family: 'Myriad Apple';
+  font-size: 28px;
+  z-index: 1;
+  line-height: 1.14;
+  font-weight: 600;
+  letter-spacing: .007em;
+}
+
+
+
+
 .formations {
-  margin-top: 20%;
+  margin-top: 60%;
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  z-index: 1;
 }
+
 
 .formation {
   border-radius: 5px;
@@ -67,4 +106,56 @@ html {
   background-color: rgb(19, 19, 19);
   color: white;
   cursor: pointer;
+}
+
+
+
+.ImageIntroductionContainer {
+  position: absolute;
+  height: 760px;
+  width: 80%;
+  border-radius: 25px;
+  top: 80%; left: 49.9%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  margin-top: 0vh;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImageIntroduction {
+  width: 100%;
+  z-index: 0;
+  top: 60%; left: 49.9%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+}
+
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
 }

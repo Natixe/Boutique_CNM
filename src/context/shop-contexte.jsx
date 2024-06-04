@@ -1,25 +1,50 @@
 import { createContext, useEffect, useState } from "react";
-import { FORMATION } from "../Formation.jsx";
+import { FORMATIONS } from "../Formation";
+import { FORMATIONPRINCIPAL  } from "../Formation";
 
 export const ShopContext = createContext(null);
 
-const getDefaultCart = () => {
+const getDefaultCartMoreOffre = () => {
   let cart = {};
-  for (let i = 1; i < FORMATION.length + 1; i++) {
+  /*9 = le premiere Id de Formation et 14 le dernier */
+  for (let i = 9; i < 14 + 1; i++) {
     cart[i] = 0;
   }
   return cart;
 };
 
+const getDefaultCartPrincipalFormation = () => {
+  let cart = {};
+  /*9 = le premiere Id de Formation et 14 le dernier */
+  for (let i = 1; i < 8 + 1; i++) {
+    cart[i] = 0;
+  }
+  return cart;
+};
+
+
 export const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [cartItems, setCartItems] = useState(getDefaultCartMoreOffre());
+  
+  const [cartItemsPrincipal, setCartItemsprincipal] = useState(getDefaultCartPrincipalFormation());
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = FORMATION.find((product) => product.id === Number(item));
+        let itemInfo = FORMATIONS.find((product) => product.id === Number(item));
         totalAmount += cartItems[item] * itemInfo.price;
+      }
+    }
+    return totalAmount;
+  };
+
+  const getTotalCartAmountPrincipal = () => {
+    let totalAmount = 0;
+    for (const item in cartItemsPrincipal) {
+      if (cartItemsPrincipal[item] > 0) {
+        let itemInfo = FORMATIONPRINCIPAL.find((product) => product.id === Number(item));
+        totalAmount += cartItemsPrincipal[item] * itemInfo.price;
       }
     }
     return totalAmount;
@@ -29,27 +54,49 @@ export const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
 
+  const addToCartPrincipal = (itemId) => {
+    setCartItemsprincipal((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+  };
+
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
+  const removeFromCartPrincipal = (itemId) => {
+    setCartItemsprincipal((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
   const updateCartItemCount = (newAmount, itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
 
+  const updateCartItemCountPrincipal = (newAmount, itemId) => {
+    setCartItemsprincipal((prev) => ({ ...prev, [itemId]: newAmount }));
+  };
+
   const checkout = () => {
-    setCartItems(getDefaultCart());
+    setCartItems(getDefaultCartMoreOffre());
+  };
+
+  const checkoutPrincipal = () => {
+    setCartItemsprincipal(getDefaultCartPrincipalFormation());
   };
 
   const contextValue = {
     cartItems,
+    cartItemsPrincipal,
     addToCart,
+    addToCartPrincipal,
     updateCartItemCount,
+    updateCartItemCountPrincipal,
     removeFromCart,
+    removeFromCartPrincipal,
     getTotalCartAmount,
+    getTotalCartAmountPrincipal,
     checkout,
+    checkoutPrincipal,
   };
-
+  console.log(cartItems)
+  console.log(cartItemsPrincipal)
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

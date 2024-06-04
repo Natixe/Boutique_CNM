@@ -1,7 +1,10 @@
-import * as React from "react";
+import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import "../index.css";
+import { FormationPrincipal } from "./shop/formationPrincipal"
+import { FORMATIONPRINCIPAL } from "../Formation"
+import { ShopContext } from "../context/shop-contexte"
 
 
 
@@ -17,7 +20,6 @@ import RectangleFormation5 from '../assets/FormationCarte5.png';
 import RectangleFormation6 from '../assets/FormationCarte6.png';
 import RectangleFormation7 from '../assets/FormationCarte7.png';
 import RectangleFormation8 from '../assets/FormationCarte8.png';
-
 
 const rectangles = [
   { id: 1, image: RectangleFormation1, blur: true },
@@ -41,7 +43,6 @@ const positions = [
   { pos: 1, top: '62.96%', left: '44.98%' },
 ];
 
-
 export const Home = () => {
   const [count, setCount] = useState(0)
   const [showRectagleStart, setshowRectagleStart] = useState(true);
@@ -51,7 +52,7 @@ export const Home = () => {
   const [showLogoLeftUpset, setshowLogoLeftUpset] = useState(false);
   const [showFormationRectangle, setshowFormationRectangle] = useState(false);
   const [items, setItems] = useState(rectangles);
-
+  
   useEffect(() => {
     console.log('MainPage loaded');
   }, []);
@@ -118,7 +119,6 @@ export const Home = () => {
     });
   };
 
-  
   return (
     <div className="ContainerSite">
       {/*Logo au centre au tout debut qui va vers le bas*/}
@@ -197,34 +197,12 @@ export const Home = () => {
       {/* --------------------------------------- */}
       {/* Rectangle formation mid */}
       {showFormationRectangle && (
-        <div className="containerFormationRectangle">
-          <button className="arrow arrow-left" onClick={handleLeftClick}>◀</button>
-          <AnimatePresence>
-            {items.map((item, index) => (
-              <motion.div
-                key={item.id}
-                className="FormationRectangle"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, top: positions[index].top, left: positions[index].left }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 120,
-                  damping: 18,
-                }}
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                  filter: item.blur ? 'blur(4px)' : 'none',
-                  backgroundSize: 'cover',
-                  cursor: index === 7 ? 'pointer' : 'default' // Change cursor style for the clickable rectangle
-                }}
-                onClick={index === 7 ? () => window.location.href = '/checkout' : undefined} // Add click handler for the specific rectangle
-              />
-            ))}
-          </AnimatePresence>
-          <button className="arrow arrow-right" onClick={handleRightClick}>▶</button>
+        <div className="containerFormationRectangle">    
+          {FORMATIONPRINCIPAL.map((formation) => (
+            <FormationPrincipal data={formation} />
+          ))}
         </div>
-      )}
+    )}
     </div>
   )
 }

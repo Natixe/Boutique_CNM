@@ -1,24 +1,33 @@
 import React from 'react'
-import { FORMATION } from "../../Formation"
-import { Formation } from "./formation"
+import { Formation } from "../shop/formation"
+import { FORMATIONS } from "../../Formation"
 import "./shop.css";
 
 
+import { ImageSlider } from '../../components/ImageSlider';
+
+
+
 export const Shop = () => {
-
-
   return (
     <div className='ContainerHome'>
       <div className='shop'>
+        <div className='TextShop'>
           <div className='shopTitle'>
-              <h1>Formation 123</h1>
+              <div>Les Formation</div>
           </div>
-          <div className='formations'>
-              {" "}    
-              {FORMATION.map((formation) => (
-              <Formation data={formation} />
-              ))}
+          <div className='shopSubTitle'>
+              <div>Pensé pour vous plaire.</div>
           </div>
+        </div> 
+        <div className='ImageIntroductionContainer'>  
+            <ImageSlider />
+        </div> 
+        <div className='formations'>
+            {FORMATIONS.map((formation) => (
+            <Formation data={formation} />
+            ))}
+        </div>
       </div>
     </div>  
   )

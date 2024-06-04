@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { reloadMainPage } from '../utils.jsx';
 import { useNavigate } from 'react-router-dom';
+import { motion, useAnimation } from 'framer-motion';
 import "./navbar.css";
 
 /*import des element de la nav bar*/

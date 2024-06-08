@@ -15,7 +15,7 @@ const getDefaultCartMoreOffre = () => {
 
 const getDefaultCartPrincipalFormation = () => {
   let cart = {};
-  /*9 = le premiere Id de Formation et 14 le dernier */
+  /*1 = le premiere Id de FormationPrincipal et 8 le dernier */
   for (let i = 1; i < 8 + 1; i++) {
     cart[i] = 0;
   }
@@ -75,11 +75,9 @@ export const ShopContextProvider = (props) => {
 
   const checkout = () => {
     setCartItems(getDefaultCartMoreOffre());
-  };
-
-  const checkoutPrincipal = () => {
     setCartItemsprincipal(getDefaultCartPrincipalFormation());
   };
+
 
   const contextValue = {
     cartItems,
@@ -93,10 +91,10 @@ export const ShopContextProvider = (props) => {
     getTotalCartAmount,
     getTotalCartAmountPrincipal,
     checkout,
-    checkoutPrincipal,
   };
   console.log(cartItems)
   console.log(cartItemsPrincipal)
+
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

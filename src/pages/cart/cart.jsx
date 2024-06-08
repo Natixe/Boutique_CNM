@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { FORMATIONPRINCIPAL } from "../../Formation"
 
 export const Cart = () => {
-  const { cartItems, cartItemsPrincipal, getTotalCartAmount, getTotalCartAmountPrincipal, checkout, checkoutPrincipal } = useContext(ShopContext)
+  const { cartItems, cartItemsPrincipal, getTotalCartAmount, getTotalCartAmountPrincipal, checkout } = useContext(ShopContext)
   const totalAmount = getTotalCartAmount()
   const totalAmountPrincipal = getTotalCartAmountPrincipal()
   const navigate = useNavigate();
@@ -48,7 +48,12 @@ export const Cart = () => {
             </button>
           </div>
         ) : (
-          <h1> Votre Panier est vide</h1>
+          <div>
+            <h1 className='TextCart'> PANIER VIDE</h1>
+            <button onClick={() => {navigate("/");}}>
+              <h1 className='textePetitCart'> Cliquez ici pour voir nos produits.</h1>
+            </button>
+          </div>
         )}
       </div>
     </div>

@@ -22,14 +22,14 @@ import RectangleFormation7 from '../assets/FormationCarte7.png';
 import RectangleFormation8 from '../assets/FormationCarte8.png';
 
 const rectangles = [
-  { id: 1, image: RectangleFormation1, blur: true },
-  { id: 2, image: RectangleFormation2, blur: true },
-  { id: 3, image: RectangleFormation3, blur: true },
-  { id: 4, image: RectangleFormation4, blur: true },
-  { id: 5, image: RectangleFormation5, blur: true },
-  { id: 6, image: RectangleFormation6, blur: true },
-  { id: 7, image: RectangleFormation7, blur: true },
-  { id: 8, image: RectangleFormation8, blur: false},
+  { id: 1, blur: true },
+  { id: 2, blur: true },
+  { id: 3, blur: true },
+  { id: 4, blur: true },
+  { id: 5, blur: true },
+  { id: 6, blur: true },
+  { id: 7, blur: true },
+  { id: 8, blur: false},
 ];
 
 const positions = [
@@ -52,10 +52,37 @@ export const Home = () => {
   const [showLogoLeftUpset, setshowLogoLeftUpset] = useState(false);
   const [showFormationRectangle, setshowFormationRectangle] = useState(false);
   const [items, setItems] = useState(rectangles);
-  
+  const [showAnimationHome, setShowAnimationHome] = useState(false);
+
   useEffect(() => {
-    console.log('MainPage loaded');
+    // Vérifie si l'animation a déjà été jouée
+    const hasPlayedAnimationHome = localStorage.getItem('hasPlayedAnimationHome');
+    if (!hasPlayedAnimationHome) {
+      setShowAnimationHome(true);
+      localStorage.setItem('hasPlayedAnimationHome', 'true');
+    }
   }, []);
+  useEffect(() => {
+    if (showAnimationHome) {
+      const timerRectagle = setTimeout(() => {
+        setShowRectagleStart(false);
+      }, 1955);
+
+      const timerLogoStartMid = setTimeout(() => {
+        setShowLogoStartMid(false);
+      }, 1400);
+
+      const timerLogoApresL_intro = setTimeout(() => {
+        setShowLogoApresL_intro(true);
+      }, 1900);
+
+      return () => {
+        clearTimeout(timerRectagle);
+        clearTimeout(timerLogoStartMid);
+        clearTimeout(timerLogoApresL_intro);
+      };
+    }
+  }, [showAnimationHome]);
 
   useEffect(() => {
     
@@ -121,89 +148,113 @@ export const Home = () => {
 
   return (
     <div className="ContainerSite">
-      {/*Logo au centre au tout debut qui va vers le bas*/}
-      {showLogoStartMid && (
-        <div className="LogoCnmStartContainer">
-          <motion.img
-          initial={{ translateY: '0%' }}
-          animate={{ translateY: '140%' }}
-          transition={{ 
-            duration: 0.6,
-            delay: 0.7,
-            ease: [0.62, 0, 0.36, 1]
-          }}
-          className="LogoCnmStart"
-          src={LogoStartMid}>
-          </motion.img>
-        </div>  
-      )}
-      {/*----------------------------------------------*/}        
-      {/*Animation des rectangle au debut*/}
-        {showRectagleStart && (
-          <div>
-            {/*Animation du rectangle qui va vers le haut*/}
-            <motion.div 
-              className="RectangleStart BoxStartUp"
-              initial={{ y: "0%", opacity: 1 }}
-              animate={{ y: "-100%", opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ 
-                duration: 0.6,
-                delay: 1.4,
-                ease: [1, 0.0, 0.5, 1.0]
-              }}
-            />          
-            {/*Animation du rectangle qui va vers le bas*/}
-            <motion.div className="RectangleStart BoxStartDown"
-              initial={{ y: "0%", opacity: 1 }}
-              animate={{ y: "100%", opacity: 1 }}
-              exit={{ opacity: 0 }}
+    {showAnimationHome && (
+      <div className='Intro'>
+        {/*Logo au centre au tout debut qui va vers le bas*/}
+        {showLogoStartMid && (
+          <div className="LogoCnmStartContainer">
+            <motion.img
+            initial={{ translateY: '0%' }}
+            animate={{ translateY: '140%' }}
+            transition={{ 
+              duration: 0.6,
+              delay: 0.7,
+              ease: [0.62, 0, 0.36, 1]
+            }}
+            className="LogoCnmStart"
+            src={LogoStartMid}>
+            </motion.img>
+          </div>  
+        )}
+        {/*----------------------------------------------*/}        
+        {/*Animation des rectangle au debut*/}
+          {showRectagleStart && (
+            <div>
+          
+              {/*Animation du rectangle qui va vers le haut*/}
+              <motion.div 
+                className="RectangleStart BoxStartUp"
+                initial={{ y: "0%", opacity: 1 }}
+                animate={{ y: "-100%", opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ 
+                  duration: 0.6,
+                  delay: 1.4,
+                  ease: [1, 0.0, 0.5, 1.0]
+                }}
+              />        
+              {/*Animation du rectangle qui va vers le bas*/}
+              <motion.div className="RectangleStart BoxStartDown"
+                initial={{ y: "0%", opacity: 1 }}
+                animate={{ y: "100%", opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 1.4,
+                  ease: [1, 0.0, 0.5, 1.0]
+                }}
+              />
+            </div>
+          )}  
+        {/*----------------------------------------------*/}
+        {/*Logo Centré apres l'intro du site*/}
+        {showLogoApresL_intro && (
+          <div className="LogoCnmAfterStartContainer">
+            <motion.div
+              className="BlurLogoAfterStart"
+              initial={{ filter: "blur(0px)"}}
+              animate={{ filter: "blur(3.5px)", opacity: 0.4}}
               transition={{
-                duration: 0.6,
-                delay: 1.4,
-                ease: [1, 0.0, 0.5, 1.0]
+                duration: 1.7,
+                delay: -0.5,
+                ease: [0.66, 0, 0.78, 0.9]
               }}
-            />
+            >
+              <motion.img 
+              className="LogoCnmAfterStart"
+              src={LogoApresL_intro}
+              initial={{ opacity: 0, scale: 1, y: "-2.2%"}}
+              animate={{ opacity: 0.8, scale: 0.7, y: "-2.2%"}}
+              transition={{
+                duration: 1.2,
+                delay: -0.3,
+                ease: [0.37, 0, 0.37, 1]
+              }}
+              />
+            </motion.div>
           </div>
         )}
-      {/*----------------------------------------------*/}
-      {/*Logo Centré apres l'intro du site*/}
-      {showLogoApresL_intro && (
+      </div>
+    )}
+
+      {!showAnimationHome && (
         <div className="LogoCnmAfterStartContainer">
-          <motion.div
-            className="BlurLogoAfterStart"
-            initial={{ filter: "blur(0px)"}}
-            animate={{ filter: "blur(3.5px)", opacity: 0.4}}
-            transition={{
-              duration: 1.7,
-              delay: -0.5,
-              ease: [0.66, 0, 0.78, 0.9]
-            }}
-          >
-            <motion.img 
-            className="LogoCnmAfterStart"
-            src={LogoApresL_intro}
-            initial={{ opacity: 0, scale: 1, y: "-2.2%"}}
-            animate={{ opacity: 0.8, scale: 0.7, y: "-2.2%"}}
-            transition={{
-              duration: 1.2,
-              delay: -0.3,
-              ease: [0.37, 0, 0.37, 1]
-            }}
-            />
-          </motion.div>
+          <img className="LogoCnmAfterStartpostIntro" src={LogoApresL_intro}/>
         </div>
-      )}      
+      )}    
       {/* --------------------------------------- */}
-      {/* Rectangle formation mid */}
-      {showFormationRectangle && (
-        <div className="containerFormationRectangle">    
-          {FORMATIONPRINCIPAL.map((formation) => (
+      {/* Rectangle formation mid */} 
+      {showAnimationHome && (
+      <div>
+        {showFormationRectangle && (
+          <div className="containerFormationRectangle">    
+            {FORMATIONPRINCIPAL.map((formation) => (
+              <FormationPrincipal data={formation} />
+            ))}
+          </div>
+        )}
+      </div>
+      )}
+      {!showAnimationHome && (
+      <div>
+          <div className="containerFormationRectangle">    
+          {FORMATIONPRINCIPAL.slice(0, 1).map((formation) => (
             <FormationPrincipal data={formation} />
           ))}
-        </div>
-    )}
-    </div>
+          </div>
+      </div>
+      )}
+   </div>
   )
 }
 

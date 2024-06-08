@@ -24,12 +24,3 @@
   transform: translateY(-50%);
 }
 
-button {
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
-}
-

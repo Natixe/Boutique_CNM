@@ -1,4 +1,11 @@
 
+@font-face {
+  font-family: 'Myriad Apple';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../Typeface/MYRIADAT.woff') format('woff');
+}
+
 
 .cartContainer {
     position: absolute;
@@ -45,7 +52,7 @@
   font-weight: bolder;
 }
 
-.checkout button {
+.checkout {
   width: 150px;
   height: 50px;
   background-color: rgb(19, 19, 19);
@@ -54,4 +61,13 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+}
+
+.textePetitCart {
+  font-family: 'Myriad Apple';
+  font-size: 28px;
+  line-height: 1.14;
+  font-weight: 600;
+  letter-spacing: .007em;
+
 }

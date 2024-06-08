@@ -1,6 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShopContext } from '../../context/shop-contexte';
+import { FORMATIONPRINCIPAL } from '../../Formation';
+import { useNavigate } from "react-router-dom";
+
+import "./formationPrincipal.css";
 
 import RectangleFormation1 from '../../assets/FormationCarte1.png';
 import RectangleFormation2 from '../../assets/FormationCarte2.png';
@@ -37,7 +41,9 @@ export const FormationPrincipal = (props) => {
   const { id, formationName, price, formationImage } = props.data;
   const { addToCartPrincipal, cartItemsPrincipal } = useContext(ShopContext);
   const cartItemCount = cartItemsPrincipal[id];
-  const [items, setItems] = useState(rectangles);
+  const [items, setItems] = useState(FORMATIONPRINCIPAL);
+  const navigate = useNavigate();
+
 
   const handleRightClick = () => {
     setItems(prev => {
@@ -66,7 +72,7 @@ export const FormationPrincipal = (props) => {
       {items.map((item, index) => (
       <div key={item.id}>
             <motion.img
-              src={item.image}
+              src={item.formationImage}
               className="FormationRectangle"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, top: positions[index].top, left: positions[index].left }}
@@ -77,16 +83,17 @@ export const FormationPrincipal = (props) => {
                 damping: 18,
               }}
               style={{
-                filter: item.blur ? 'blur(4px)' : 'none',
+                filter: index !== 7 ? 'blur(4px)' : 'none',
                 backgroundSize: 'cover',
                 cursor: index === 7 ? 'pointer' : 'default',
               }}
               onClick={() => {
                 if (index === 7) {
+                  navigate("/cart")
                   addToCartPrincipal(item.id);
                 }
               }}
-            />{cartItemCount > 0 && <> ({cartItemCount})</>}
+            />
       </div>
       ))}
       </AnimatePresence>

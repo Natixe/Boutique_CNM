@@ -1,0 +1,75 @@
+.FormationRectangle {
+  position: absolute;
+  width:200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -3;
+}
+@media screen and (max-width: 1921px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+
+}
+}
+@media screen and (max-width: 1441px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 184px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 184px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+  }
+}
+@media screen and (max-width: 479px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 120px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+  }
+}
+  
+.arrow-left, .arrow-right {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: -2;
+}
+
+.arrow-left {
+  top: 75vh;
+  left: 89vh;
+  z-index: -2;
+}
+
+.arrow-right {
+  top: 75vh;
+  right: 88vh;
+  z-index: -2;
+}

@@ -3,12 +3,39 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+
+
 /*Importation des images*/
 
 
 export const Moreoffre = () => {
-    const [showAnimeLogoLeftUpset, setshowAnimeLogoLeftUpset] = useState(false);
-    const [showLogoLeftUpset, setshowLogoLeftUpset] = useState(false);
+    const [showAnimeLogoLeftUpsetMoreOffre, setshowAnimeLogoLeftUpset] = useState(false);
+    const [showLogoLeftUpsetMoreOffre, setshowLogoLeftUpset] = useState(false);
+
+    const [showAnimationMoreOffre, setShowAnimationMoreOffre] = useState(false);
+
+    useEffect(() => {
+      // Vérifie si l'animation a déjà été jouée
+      const hasPlayedAnimationMoreOffre = localStorage.getItem('hasPlayedAnimationMoreOffre');
+      if (!hasPlayedAnimationMoreOffre) {
+        setShowAnimationMoreOffre(true);
+        localStorage.setItem('hasPlayedAnimationMoreOffre', 'true');
+      }
+    }, []);
+  
+    useEffect(() => {
+      if (showAnimationMoreOffre) {
+        const timerLogoAnimeLeftUpMoreOffre = setTimeout(() => {
+          showAnimeLogoLeftUpsetMoreOffre(false);
+          showLogoLeftUpsetMoreOffre(false);
+        }, 2000);
+  
+        return () => {
+          clearTimeout(timerLogoAnimeLeftUpMoreOffre,timerLogoLeftUp);
+        };
+      }
+    }, [showAnimationMoreOffre]);
+
 
     useEffect(() => {
 
@@ -27,10 +54,11 @@ export const Moreoffre = () => {
 
    return ( 
     <>
-
+      {showAnimationMoreOffre && (
+      <div>
         {/*Intro Nav Bar*/}
         {/*Logo en haut a gauche*/}
-        {showAnimeLogoLeftUpset && (      
+        {showAnimeLogoLeftUpsetMoreOffre && (      
           <motion.div
             className="MoreProducts"
             initial={{ y: "-250%"}}
@@ -48,7 +76,7 @@ export const Moreoffre = () => {
         )}
         {/*Nav Bar Apres intro*/}
         {/*Logo en haut a gauche */}
-        {showLogoLeftUpset && (        
+        {showLogoLeftUpsetMoreOffre && (        
           <div
             className="MoreProductsContainer"
           >
@@ -67,7 +95,29 @@ export const Moreoffre = () => {
                 </h1>
               </motion.div>
           </div>
-        )}     
+        )}  
+      </div>
+      )}   
+      {!showAnimationMoreOffre && (
+        <div
+          className="MoreProductsContainer"
+        >
+          <motion.div
+            className="MoreProducts"
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 400, 
+              damping: 17 }
+            }
+          >
+            <h1 className="MoreProductsText">
+            Plus d'offre
+            </h1>
+          </motion.div>
+        </div>
+      )}  
     </>
    )   
    

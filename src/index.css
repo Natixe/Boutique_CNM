@@ -163,6 +163,14 @@ html {
   z-index: -3;
 }
 
+.LogoCnmAfterStartContainerPostIntro {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  margin-top: 0vh;
+  z-index: -3;
+}
 
 .LogoCnmAfterStart {
   width: 100vh;
@@ -224,6 +232,23 @@ html {
 
   }
 }
+
+@media screen and (max-width: 1921px) {
+
+  .LogoCnmAfterStartpostIntro {
+    width: 100vh;
+    height: 20vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    scale: 0.7;
+    opacity: 0.2;
+    filter: blur(3.5px);
+    transform: translateY(-2.2%);
+
+  }
+}
+
 
 /*1441PX MAX*/
 
@@ -451,80 +476,3 @@ html {
   }  
 }
 
-.FormationRectangle {
-  position: absolute;
-  width: 200px;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -3;
-}
-@media screen and (max-width: 1921px) {
-  .FormationRectangle {
-    position: absolute;
-    width: 200px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -3;
-
-  }
-}
-@media screen and (max-width: 1441px) {
-  .FormationRectangle {
-    position: absolute;
-    width: 184px;
-    height: 230px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -3;
-  }
-}
-@media screen and (max-width: 768px) {
-  .FormationRectangle {
-    position: absolute;
-    width: 184px;
-    height: 230px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -3;
-  }
-}
-@media screen and (max-width: 479px) {
-  .FormationRectangle {
-    position: absolute;
-    width: 120px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -3;
-  }
-}
-
-
-
-.arrow-left, .arrow-right {
-  position: absolute;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: -2;
-}
-
-.arrow-left {
-  top: 75vh;
-  left: 89vh;
-  z-index: -2;
-}
-
-.arrow-right {
-  top: 75vh;
-  right: 88vh;
-  z-index: -2;
-}

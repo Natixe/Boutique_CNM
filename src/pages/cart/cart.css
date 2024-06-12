@@ -1,3 +1,24 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 
 @font-face {
   font-family: 'Myriad Apple';
@@ -8,54 +29,131 @@
 
 
 .cartContainer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: -30px;
-    bottom: 0;	
-    padding-right: 15px;
-    overflow-y: scroll;
-    z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: -30px;
+  bottom: 0;	
+  padding-right: 15px;
+  overflow-y: scroll;
+  z-index: -1;
   
 }
 
 .cart {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.cartItem {
-  width: 700px;
-  height: 250px;
-  display: flex;
-
-  align-items: center;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+.containercartItem {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 50%;
+  display: table-row-group;
   border-radius: 25px;
-  margin: 30px;
 }
 
-.cartItem img {
-  width: 200px;
+.description {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.cartItem .description {
-  width: 100%;
-  font-size: 30px;
+.DescriptionFormation {
+  
+  position: absolute;
+  width: 20%;
+  left: 20%;
 }
 
-.countHandler input {
-  width: 40px;
+.TextDescriptionFormation {
+  white-space: pre ;
+  color: #1D1D1F;
+
+
+}
+
+.ContainerformationImage {
+  display: flex;
+  width: 75px;
+  height: 90px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.formationImage {
+  width: 65px;
+  height: 81.25px;
+
+}
+
+
+
+.Items{
+  border-top: 1px solid hsl(0, 4%, 90%);
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid hsl(0, 4%, 90%);
+
+}
+
+
+.contHandler {
+  display: flex;
+  width: 120px;
+  height: 32px;
+  border: 1px solid #5d5d5d;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.CartInput {
+
+  height: 32px;
+  display: table-cell;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  line-height: initial;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all 0.3s;
+  width: 33.33333%;
+  text-align: center !important;
+}
+.CartInputRemove{
+  background-color: transparent;
+  border-right: 1px solid #5d5d5d;
   text-align: center;
-  font-weight: bolder;
+  width: 33.33333%;
+}
+
+.CartInputAdd{
+  background-color: transparent;
+  border-left: 1px solid #5d5d5d;
+  text-align: center;
+  width: 33.33333%;
 }
 
 .checkout {
   width: 150px;
   height: 50px;
-  background-color: rgb(19, 19, 19);
   color: white;
   border: none;
   border-radius: 8px;
@@ -63,11 +161,185 @@
   cursor: pointer;
 }
 
-.textePetitCart {
-  font-family: 'Myriad Apple';
-  font-size: 28px;
-  line-height: 1.14;
-  font-weight: 600;
-  letter-spacing: .007em;
+.DescriptionCart{
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  height: 10%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  box-sizing: border-box;
 
+}
+
+
+.ContainerCartPanier{
+ height: 100%;
+ width: 50.5%;
+}
+
+.ContainerCartPrix{
+  height: 100%;
+  width: 22.6%;
+}
+
+.ContainerCartTotal{
+  height: 100%;
+
+}
+
+
+.TextDescriptionCartPanier {
+  position: static;
+  color: #1D1D1F;
+  font-family: 'Myriad Apple';
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4705882353;
+}
+
+.TextDescriptionCartPrix {
+  position: static;
+  color: #1D1D1F;
+  font-family: 'Myriad Apple';
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4705882353;
+}
+
+.TextDescriptionCartTotal {
+  position: static;
+  color: #1D1D1F;
+  font-family: 'Myriad Apple';
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4705882353;
+}
+
+
+
+
+.TotalcheckoutConteiner {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  top: 83%;
+  left: 64.6%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.Totalcheckout {
+  color: #1D1D1F;
+  font-family: 'Myriad Apple';
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: .009em;
+  line-height: 1.1666666667;
+}
+
+.TotalcheckoutPrix {
+   font-family: 'Myriad Apple';
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  line-height: 1.1666666667;
+
+}
+.panier {
+  font-family: 'Myriad Apple';
+
+}
+
+.ButtonContinuerAchats {
+  position: absolute;
+  top: 87%;
+  left: 54.2%;
+  width: 180px;
+  height: 35px;
+  border-radius: 12px;
+  background-color: #C25B4B;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ButtonPayement {
+  width: 180px;
+  height: 35px;
+  border-radius: 12px;
+  background-color: #0071e3;
+  position: absolute;
+  top: 87%;
+  left: 65.8%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.ButtonPayementText {
+  font-family: 'Myriad Apple';
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  line-height: 1.1764805882;
+  
+}
+
+.ButtonContinuerAchatsText{
+  color: #fff;
+  font-family: 'Myriad Apple';
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -.022em;
+  line-height: 1.1764805882;
+}
+
+/*
+width: 180vw;
+height: 60vh;*/
+.TextCart {
+  position: absolute;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4705882353;
+  font-family: 'Myriad Apple';
+  top: 40%; left: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.textePetitCart {
+  color: #1D1D1F;
+  position: absolute;
+  font-family: 'Myriad Apple';
+  font-size: 14px;
+  line-height: 1.3333733333;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  top: 45%; left: 45.5%;
 }

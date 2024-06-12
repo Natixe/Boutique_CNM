@@ -16,6 +16,7 @@ export const FORMATIONPRINCIPAL = [
         price: 1999.0,
         formationImage:Image1,
         blur: true,
+        formationDescription : "descripton"
     },
     {
         id: 2,
@@ -23,6 +24,7 @@ export const FORMATIONPRINCIPAL = [
         price: 2999.0,
         formationImage:Image2,
         blur: true,
+        formationDescription : "descripton"
     },
     {
         id: 3,
@@ -30,6 +32,7 @@ export const FORMATIONPRINCIPAL = [
         price: 3999.0,
         formationImage:Image3,
         blur: true,
+        formationDescription : "descripton"
     },
     {
         id: 4,
@@ -37,6 +40,7 @@ export const FORMATIONPRINCIPAL = [
         price: 4999.0,
         formationImage:Image4,
         blur: true,
+        formationDescription : "descripton"
     },
     {
         id: 5,
@@ -44,6 +48,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:Image5,
         blur: true,
+        formationDescription : "descripton"
     },
     {
         id: 6,
@@ -51,6 +56,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:Image6,
         blur: true,
+        formationDescription : "descripton"
     },
     {
         id: 7,
@@ -58,6 +64,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:Image7,
         blur: true,
+        formationDescription : "descripton"
     },
     {
         id: 8,
@@ -65,7 +72,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:Image8,
         blur: true,
-
+        formationDescription : "descricswqfdsfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddpton"
     }
 ]
 
@@ -75,35 +82,41 @@ export const FORMATIONS = [
         formationName: "muscu1",
         price: 1999.0,
         formationImage:Image1,
+        formationDescription : "descripton"
     },
     {
         id: 10,
         formationName: "muscu2",
         price: 2999.0,
         formationImage:Image1,
+        formationDescription : "descripton"
     },
     {
         id: 11,
         formationName: "muscu3",
         price: 3999.0,
         formationImage:Image1,
+        formationDescription : "descripton"
     },
     {
         id: 12,
         formationName: "muscu4",
         price: 4999.0,
         formationImage:Image1,
+        formationDescription : "descripton"
     },
     {
         id: 13,
         formationName: "muscu5",
         price: 5999.0,
         formationImage:Image1,
+        formationDescription : "descripton"
     },
     {
         id: 14,
         formationName: "muscu6",
         price: 5999.0,
         formationImage:Image1,
+        formationDescription : "descripton"
     }
 ]

@@ -66,15 +66,15 @@ export const Home = () => {
     if (showAnimationHome) {
       const timerRectagle = setTimeout(() => {
         setShowRectagleStart(false);
-      }, 1955);
+      }, 0);
 
       const timerLogoStartMid = setTimeout(() => {
         setShowLogoStartMid(false);
-      }, 1400);
+      }, 0);
 
       const timerLogoApresL_intro = setTimeout(() => {
         setShowLogoApresL_intro(true);
-      }, 1900);
+      }, 0);
 
       return () => {
         clearTimeout(timerRectagle);
@@ -238,9 +238,9 @@ export const Home = () => {
       <div>
         {showFormationRectangle && (
           <div className="containerFormationRectangle">    
-            {FORMATIONPRINCIPAL.map((formation) => (
-              <FormationPrincipal data={formation} />
-            ))}
+          {FORMATIONPRINCIPAL.slice(0, 1).map((formation) => (
+            <FormationPrincipal data={formation} />
+          ))}
           </div>
         )}
       </div>

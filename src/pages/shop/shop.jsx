@@ -14,7 +14,7 @@ export const Shop = () => {
       <div className='shop'>
         <div className='TextShop'>
           <div className='shopTitle'>
-              <div>Les Formation</div>
+              <div>Les Formations</div>
           </div>
           <div className='shopSubTitle'>
               <div>Pensé pour vous plaire.</div>

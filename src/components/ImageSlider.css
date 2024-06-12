@@ -1,8 +1,9 @@
 .slider {
   position: relative;
-  width: 101%;
-  height: 101%;
+  width: 99%;
+  height: 99%;
   overflow: hidden;
+  border-radius: 30px;
 
 }
 
@@ -11,8 +12,7 @@
   height: 100%;
   object-fit: cover;
   position: absolute;
-  border-radius: 25px;
-
+  border-radius: 40px;
 }
 
 .buttons {

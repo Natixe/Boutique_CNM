@@ -84,6 +84,11 @@ html {
 
 .formation .description {
   text-align: center;
+  font-family: 'Myriad Apple';
+  font-size: 20px;
+  line-height: 1.3333733333;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .formation:hover {

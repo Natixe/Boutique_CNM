@@ -6,7 +6,7 @@ import RectangleFormation2 from '../assets/FormationCarte2.png';
 import RectangleFormation3 from '../assets/FormationCarte3.png';
 import RectangleFormation4 from '../assets/FormationCarte4.png';
 import RectangleFormation5 from '../assets/FormationCarte5.png';
-import RectangleFormation6 from '../assets/FormationCarte6.png';
+import IMG_3885 from '../assets/IMG_3885.jpg';
 
 const images = [
     RectangleFormation1,
@@ -14,7 +14,7 @@ const images = [
     RectangleFormation3,
     RectangleFormation4,
     RectangleFormation5,
-    RectangleFormation6
+    IMG_3885
 ];
 
 const variants = {

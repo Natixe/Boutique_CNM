@@ -7,7 +7,14 @@ import Image5 from './assets/FormationCarte5.png';
 import Image6 from './assets/FormationCarte6.png';
 import Image7 from './assets/FormationCarte7.png';
 import Image8 from './assets/FormationCarte8.png';
+import MID from './assets/FormationCarte0.png';
 
+import StreetWorkoutMF from './assets/StreetWorkoutAssets/Street_WorkoutMF.webp';
+import PDMuscleMF from './assets/PDMuscleAssets/PDMuscleMF.webp';
+import PDMusclePersoMF from './assets/PDMusclePersoAssets/PDMusclePersoMF.webp';
+import NutritionMF from './assets/NutritionAssets/NutritionMF.webp';
+import NutritionPersoMF from './assets/NutritionPersoAssets/NutritionPersoMF.webp';
+import LePPersonalisableMF from './assets/LePPersonalisableAssets/LePPersonalisableMF.webp';
 
 export const FORMATIONPRINCIPAL = [
     {
@@ -30,7 +37,7 @@ export const FORMATIONPRINCIPAL = [
         id: 3,
         formationName: "Principal3",
         price: 3999.0,
-        formationImage:Image3,
+        formationImage:LePPersonalisableMF,
         blur: true,
         formationDescription : "descripton"
     },
@@ -38,7 +45,7 @@ export const FORMATIONPRINCIPAL = [
         id: 4,
         formationName: "Principal4",
         price: 4999.0,
-        formationImage:Image4,
+        formationImage:NutritionPersoMF,
         blur: true,
         formationDescription : "descripton"
     },
@@ -46,7 +53,7 @@ export const FORMATIONPRINCIPAL = [
         id: 5,
         formationName: "Principal5",
         price: 5999.0,
-        formationImage:Image5,
+        formationImage:NutritionMF,
         blur: true,
         formationDescription : "descripton"
     },
@@ -54,7 +61,7 @@ export const FORMATIONPRINCIPAL = [
         id: 6,
         formationName: "Principal6",
         price: 5999.0,
-        formationImage:Image6,
+        formationImage:PDMusclePersoMF,
         blur: true,
         formationDescription : "descripton"
     },
@@ -62,7 +69,7 @@ export const FORMATIONPRINCIPAL = [
         id: 7,
         formationName: "Principal7",
         price: 5999.0,
-        formationImage:Image7,
+        formationImage:PDMuscleMF,
         blur: true,
         formationDescription : "descripton"
     },
@@ -70,9 +77,9 @@ export const FORMATIONPRINCIPAL = [
         id: 8,
         formationName: "Principal8",
         price: 5999.0,
-        formationImage:Image8,
+        formationImage:StreetWorkoutMF,
         blur: true,
-        formationDescription : "descricswqfdsfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddpton"
+        formationDescription : "Coque RHINOSHIELD Clear Case (compatible MagSafe) pour iPhone 14"
     }
 ]
 

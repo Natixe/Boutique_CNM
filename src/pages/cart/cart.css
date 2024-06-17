@@ -68,16 +68,20 @@ time, mark, audio, video, button  {
 }
 
 .DescriptionFormation {
-  
   position: absolute;
-  width: 20%;
-  left: 20%;
+  width: 28%;
+  height: 10%;
+  left: 15%;
 }
 
 .TextDescriptionFormation {
-  white-space: pre ;
   color: #1D1D1F;
-
+  font-family: 'Myriad Apple';
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4705882353;
+  text-align: left;
 
 }
 
@@ -115,7 +119,7 @@ time, mark, audio, video, button  {
   display: flex;
   width: 120px;
   height: 32px;
-  border: 1px solid #5d5d5d;
+  border: 1px solid #1D1D1F;
   margin: 0 auto;
   flex-wrap: nowrap;
   justify-content: center;
@@ -126,7 +130,7 @@ time, mark, audio, video, button  {
   display: table-cell;
   background-color: transparent;
   border: none;
-  color: #000;
+  color: #1D1D1F;
   font-size: 1em;
   line-height: initial;
   margin: 0;
@@ -253,7 +257,8 @@ time, mark, audio, video, button  {
 }
 
 .TotalcheckoutPrix {
-   font-family: 'Myriad Apple';
+  color: #848484;
+  font-family: 'Myriad Apple';
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 0.009em;
@@ -341,5 +346,7 @@ height: 60vh;*/
   line-height: 1.3333733333;
   font-weight: 400;
   letter-spacing: -0.01em;
-  top: 45%; left: 45.5%;
+  top: 45%; left: 45.3%;
+
+
 }

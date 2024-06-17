@@ -8,7 +8,7 @@
 
 
 html {
-  /*background: url("./assets/testecentre.jpg") no-repeat top;*/
+  background: url("./assets/testecentre.jpg") no-repeat top;
   background-color: #D3D3D3;
 }
 
@@ -24,7 +24,6 @@ body {
   right: -30px;
   bottom: 0;	
   padding-right: 15px;
-  overflow-y: scroll;
   z-index: -1;
 
 }
@@ -332,9 +331,9 @@ body {
 @media screen and (max-width: 1921px) {
   .containerFormationRectangle {
     position: absolute;
-    width: 100vw;
+    width: 180vh;
     height: 100vh;
-    top: 48%; left: 49.8%;
+    top: 49%; left: 49%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     display: flex;
@@ -481,3 +480,22 @@ body {
   }  
 }
 
+.containerSliderFormationP {
+  z-index: 20;
+  position: absolute;
+  width: 190px;
+  height: 83.98px;
+  left: 44.65%;
+  top: 56%;
+  background: transparent;
+
+}/*
+.containerSliderFormationP {
+  z-index: 20;
+  position: absolute;
+  background-color: black;
+  width: 480px;
+  height: 200px;
+  left: 44.6%;
+  top: 52%;
+}*/

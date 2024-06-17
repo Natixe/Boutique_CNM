@@ -137,7 +137,6 @@ export const FormationPrincipal = (props) => {
               onClick={() => {
                 if (index === 7 && item.id === 1) {
                   console.log(item.id + "LOL1")
-                  navigate("/cart")
                 }
                 if (index === 7 && item.id === 2) {
                   console.log(item.id + "LOL2")
@@ -145,7 +144,7 @@ export const FormationPrincipal = (props) => {
                 }
                 if (index === 7 && item.id === 3) {
                   console.log(item.id + "LOL3")
-
+                  navigate("/descLePPersonalisable")
                 }
                 if (index === 7 && item.id === 4) {
                   console.log(item.id + "LOL4")
@@ -153,18 +152,22 @@ export const FormationPrincipal = (props) => {
                 }
                 if (index === 7 && item.id === 5) {
                   console.log(item.id + "LOL5")
+                  navigate("/descNutrition")
 
                 }
                 if (index === 7 && item.id === 6) {
                   console.log(item.id + "LOL6")
+                  navigate("/descPDMusclePerso")
 
                 }
                 if (index === 7 && item.id === 7) {
                   console.log(item.id + "LOL7")
-
+                  navigate("/descPDMuscle")
                 }
                 if (index === 7 && item.id === 8) {
                   console.log(item.id + "LOL8")
+                  navigate("/descStreetWorkout")
+
                 }
               }}
             />

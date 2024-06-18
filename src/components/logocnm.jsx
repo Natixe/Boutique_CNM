@@ -14,6 +14,7 @@ export const Logocnm = () => {
   const handleClick = () => {
     reloadMainPage(navigate);
   }; 
+  
   const [showAnimationLogoCnm, setShowAnimationLogoCnm] = useState(false);
 
   useEffect(() => {

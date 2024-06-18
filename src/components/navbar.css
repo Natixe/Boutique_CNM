@@ -1,93 +1,109 @@
+
+@font-face {
+  font-family: 'Myriad Apple';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../Typeface/MYRIADAT.woff') format('woff');
+}
+
+
 /*Logo en haut a gauche*/
+a{
+  text-decoration: none;
+}
 
 .ButtonLogoCNMLeftUp {
-    background-color: transparent;
-}
-  
-  
-.nav {
   display: flex;
-  position: fixed;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  padding-top: 40px;
-  padding-right: 50px;
-  padding-left: 50px;
-  z-index: 3;
+  background-color: transparent;
 }
 
-@media screen and (max-width: 767px) {
-  .nav {
-      padding-top: 20px;
-      padding-right: 30px;
-      padding-left: 30px;
-  }
+.nav {
+  position: relative;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  z-index: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
-@media screen and (max-width: 767px) {
-  .hero-link {
-      margin-top: 5px;
-  }
+.BNavInContainer{
+  border-radius: 10px;
+  display: flex;
+  width: 96%;
+  height: 46px;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
-
-@media screen and (max-width: 479px) {
-  .hero-link {
-      margin-top: 3px;
-  }
+.NavInContainer{
+  border-radius: 10px;
+  display: flex;
+  width: 96%;
+  height: 46px;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  backdrop-filter:blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
-
-.w-inline-block {
-  max-width: 100%;
-}
 
 .CNM-logo {
   width: 140px;
+  height: 100%;
 }
 
-@media screen and (max-width: 1441px) {
-  .CNM-logo {
-    width: 140px;
-    padding-top: 5px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .CNM-logo {
-      width: 108px;
-  }
-}
 
 
 /*Plus d'offre en haut a droite*/
 
+.BOXNAVBARRE1 {
+  width: 1%;
+  height: 100%;
+}
+
+.BOXNAVBARRE2 {
+  width: 78.5%;
+  height: 100%;
+}
+
+.BOXNAVBARRE3 {
+  width: 0.5%;
+  height: 100%;
+}
+
+.BOXNAVBARRE4 {
+  width: 1%;
+  height: 100%;
+}
+
 .MoreProducts {
-  position: absolute;
-  top: 105%;
-  left: 87%;
-  width: 150px;
-  height: 33px;
-  background-color: #C25B4B;
-  margin-top: -4.7vh;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  width: 150px;
+  height: 34px;
+  background-color: #C25B4B;
+  border-radius: 10px;
 }
 
 .MoreProductsText{
-  margin-top: 1.2vh;
-  font-family: 'Alexana';
-  font-size: 13px;
   color: #FFFFFF;
+  text-decoration: none !important;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .007em;
+  font-family: "Myriad Apple";
 }
 
 .Cart {
-  position: absolute;
-  top: 96.5%;
-  left: 96%;
-  height: 40px;
-  margin-top: -4.7vh;
+  height: 35px;
   text-align: center;
 }
 

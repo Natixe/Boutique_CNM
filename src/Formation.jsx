@@ -1,6 +1,6 @@
 
 import Image1 from './assets/FormationCarte1.png';
-import Image2 from './assets/FormationCarte2.png';
+import Image2 from './assets/NutritionPersoMF1.webp';
 import Image3 from './assets/FormationCarte3.png';
 import Image4 from './assets/FormationCarte4.png';
 import Image5 from './assets/FormationCarte5.png';
@@ -21,7 +21,7 @@ export const FORMATIONPRINCIPAL = [
         id: 1,
         formationName: "Principal1",
         price: 1999.0,
-        formationImage:Image1,
+        formationImage:LePPersonalisableMF,
         blur: true,
         formationDescription : "descripton"
     },

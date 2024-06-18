@@ -54,6 +54,7 @@ export const Home = () => {
   const [items, setItems] = useState(rectangles);
   const [showAnimationHome, setShowAnimationHome] = useState(false);
 
+  
   useEffect(() => {
     // Vérifie si l'animation a déjà été jouée
     const hasPlayedAnimationHome = localStorage.getItem('hasPlayedAnimationHome');
@@ -61,7 +62,8 @@ export const Home = () => {
       setShowAnimationHome(true);
       localStorage.setItem('hasPlayedAnimationHome', 'true');
     }
-  }, []);
+    }, []);
+
   useEffect(() => {
     if (showAnimationHome) {
       const timerRectagle = setTimeout(() => {

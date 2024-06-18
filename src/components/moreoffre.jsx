@@ -36,7 +36,6 @@ export const Moreoffre = () => {
       }
     }, [showAnimationMoreOffre]);
 
-
     useEffect(() => {
 
     /*Ajoute le Logo cnm en haut a gauche puis Supprime le logo CNM en haut a gauche*/
@@ -90,9 +89,9 @@ export const Moreoffre = () => {
                   damping: 17 }
                 }
               >
-                <h1 className="MoreProductsText">
+                <div className="MoreProductsText">
                 Plus d'offre
-                </h1>
+                </div>
               </motion.div>
           </div>
         )}  
@@ -112,9 +111,9 @@ export const Moreoffre = () => {
               damping: 17 }
             }
           >
-            <h1 className="MoreProductsText">
+            <div className="MoreProductsText">
             Plus d'offre
-            </h1>
+            </div>
           </motion.div>
         </div>
       )}  

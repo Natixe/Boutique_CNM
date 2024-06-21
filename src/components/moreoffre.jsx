@@ -103,8 +103,8 @@ export const Moreoffre = () => {
         >
           <motion.div
             className="MoreProducts"
-            whileHover={{ scale: 1.15 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.90 }}
             transition={{ 
               type: "spring", 
               stiffness: 400, 

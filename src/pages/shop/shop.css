@@ -6,32 +6,45 @@
   src: url('../../Typeface/MYRIADAT.woff') format('woff');
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+  z-index: -1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #84848486;
+  border-radius: 20px;
+  height: 4px;
+}
+
 html {
-  overflow: hidden;
   /*background: url("./assets/testecentre.jpg") no-repeat top;*/
   background-color: #D3D3D3;
+
 }
 
 
 
-.ContainerHome {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: -30px;
-  bottom: 0;	
-  padding-right: 15px;
-  overflow-y: scroll;
-  z-index: 0;
-  top: 0%;
-  
+
+
+.BoxtextTitleShop1{
+  width: 140px;
+  height: 100%;
+
 }
 
+.TextShop {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.BoxtextTitleShop2{
+  width: 46.5%;
+  height: 100%;
+}
 .shopTitle {
-  position: absolute;
-  left: 9.7%;
-  margin-top: -48.5%;
-  text-align: center;
   font-family: 'Myriad Apple';
   font-size: 80px;
   z-index: 1;
@@ -39,12 +52,14 @@ html {
   font-weight: 600;
   Letter-spacing: -0.015em;
 }
+.BoxtextTitleShop3{
+  width: 130px;
+  height: 100%;
+
+}
+
 
 .shopSubTitle {
-  position: absolute;
-  left: 75.2%;
-  margin-top: -46.3%;
-  text-align: center;
   font-family: 'Myriad Apple';
   font-size: 28px;
   z-index: 1;
@@ -53,11 +68,29 @@ html {
   letter-spacing: .007em;
 }
 
+.ImageIntroductionContainer {
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.ImageIntroduction {
+  border-radius: 30px;
+  height: 100%;
+  width: 85%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
 
+.formationsContainer{
+  height: auto;
+  width: 100%;
+  margin-top: 1%;
 
-
+}
 .formations {
-  margin-top: 60%;
   width: 100%;
   height: auto;
   display: grid;
@@ -110,56 +143,4 @@ html {
   background-color: rgb(19, 19, 19);
   color: white;
   cursor: pointer;
-}
-
-
-
-.ImageIntroductionContainer {
-  position: absolute;
-  height: 760px;
-  width: 80%;
-  border-radius: 25px;
-  top: 80%; left: 49.9%;
-  transform: translateY(-50%);
-  transform: translate(-50%, -50%);
-  margin-top: 0vh;
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.ImageIntroduction {
-  width: 100%;
-  z-index: 0;
-  top: 60%; left: 49.9%;
-  transform: translateY(-50%);
-  transform: translate(-50%, -50%);
-}
-
-.next,
-.prev {
-  top: calc(50% - 20px);
-  position: absolute;
-  background: white;
-  border-radius: 30px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  z-index: 1;
-}
-
-.next {
-  right: 10px;
-}
-
-.prev {
-  left: 10px;
-  transform: scale(-1);
 }

@@ -14,7 +14,11 @@ export const Cart = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='cartContainer'>
+    <motion.div 
+    className='cartContainer'
+    animate={{ backgroundColor: ["#141417", "#D3D3D3"] }}
+    transition={{ duration: 1.5, loop: Infinity, ease: "easeInOut" }}
+    >
       <div className='cart'>
           <div className='containercartItem'>
 
@@ -92,6 +96,6 @@ export const Cart = () => {
             </div>
         )}
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -23,7 +23,9 @@ export const FORMATIONPRINCIPAL = [
         price: 1999.0,
         formationImage:LePPersonalisableMF,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
+        
     },
     {
         id: 2,
@@ -31,6 +33,7 @@ export const FORMATIONPRINCIPAL = [
         price: 2999.0,
         formationImage:Image2,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -39,6 +42,7 @@ export const FORMATIONPRINCIPAL = [
         price: 3999.0,
         formationImage:LePPersonalisableMF,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -47,6 +51,7 @@ export const FORMATIONPRINCIPAL = [
         price: 4999.0,
         formationImage:NutritionPersoMF,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -55,6 +60,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:NutritionMF,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -63,6 +69,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:PDMusclePersoMF,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -71,6 +78,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:PDMuscleMF,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -79,6 +87,7 @@ export const FORMATIONPRINCIPAL = [
         price: 5999.0,
         formationImage:StreetWorkoutMF,
         blur: true,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "Coque RHINOSHIELD Clear Case (compatible MagSafe) pour iPhone 14"
     }
 ]
@@ -89,6 +98,7 @@ export const FORMATIONS = [
         formationName: "muscu1",
         price: 1999.0,
         formationImage:Image1,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -96,6 +106,7 @@ export const FORMATIONS = [
         formationName: "muscu2",
         price: 2999.0,
         formationImage:Image1,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -103,6 +114,7 @@ export const FORMATIONS = [
         formationName: "muscu3",
         price: 3999.0,
         formationImage:Image1,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -110,6 +122,7 @@ export const FORMATIONS = [
         formationName: "muscu4",
         price: 4999.0,
         formationImage:Image1,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -117,6 +130,7 @@ export const FORMATIONS = [
         formationName: "muscu5",
         price: 5999.0,
         formationImage:Image1,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
@@ -124,6 +138,7 @@ export const FORMATIONS = [
         formationName: "muscu6",
         price: 5999.0,
         formationImage:Image1,
+        formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     }
 ]

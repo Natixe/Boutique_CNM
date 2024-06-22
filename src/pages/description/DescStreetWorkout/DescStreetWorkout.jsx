@@ -68,11 +68,13 @@ export const DescStreetWorkout = () => {
   );
 
   return (
+    <>
     <motion.div 
     className='Description'
     animate={{ backgroundColor: ["#D3D3D3", "#141417"] }}
     transition={{ duration: 1.5, loop: Infinity, ease: "easeInOut" }}
     >
+      <div className='BOXUP'></div>
       <div className='ContainerDescription'>
         <div className='ContainerFormationImg'>
           <div className='BOXImgFormation'></div>
@@ -107,7 +109,7 @@ export const DescStreetWorkout = () => {
               initial={{ color: '#000000' }} 
               animate={{ color: '#FF8C78' }}
               transition={{ duration: 3, loop: Infinity, ease: "linear" }}
-              >Street workout</motion.p>
+              >Street workout ®</motion.p>
             </div>
             <div className='ContainerPriceDesc'>
               <p className='PriceDesc'>1201.99€</p>
@@ -115,7 +117,10 @@ export const DescStreetWorkout = () => {
           </div>
           <div className='DescDown'>
             <div className='ContainerDesc'>
-              <p className='Desc'>Description de la formation...</p>
+              <p className='Desc'>
+              Découvrez notre programme de musculation Street Workout, conçu pour transformer votre corps en seulement cinq jours par semaine. Chaque séance, ne durant jamais plus de 1h30, est axée sur la prise de muscle avec des exercices efficaces et variés.<br/>
+              <br/>
+              Rejoignez-nous pour atteindre vos objectifs de musculation avec des séances dynamiques et complètes, adaptées à tous les niveaux. Transformez votre corps et dépassez vos limites avec notre programme Street Workout !</p>
             </div>
             <div className='ContainerAddToCar'>
               <motion.button
@@ -144,13 +149,73 @@ export const DescStreetWorkout = () => {
                   damping: 17 }
                 }
                 onClick={() => addToCartPrincipal(8)} 
-                className='ButtonAddToPaypal'>
+                className='ButtonAddToPaypal'
+                >
                 Payer avec PayPal
               </motion.button>
             </div>
           </div>
         </div>
+        
       </div>
+      <div className='ContainerInfoDesc'>
+        <div className='InfoDesc'>
+          <div className='TitleInfoDesc'>
+            <div className='BOXDescTitleBack'></div>
+            <div className='DescTitleBack' >Description</div>
+          </div>
+          <div className='textInfoDesc'>
+            <div className='texteDesc'>
+              Transformez votre physique avec notre programme de musculation Street Workout, une méthode innovante et complète pour sculpter votre corps en un rien de temps. Conçu pour maximiser la prise de muscle et améliorer la condition physique générale, ce programme s'adapte à tous les niveaux, du débutant à l'athlète confirmé.<br/>
+              <br/>
+              <h1 className='TitleDesc2'>Pourquoi choisir notre programme Street Workout ?<br/></h1>
+              <br/>
+              <div className='texteDesc'>
+                Polyvalence et Accessibilité :&nbsp;Sans besoin d'équipement sophistiqué, ce programme utilise principalement le poids du corps pour des résultats impressionnants, que vous soyez à la maison, au parc ou en voyage.
+                <br/>Gain de Muscles et Force :&nbsp;En mettant l'accent sur des mouvements composés et des exercices de résistance, chaque séance est conçue pour cibler plusieurs groupes musculaires, favorisant une croissance musculaire harmonieuse.<br/>
+                Entraînements Structurés :&nbsp;Chaque jour de la semaine est dédié à un focus spécifique, garantissant un équilibre entre les différentes parties du corps et permettant une récupération optimale.
+                <br/>Durée Optimisée :&nbsp;Avec des séances de moins de 1h30, ce programme est idéal pour ceux qui ont un emploi du temps chargé mais qui souhaitent tout de même obtenir des résultats significatifs.
+                <br/>Évolution Continue :&nbsp;Des exercices progressifs et variés maintiennent votre motivation et votre engagement, tout en évitant les plateaux de performance.<br/>
+                <br/>
+              </div>
+              <h1 className='TitleDesc2'>Les Avantages du Street Workout:<br/></h1>
+              <br/>
+              <div className='texteDesc'>
+                Amélioration de la Condition Physique :&nbsp; En combinant des exercices de force, de flexibilité et de cardio, ce programme booste votre endurance et votre agilité.<br/>
+                Brûlage de Graisses :&nbsp; Les mouvements intenses et dynamiques aident à augmenter votre métabolisme, facilitant la perte de graisse tout en construisant du muscle.<br/>
+                Renforcement du Cœur et de l’Esprit :&nbsp; En relevant les défis physiques du Street Workout, vous renforcez non seulement votre corps mais aussi votre discipline mentale et votre résilience.<br/>
+                <br/>
+              </div>
+              <div>
+                Rejoignez notre programme de musculation Street Workout et découvrez une nouvelle façon de vous entraîner, où que vous soyez. <br/>Avec des résultats visibles et durables, préparez-vous à révéler la meilleure version de vous-même !
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+        <div className='MarketingInfoDesc'>
+          <div className='MaketingContainer'>
+
+            <div className='AvantageInfoDesc'>
+                <div className='AvantageInfoTitle'>Avantages</div>
+                <div className='texteDescAvantageBOX'></div>
+                <div className='texteDescAvantage'>Efficacité :&nbsp;Des exercices ciblés pour chaque groupe musculaire.</div>
+                <div className='texteDescAvantage'>Flexibilité :&nbsp;Séances de moins de 1h30, parfaites pour un emploi du temps chargé.</div>
+                <div className='texteDescAvantage'>Progression :&nbsp; Un programme structuré pour des gains de force et de muscle.</div>
+                <div className='texteDescAvantage'>Brûlage de Graisses :&nbsp;Mouvements intenses, facilitant perte de graisse et gain de muscle.</div>
+                <div className='texteDescAvantage'>Adaptabilité :&nbsp;Exercices pour ajuster l'intensité, permettant progression individuelle.</div>
+                <div className='texteDescAvantage'>Le Plaisir de le Variété :&nbsp;Diversité des exercices et routines maintient l'intérêt et l'excitation.</div>
+            </div>
+            <div className='leplusInfoDesc'>
+
+            </div>  
+          </div>   
+        </div>
+
+      </div>
+
     </motion.div>
+    </>
   );
 };

@@ -6,16 +6,18 @@
 }
 
 .Description{
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 1800px;
+  display:inline-block;
 
+}
+.BOXUP{
+  width: 100%;
+  height: 70px;
 }
 /*background-color: #141417;
 color: #141417;*/
 .ContainerDescription {
-  position: absolute;
-  top: 10%;
   height: 800px;
   width: 100%;
   display: flex;
@@ -105,8 +107,8 @@ color: #141417;*/
   display: block;
   text-align: left;
   word-wrap: break-word;
-  border-top: 1px solid hsl(0, 4%, 90%);
-  border-bottom: 1px solid hsl(0, 4%, 90%);
+  border-top: 1px solid hsla(0, 6%, 90%, 0.829);
+  border-bottom: 1px solid hsla(0, 6%, 90%, 0.829);
   color: #ffff;
 
 }
@@ -146,11 +148,115 @@ color: #141417;*/
   line-height: 1.381002381;
   font-weight: 600;
   letter-spacing: .011em;
-  background-color: #D76350;
   width: 39%;
   height: 34%;
   border-radius: 10px;
 
+}
+
+.ContainerInfoDesc{
+  height: 900px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.InfoDesc{
+ width: 65%;
+ height: 75%;
+}
+
+.MarketingInfoDesc{
+  border-left: 1px solid hsl(0, 4%, 90%);
+  width: 35%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MaketingContainer{
+  height: 90%;
+  width: 92%;
+}
+
+.TitleInfoDesc{
+  display: flex;
+  height: 15%;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.textInfoDesc{
+  margin-left: 2.5%;
+  height: 85%;
+  width: 95%;
+}
+
+.leplusInfoDesc{
+  width: 100%;
+  height: 50%;
+
+}
+
+.AvantageInfoDesc{
+  width: 100%;
+  height: 50%;
+
+}
+
+.AvantageInfoTitle{
+  font-family: 'Myriad Apple';
+  font-size: 30px;
+  line-height: 1.1428571429;
+  font-weight: 600;
+  letter-spacing: .007em;
+  color: #FF8E7A;
+
+}
+
+.TitleDesc2{
+  font-family: 'Myriad Apple';
+  font-size: 30px;
+  line-height: 1.1428571429;
+  font-weight: 600;
+  letter-spacing: .007em;
+  color: #FF8E7A;
+
+}
+.BOXDescTitleBack{
+  width: 2.5%;
+}
+.DescTitleBack{
+  font-family: 'Myriad Apple';
+  font-size: 40px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: #FF8E7A;
+}
+.texteDesc{
+  font-family: 'Myriad Apple';
+  font-size: 17px;
+  line-height: 1.50;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+  color: white;
+
+}
+
+.texteDescAvantage{
+  font-family: 'Myriad Apple';
+  font-size: 17px;
+  line-height: 2.2;
+  font-weight: 800;
+  letter-spacing: -0.022em;
+  color: white;
+
+}
+
+.texteDescAvantageBOX {
+  height: 20px;
+  width: 100%;
 }
 
 /*-------------------------------------------------------------------------------------------------*/

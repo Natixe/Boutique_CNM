@@ -5,7 +5,6 @@ import { useGesture } from 'react-use-gesture';
 import { ShopContext } from "../../../context/shop-contexte";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
 import Street_WorkoutMFG from '../../../assets/StreetWorkoutAssets/Street_WorkoutMFG.webp';
 
 // Calculate X-axis rotation based on mouse position

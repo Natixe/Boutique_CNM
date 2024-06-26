@@ -15,7 +15,7 @@ export const CartItem = (props) => {
             <p className="DescriptionFormation">
                 <b className="TextDescriptionFormation"> {formationName}, {formationDescription}</b>
             </p>
-            <p>{price}€</p>
+            <p className="price">{price}€</p>
             <div className="contHandler">
               
               <motion.button 

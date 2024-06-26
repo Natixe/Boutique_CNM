@@ -1,0 +1,99 @@
+
+@font-face {
+  font-family: 'Alexana';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./Typeface/Alexana.woff') format('woff');
+}
+  
+  
+
+.ContainerError404{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #141417;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.Error404{
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #D76350;
+}
+
+.TitleError404{
+    font-family: 'Myriad Apple';
+    font-size: 40px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: #929292;
+    text-align: left;
+}
+
+.SubTitleError404 {
+    font-family: 'Myriad Apple';
+    font-size: 30px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: #929292;
+    text-align: left;
+}
+
+.ContainerE404{
+    display: flex;
+    width: 40%;
+    height: 20%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.E404{
+    font-family: 'Myriad Apple';
+    font-size: 50px;
+    line-height: 1.0714285714;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+}
+
+.boxE404{
+
+    width: 10%;
+    height: 10%;
+}
+
+.ContainerButton404{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Button404{
+    width: 47%;
+    height: 27%;
+    border-radius: 10px;
+}
+
+.TextButton404{
+    font-family: 'Myriad Apple';
+    font-size: 20px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+
+}

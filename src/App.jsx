@@ -16,6 +16,10 @@ import { DescNutritionPers  } from "./pages/description/DescNutritionPers/DescNu
 
 import { DescLePPersonalisable } from "./pages/description/DescLePPersonalisable/DescLePPersonalisable";
 
+import { PayPalError } from "./pages/System/PayPalError"
+import { Error404 } from "./pages/System/Error404"
+
+
 function App() {
   return (
     <>  
@@ -34,6 +38,10 @@ function App() {
             <Route path="/descNutrition" element={<DescNutrition />}  />{/*5*/}
             <Route path="/descNutritionPers" element={<DescNutritionPers />}  />{/*4*/}
             <Route path="/descLePPersonalisable" element={<DescLePPersonalisable />}  />{/*3*/}
+
+
+            <Route path="/payPalError" element={<PayPalError />}  />{/*System*/}
+            <Route path="*" element={<Error404 />}  />{/*System*/}
 
           </Routes>
       </Router>

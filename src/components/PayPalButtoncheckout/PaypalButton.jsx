@@ -30,13 +30,13 @@ export const PaypalButton = () => {
       <PayPalScriptProvider options={initialOptions}>
         <PayPalButtons
           style={{
-            shape: "pill",
+            shape: "rect",
             layout: "vertical",
-            color: "black",
-            label: "paypal",
+            color: "silver",
+            label: "buynow",
           }}
           onCancel={(data) => {
-            window.location.assign("/your-error-page-here");
+            window.location.assign("/payPalError");
           }}
           createOrder={async () => {
             try {

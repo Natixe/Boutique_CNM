@@ -83,12 +83,12 @@ export const FORMATIONPRINCIPAL = [
     },
     {
         id: 8,
-        formationName: "Principal8",
+        formationName: "Le Street Workout",
         price: 5999.0,
         formationImage:StreetWorkoutMF,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "Coque RHINOSHIELD Clear Case (compatible MagSafe) pour iPhone 14"
+        formationDescription : "Programme de musculation street workout conçu pour transformer votre corps."
     }
 ]
 

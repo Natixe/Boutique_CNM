@@ -1,11 +1,10 @@
 
-
 .CheckoutContainer{
     width: 100%;
-    height: 1080px;
-    background-color: brown;
+    height: 1500px;
     display: flex;
 }
+
 .ContainerMethodInfo{
     width: 64%;
     height: 100%;
@@ -13,45 +12,138 @@
 }
 
 .BOXRIGHTContainer{
-    background-color: antiquewhite;
-    width: 19%;
-    height: 100%;
-}
-.BOXLEFTContainer{
-    background-color: antiquewhite;
     width: 19%;
     height: 100%;
 }
 
+.BOXLEFTContainer{
+    width: 19%;
+    height: 100%;
+}
 
 .ContainerPayment{
-    background-color: green;
     width: 55%;
     height: 100%;
     display: flex;
 }
 
 .BOXRIGHTMethodPayment{
+    margin-top: 15%;
     width: 5%;
-    height: 100%;
-    background-color: black;
+    height: 55%;
+    border-left: 1px solid hsl(0, 4%, 90%);
+
 }
+
 .BOXLEFTMethodPayment{
-    width: 10%;
+    width: 1%;
     height: 100%;
-    background-color: black;
 }
+
 .MethodPayment{
     width: 85%;
     height: 100%;
-    background-color: rgb(158, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.InformationCard{
-    background-color: blueviolet;
+.PayPalButton{
+    width: 80%;
+    height: 70%;
+
+}
+
+.InformationCardContainer{
     width: 45%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.cartInformation{
+    margin-top: 25%;
+    height: 60%;
+    width: 85%;
+    display: table-row-group;
 
 }
 
 
+.ItemsInfo{
+    border-top: 1px solid hsl(0, 4%, 90%);
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid hsl(0, 4%, 90%);
+}
+
+.ContainerformationImageinfo{
+    display: flex;
+    width: 75px;
+    height: 90px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.formationImageinfo{
+    width: 60px;
+    height: 78.25px;
+}
+
+.descriptionInfo {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.DescriptionFormationInfo {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.TextDescriptionFormationInfo{
+    color: #1D1D1F;
+    font-family: 'Myriad Apple';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.4705882353;
+    text-align: left;
+}
+
+.ContainerTotalInfo{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.EuroInfotext{
+    color: #1D1D1F;
+    font-family: 'Myriad Apple';
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4705882353;
+}
+
+.TotalInfotext{
+    color: #1D1D1F;
+    font-family: 'Myriad Apple';
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.4705882353;
+}

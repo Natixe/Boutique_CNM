@@ -7,7 +7,7 @@ export const CartItem = (props) => {
     const { cartItems, cartItemsPrincipal, addToCart, addToCartPrincipal, removeFromCart, removeFromCartPrincipal, updateCartItemCount, updateCartItemCountPrincipal } = useContext(ShopContext)
     
   return (
-    <div className='Items'>
+    <div className='ItemsInfo'>
         <div className="ContainerformationImage">
           <img className="formationImage" src={formationImage}/>
         </div>

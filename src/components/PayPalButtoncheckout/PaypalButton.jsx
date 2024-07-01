@@ -21,7 +21,7 @@ export const PaypalButton = () => {
   const productDetails = {
     name: "Sample Product",
     quantity: 1, // Integer value
-    price: totalAmount + totalAmountPrincipal /*totalAmount + totalAmountPrincipal*/ // String value
+    price: totalAmount + totalAmountPrincipal + 2 /*totalAmount + totalAmountPrincipal*/ // String value
   };
   console.log(totalAmount + totalAmountPrincipal)
 

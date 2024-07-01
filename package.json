@@ -1,9 +1,10 @@
 {
-  "name": "boutique-cnm",
+  "name": "cnm-nutrisport",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "main": "server/server.js",
+  "homepage": "http://cnm-nutrisport.com/",
   "scripts": {
     "client-dev": "vite",
     "server-dev": "nodemon server/server.js",

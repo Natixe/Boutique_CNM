@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-contexte"
 import { motion, AnimatePresence } from "framer-motion";
@@ -7,7 +8,7 @@ export const CartItem = (props) => {
     const { cartItems, cartItemsPrincipal, addToCart, addToCartPrincipal, removeFromCart, removeFromCartPrincipal, updateCartItemCount, updateCartItemCountPrincipal } = useContext(ShopContext)
     
   return (
-    <div className='ItemsInfo'>
+    <div className='Items'>
         <div className="ContainerformationImage">
           <img className="formationImage" src={formationImage}/>
         </div>
@@ -24,8 +25,8 @@ export const CartItem = (props) => {
               whileTap={{ scale: 0.8 }}
               className="CartInputRemove"
               onClick={() => {
-                removeFromCart(id);
-                removeFromCartPrincipal(id);
+                /*removeFromCart(id);
+                removeFromCartPrincipal(id);*/
               }}>
                 <span>-</span>
               </motion.button>
@@ -47,8 +48,8 @@ export const CartItem = (props) => {
               transition={{ type: "spring", stiffness: 400, damping: 10 }} 
               className="CartInputAdd"
               onClick={() => {
-                addToCart(id);
-                addToCartPrincipal(id);
+                /*addToCart(id);
+                addToCartPrincipal(id);*/
               }}>
                 <span>+</span>
               </motion.button>

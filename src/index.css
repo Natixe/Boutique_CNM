@@ -31,8 +31,9 @@ time, mark, audio, video, button  {
 
 
 html {
- /* background: url("./assets/testecentre.jpg") no-repeat top;*/
+ background: url("./assets/testecentre.jpg") no-repeat top;
   background-color: #D3D3D3;
+  overflow-y: hidden;
 }
 
 body {
@@ -43,7 +44,6 @@ body {
 }
 
 .ContainerSite {
-  position: absolute;
   left: 0;
   top: 0;
   right: -30px;
@@ -192,6 +192,7 @@ body {
   z-index: -3;
 }
 
+
 .LogoCnmAfterStartContainerPostIntro {
   position: absolute;
   top: 50%; left: 50%;
@@ -241,7 +242,7 @@ body {
 @media screen and (max-width: 1921px) {
   .LogoCnmAfterStartContainer {
     position: absolute;
-    top: 50%; left: 49%;
+    top: 50%; left: 48.5%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
@@ -304,8 +305,44 @@ body {
 
   }
 }
+/* 1366 MAX*/
+
+@media screen and (max-width: 1366px) {
+  .LogoCnmAfterStartContainer {
+    position: absolute;
+    top: 52%; left: 48.5%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    margin-top: 0vh;
+    z-index: -3;
+  }
+}
+
+/* 1280 MAX*/
+
+@media screen and (max-width: 1280px) {
+  .LogoCnmAfterStartContainer {
+    position: absolute;
+    top: 53%; left: 49%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    margin-top: 0vh;
+    z-index: -3;
+  }
+}
 
 
+@media screen and (max-width: 1280px) {
+
+  .LogoCnmAfterStart {
+    width: 100vh;
+    height: 18vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+  }
+}
 
 
 /*479PX MAX*/
@@ -358,7 +395,7 @@ body {
     position: absolute;
     width: 180vh;
     height: 100vh;
-    top: 49%; left: 48.5%;
+    top: 49%; left:49.8%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     display: flex;
@@ -385,13 +422,45 @@ body {
   
   }  
 }
+@media screen and (max-width: 1366px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 110vw;
+    height: 102vh;
+    top: 50%; left: 49.2%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: -3;
+  
+  }  
+}
+@media screen and (max-width: 1280px) {
+  .containerFormationRectangle {
+    position: absolute;
+    width: 110vw;
+    height: 100vh;
+    top: 50%; left: 49.3%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    z-index: -3;
+  }  
+}
+
 
 @media screen and (max-width: 1025px) {
   .containerFormationRectangle {
     position: absolute;
     width: 150vw;
-    height: 80vh;
-    top: 50%; left: 47%;
+    height: 90vh;
+    top: 50%; left: 49.7%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     display: flex;
@@ -514,13 +583,43 @@ body {
   top: 56%;
   background: transparent;
 
-}/*
-.containerSliderFormationP {
-  z-index: 20;
-  position: absolute;
-  background-color: black;
-  width: 480px;
-  height: 200px;
-  left: 44.6%;
-  top: 52%;
-}*/
+}
+@media screen and (max-width: 1440px) {
+  .containerSliderFormationP {
+    z-index: 20;
+    position: absolute;
+    width: 190px;
+    height: 83.98px;
+    left: 44.9%;
+    top: 56%;
+    background: transparent;
+  
+  }
+  
+}
+
+@media screen and (max-width: 1366px) {
+  .containerSliderFormationP {
+    z-index: 20;
+    position: absolute;
+    width: 172px;
+    height: 80px;
+    left: 45%;
+    top: 54%;
+    background: transparent;
+  }
+  
+}
+@media screen and (max-width: 1280px) {
+  .containerSliderFormationP {
+    z-index: 20;
+    position: absolute;
+    width: 180px;
+    height: 75px;
+    left: 44.25%;
+    top: 53%;
+    background: transparent;
+  
+  }
+  
+}

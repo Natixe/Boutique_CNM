@@ -30,6 +30,28 @@
     z-index: -3;
   }
 }
+@media screen and (max-width: 1366px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 172px;
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 172px;
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+  }
+}
 @media screen and (max-width: 768px) {
   .FormationRectangle {
     position: absolute;
@@ -53,15 +75,6 @@
   }
 }
   
-.arrow-left, .arrow-right {
-  position: absolute;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: -2;
-}
-
 .arrow-left {
   top: 74vh;
   left: 79vh;
@@ -74,6 +87,129 @@
   z-index: -2;
 }
 
+.ContainerArrow{
+  display: flex;
+  height: 53%;
+  margin-left: 0.5%;
+  width: 240px;
+  z-index: -2;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  pointer-events:none;
+
+}
+
+.arrow{
+  background: none;
+  border: none;
+  color: aliceblue;
+}
+@media screen and (max-width: 1440px) {
+  .arrow-left {
+    top: 76vh;
+    left: 87vh;
+    z-index: -2;
+  }
+  
+  .arrow-right {
+    top: 76vh;
+    right: 81.4vh;
+    z-index: -2;
+  }
+  .ContainerArrow{
+    display: flex;
+    height: 56%;
+    margin-left: 3%;
+    width: 240px;
+    z-index: -2;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  
+  
+}
+@media screen and (max-width: 1366px) {
+  .arrow-left {
+    top: 74vh;
+    left: 85vh;
+    z-index: -2;
+  }
+  
+  .arrow-right {
+    top: 74vh;
+    right: 82.5vh;
+    z-index: -2;
+  }
+  .ContainerArrow{
+    display: flex;
+    height: 56%;
+    margin-left: 1.4%;
+    width: 210px;
+    z-index: -2;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+  }
+  
+}
+@media screen and (max-width: 1280px) {
+  .arrow-left {
+    top: 74vh;
+    left: 85vh;
+    z-index: -2;
+  }
+  
+  .arrow-right {
+    top: 74vh;
+    right: 82.5vh;
+    z-index: -2;
+  }
+  .ContainerArrow{
+    display: flex;
+    height: 56%;
+    margin-left: 1.3%;
+    width: 220px;
+    z-index: -2;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+  }
+  
+}
+@media screen and (max-width: 1024px) {
+  .arrow-left {
+    top: 74vh;
+    left: 85vh;
+    z-index: -2;
+  }
+  
+  .arrow-right {
+    top: 74vh;
+    right: 82.5vh;
+    z-index: -2;
+  }
+  .ContainerArrow{
+    display: flex;
+    height: 56%;
+    margin-left: 0.4%;
+    width: 210px;
+    z-index: -2;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+  }
+  
+}
+/*background: url("./assets/testecentre.jpg") no-repeat top;*/
+
+
+
+
 .sliderFormationP {
   position: relative;
   width: 100%;
@@ -82,6 +218,19 @@
   background: transparent;
 }
 
+@media screen and (max-width: 1280px) {
+  .sliderFormationP {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+}
+
+
+
 .imageFormationP {
   width:100%;
   height: 100%;
@@ -89,3 +238,4 @@
   position: absolute;
   background: transparent;
 }
+

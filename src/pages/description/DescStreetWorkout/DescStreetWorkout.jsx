@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect, useContext } from 'react';
 import "./DescStreetWorkout.css";
 import { useSpring, animated, to } from '@react-spring/web';
@@ -111,7 +112,7 @@ export const DescStreetWorkout = () => {
               >Street workout ®</motion.p>
             </div>
             <div className='ContainerPriceDesc'>
-              <p className='PriceDesc'>1201.99€</p>
+              <p className='PriceDesc'>39.99€</p>
             </div>
           </div>
           <div className='DescDown'>
@@ -150,7 +151,7 @@ export const DescStreetWorkout = () => {
                 onClick={() => addToCartPrincipal(8)} 
                 className='ButtonAddToPaypal'
                 >
-                Payer avec PayPal
+                ?
               </motion.button>
             </div>
           </div>

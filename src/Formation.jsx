@@ -1,4 +1,5 @@
 
+
 import Image1 from './assets/FormationCarte1.png';
 import Image2 from './assets/NutritionPersoMF1.webp';
 import Image3 from './assets/FormationCarte3.png';
@@ -16,12 +17,15 @@ import NutritionMF from './assets/NutritionAssets/NutritionMF.webp';
 import NutritionPersoMF from './assets/NutritionPersoAssets/NutritionPersoMF.webp';
 import LePPersonalisableMF from './assets/LePPersonalisableAssets/LePPersonalisableMF.webp';
 
+import Entertainment from "./assets/Entertainment.webp";
+
+
 export const FORMATIONPRINCIPAL = [
     {
         id: 1,
         formationName: "Principal1",
         price: 1999.0,
-        formationImage:LePPersonalisableMF,
+        formationImage:MID,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
@@ -31,7 +35,7 @@ export const FORMATIONPRINCIPAL = [
         id: 2,
         formationName: "Principal2",
         price: 2999.0,
-        formationImage:Image2,
+        formationImage:Entertainment,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
@@ -40,7 +44,7 @@ export const FORMATIONPRINCIPAL = [
         id: 3,
         formationName: "Principal3",
         price: 3999.0,
-        formationImage:LePPersonalisableMF,
+        formationImage:MID,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
@@ -49,7 +53,7 @@ export const FORMATIONPRINCIPAL = [
         id: 4,
         formationName: "Principal4",
         price: 4999.0,
-        formationImage:NutritionPersoMF,
+        formationImage:Entertainment,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
@@ -58,7 +62,7 @@ export const FORMATIONPRINCIPAL = [
         id: 5,
         formationName: "Principal5",
         price: 5999.0,
-        formationImage:NutritionMF,
+        formationImage:Entertainment,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
@@ -67,24 +71,24 @@ export const FORMATIONPRINCIPAL = [
         id: 6,
         formationName: "Principal6",
         price: 5999.0,
-        formationImage:PDMusclePersoMF,
+        formationImage:MID,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
     {
         id: 7,
-        formationName: "Principal7",
-        price: 5999.0,
+        formationName: "Prise de Muscle",
+        price: 39.99,
         formationImage:PDMuscleMF,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "descripton"
+        formationDescription : "Programme de musculatio Prise de Muscle, conçue pour transformer votre physique et optimiser votre croissance musculaire."
     },
     {
         id: 8,
         formationName: "Le Street Workout",
-        price: 5999.0,
+        price: 39.99,
         formationImage:StreetWorkoutMF,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",

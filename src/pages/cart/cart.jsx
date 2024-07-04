@@ -59,7 +59,7 @@ export const Cart = () => {
               </div>
               <motion.div 
                 onClick={() => {
-                  navigate("/shop");
+                  navigate("/*");
                 }}
                 whileHover={{ scale: 1.1}}
                 whileTap={{ scale: 0.95 }}

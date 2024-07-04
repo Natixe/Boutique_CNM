@@ -28,6 +28,52 @@ a{
   justify-content: center;
   flex-wrap: nowrap;
 }
+@media screen and (max-width: 1366px) {
+  .nav {
+    position: fixed;
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    z-index: 20;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background: url("./assets/testecentre.jpg") no-repeat top;
+
+  }
+  
+}
+@media screen and (max-width: 1280px) {
+  .nav {
+    position: fixed;
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    z-index: 20;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+}
+@media screen and (max-width: 1024px) {
+  .nav {
+    position: fixed;
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    z-index: 20;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+}
+
+
 
 .BNavInContainer{
   border-radius: 10px;
@@ -110,3 +156,5 @@ a{
 .CartContainer {
   background-color: transparent;
 }
+
+/*background: url("./assets/testecentre.jpg") no-repeat top;*/

@@ -19,7 +19,7 @@ export const Checkout = () => {
   return (
     <>
       <motion.div>
-        {(totalAmount + totalAmountPrincipal + 1) > 0 ? (
+        {(totalAmount + totalAmountPrincipal) > 0 ? (
         <motion.div 
           className='CheckoutContainer'
         >
@@ -65,7 +65,7 @@ export const Checkout = () => {
 
         </motion.div>
         ) : (      
-        <div>j'aiiiiiiiiiiiiiiiiiiiiiiiiiii pas</div>
+        <div></div>
         )}
       </motion.div>
     </>

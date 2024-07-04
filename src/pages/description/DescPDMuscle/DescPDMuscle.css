@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'Myriad Apple';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../Typeface/MYRIADAT.woff') format('woff');
+  }
+  
+  .Description{
+    width: 100%;
+    height: 1800px;
+    display:inline-block;
+  
+  }
+  .BOXUP{
+    width: 100%;
+    height: 70px;
+  }
+  /*background-color: #141417;
+  color: #141417;*/
+  .ContainerDescription {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  .ContainerFormationImg{
+    width: 850px;
+    height: 650px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+  }
+  .ImgFormation{
+    width: 350px;
+    height: 437.5px;
+  }
+  .BOXImgFormation {
+    width: 350px;
+    height: 437.5px;
+  }
+  
+  
+  
+  .ContainerFormationDesc{
+    width: 850px;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .DescUp{
+    height: 30%;
+    width: 100%;
+  
+  }
+  .DescDown{
+    height: 70%;
+    width: 100%;
+  }
+  
+  .ContainerTitleDesc{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .TitleDesc {
+    font-family: 'Myriad Apple';
+    font-size: 3.5vw;
+    line-height: 120%;
+    font-weight: 600;
+    color: #FF8C78;
+  }
+  .PriceDesc{
+    font-family: 'Myriad Apple';
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+    color: #D3D3D3;
+  }
+  
+  .ContainerPriceDesc{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .Desc {
+    font-family: 'Myriad Apple';
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+    display: block;
+    text-align: left;
+    word-wrap: break-word;
+    border-top: 1px solid hsla(0, 6%, 90%, 0.829);
+    border-bottom: 1px solid hsla(0, 6%, 90%, 0.829);
+    color: #ffff;
+  
+  }
+  
+  .ContainerDesc{
+    height: 60%;
+    width: 100%;
+    
+  }
+  .ContainerAddToCar{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .ButtonAddToCard{
+    font-family: 'Myriad Apple';
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+    width: 40%;
+    height: 35%;
+    background-color: #D76350;
+    border-radius: 10px;
+  }
+  .BOXPAY{
+    width: 10%;
+    height: 50%;
+  }
+  .ButtonAddToPaypal{
+    font-family: 'Myriad Apple';
+    font-size: 21px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+    width: 39%;
+    height: 34%;
+    border-radius: 10px;
+  
+  }
+  
+  .ContainerInfoDesc{
+    height: 900px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .InfoDesc{
+   width: 65%;
+   height: 75%;
+  }
+  
+  .MarketingInfoDesc{
+    border-left: 1px solid hsl(0, 4%, 90%);
+    width: 35%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .MaketingContainer{
+    height: 90%;
+    width: 92%;
+  }
+  
+  .TitleInfoDesc{
+    display: flex;
+    height: 15%;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .textInfoDesc{
+    margin-left: 2.5%;
+    height: 85%;
+    width: 95%;
+  }
+  
+  .leplusInfoDesc{
+    width: 100%;
+    height: 50%;
+  
+  }
+  
+  .AvantageInfoDesc{
+    width: 100%;
+    height: 50%;
+  
+  }
+  
+  .AvantageInfoTitle{
+    font-family: 'Myriad Apple';
+    font-size: 30px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
+    color: #FF8E7A;
+  
+  }
+  
+  .TitleDesc2{
+    font-family: 'Myriad Apple';
+    font-size: 30px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
+    color: #FF8E7A;
+  
+  }
+  .BOXDescTitleBack{
+    width: 2.5%;
+  }
+  .DescTitleBack{
+    font-family: 'Myriad Apple';
+    font-size: 40px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: #FF8E7A;
+  }
+  .texteDesc{
+    font-family: 'Myriad Apple';
+    font-size: 17px;
+    line-height: 1.50;
+    font-weight: 500;
+    letter-spacing: -0.022em;
+    color: white;
+  
+  }
+  
+  .texteDescAvantage{
+    font-family: 'Myriad Apple';
+    font-size: 17px;
+    line-height: 2.2;
+    font-weight: 800;
+    letter-spacing: -0.022em;
+    color: white;
+  
+  }
+  
+  .texteDescAvantageBOX {
+    height: 20px;
+    width: 100%;
+  }
+  
+  /*-------------------------------------------------------------------------------------------------*/
+  
+  .card {
+    position: absolute;
+    width: 300px;
+    height: 375px;
+    background: grey;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.5s, opacity 0.5s;
+    will-change: transform;
+    border: 5px solid white;
+    cursor: grab;
+    overflow: hidden;
+    touch-action: none;
+    z-index: 2;
+  }
+  .BOX{
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 101%;
+    z-index:-1;
+    height: 101%;
+  }
+  .card:hover {
+    box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card > div {
+    will-change: transform;
+    height: 100%;
+    margin: 0vw 0;
+  }
+  
+  .card > div > * {
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    margin: 0vw 0;
+  }
+  
+  .containerCard {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }

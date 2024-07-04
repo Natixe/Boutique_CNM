@@ -2,23 +2,36 @@ import express from "express";
 import fetch from "node-fetch";
 import "dotenv/config";
 import path from "path";
+import fs from "fs";
+import archiver from "archiver";
+import { fileURLToPath } from 'url';
 
-const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PORT = 8888 } = process.env;
-const base = "https://api-m.sandbox.paypal.com";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const { VITE_PAYPAL_CLIENT_ID_PRODUCTION, PAYPAL_CLIENT_SECRET_PRODUCTION, PORT = 8888 } = process.env;
+const base = "https://api-m.paypal.com";
 const app = express();
 
-// Host static files
-app.use(express.static("client"));
-
-// Parse post params sent in body in JSON format
+const clientBuildPath = path.join(__dirname, "../src");
+app.use(express.static(clientBuildPath));
 app.use(express.json());
+
+app.use((req, res, next) => {
+  if (req.path.endsWith('.js')) {
+    res.type('application/javascript');
+  } else if (req.path.endsWith('.jsx')) {
+    res.type('application/javascript'); // JSX should be processed by the build tool
+  }
+  next();
+});
 
 const generateAccessToken = async () => {
   try {
-    if (!PAYPAL_CLIENT_ID || !PAYPAL_CLIENT_SECRET) {
+    if (!VITE_PAYPAL_CLIENT_ID_PRODUCTION || !PAYPAL_CLIENT_SECRET_PRODUCTION) {
       throw new Error("MISSING_API_CREDENTIALS");
     }
-    const auth = Buffer.from(PAYPAL_CLIENT_ID + ":" + PAYPAL_CLIENT_SECRET).toString("base64");
+    const auth = Buffer.from(VITE_PAYPAL_CLIENT_ID_PRODUCTION + ":" + PAYPAL_CLIENT_SECRET_PRODUCTION).toString("base64");
     const response = await fetch(`${base}/v1/oauth2/token`, {
       method: "POST",
       body: "grant_type=client_credentials",
@@ -34,7 +47,6 @@ const generateAccessToken = async () => {
     }
 
     const data = await response.json();
-    console.log("Access Token:", data.access_token);
     return data.access_token;
   } catch (error) {
     console.error("Failed to generate Access Token:", error);
@@ -42,7 +54,7 @@ const generateAccessToken = async () => {
   }
 };
 
-async function handleResponse(response) {
+const handleResponse = async (response) => {
   const text = await response.text();
   if (!text) {
     return { error: "Empty response", httpStatusCode: response.status };
@@ -60,16 +72,15 @@ async function handleResponse(response) {
       httpStatusCode: response.status,
     };
   }
-}
+};
 
 const createOrder = async (cart) => {
   try {
     const accessToken = await generateAccessToken();
-    console.log("Creating order with cart:", cart);
 
     const items = cart.map(item => ({
       name: item.name,
-      quantity: item.quantity.toString(), // Ensure quantity is a string
+      quantity: item.quantity.toString(),
       unit_amount: item.unit_amount,
     }));
     
@@ -100,7 +111,6 @@ const createOrder = async (cart) => {
     });
 
     const { jsonResponse, httpStatusCode } = await handleResponse(response);
-    console.log("Order response:", jsonResponse, httpStatusCode);
 
     if (httpStatusCode !== 201) {
       throw new Error(`Failed to create order: ${jsonResponse.error || JSON.stringify(jsonResponse)}`);
@@ -113,15 +123,12 @@ const createOrder = async (cart) => {
   }
 };
 
-// createOrder route
 app.post("/api/orders", async (req, res) => {
   try {
     const { cart } = req.body;
-    console.log("Received cart:", cart);
     const orderData = await createOrder(cart);
     res.status(201).json(orderData);
   } catch (error) {
-    console.error("Failed to create order:", error);
     res.status(500).json({ error: error.message || "Failed to create order." });
   }
 });
@@ -147,22 +154,60 @@ const captureOrder = async (orderID) => {
   return jsonResponse;
 };
 
-// captureOrder route
 app.post("/api/orders/:orderID/capture", async (req, res) => {
   try {
     const { orderID } = req.params;
     const orderData = await captureOrder(orderID);
     res.status(201).json(orderData);
   } catch (error) {
-    console.error("Failed to capture order:", error);
     res.status(500).json({ error: "Failed to capture order." });
   }
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve("../src/index.html"));
+app.post("/api/download", async (req, res) => {
+  const { cartItems, cartItemsPrincipal } = req.body;
+
+  // Debugging log
+  console.log("Received cartItems:", cartItems);
+  console.log("Received cartItemsPrincipal:", cartItemsPrincipal);
+  
+  const cartItemsArray = Object.entries(cartItems).map(([id, quantity]) => ({ id: Number(id), quantity }));
+  const cartItemsPrincipalArray = Object.entries(cartItemsPrincipal).map(([id, quantity]) => ({ id: Number(id), quantity }));
+  
+  // Filter out items with quantity > 0
+  const items = [...cartItemsArray, ...cartItemsPrincipalArray].filter(item => item.quantity > 0);
+  const downloadPath = path.join(__dirname, "../Download");
+
+  const archive = archiver("zip");
+  res.attachment("Formations-CNM.zip");
+
+  archive.on("error", (err) => {
+    console.error("Archive error:", err);
+    res.status(500).send({ error: err.message });
+  });
+
+  archive.pipe(res);
+
+  items.forEach((item) => {
+    const filePath = path.join(downloadPath, `${item.id}`);
+    if (fs.existsSync(filePath)) {
+      console.log(`Adding file to archive: ${filePath}`);
+      archive.directory(filePath, false);
+    } else {
+      console.error(`File not found: ${filePath}`);
+    }
+  });
+
+  await archive.finalize();
+});
+
+// Catch-all handler to serve the React app for any other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientBuildPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
   console.log(`Node server listening at http://localhost:${PORT}/`);
+  console.log(`Node server listening at http://0.0.0.0:${PORT}/`);
 });
+//

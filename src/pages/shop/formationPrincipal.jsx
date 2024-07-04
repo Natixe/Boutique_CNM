@@ -20,16 +20,19 @@ import PDMusclePersoTitle from '../../assets/PDMusclePersoAssets/PDMusclePersoTi
 import NutritionTitle from '../../assets/NutritionAssets/NutritionTitle.svg';
 import NutritionPersoTitle from '../../assets/NutritionPersoAssets/NutritionPersoTitle.svg';
 import LePPersonalisableTitle from '../../assets/LePPersonalisableAssets/LePPersonalisableTitle.svg';
+import MID from '../../assets/FormationCarte0.png';
+
+
 
 const images = [
   StreetWorkoutTitle,
   PDMuscleTitle,
-  PDMusclePersoTitle,
-  NutritionTitle,
-  NutritionPersoTitle,
-  LePPersonalisableTitle,
-  RectangleFormation2,
-  RectangleFormation1,
+  MID,
+  null,
+  null,
+  null,
+  null,
+  null,
 ];
 
 const variants = {
@@ -111,7 +114,10 @@ export const FormationPrincipal = (props) => {
 
   return (
     <>
-      <button className="arrow arrow-left" onClick={() => { handleLeftClick(); paginate(-1); }}>◀</button>
+      <div className='ContainerArrow'>
+        <button className="arrow arrow-left" onClick={() => { handleLeftClick(); paginate(-1); }}>◀</button>
+        <button className="arrow arrow-right" onClick={() => { handleRightClick(); paginate(1); }}>▶</button>
+      </div>
       <AnimatePresence>
       {items.map((item, index) => (
       <div key={item.id}>
@@ -136,36 +142,36 @@ export const FormationPrincipal = (props) => {
                                 console.log(item.id)*/
               onClick={() => {
                 if (index === 7 && item.id === 1) {
-                  console.log(item.id + "LOL1")
+                  console.log(item.id )
                 }
                 if (index === 7 && item.id === 2) {
-                  console.log(item.id + "LOL2")
+                  console.log(item.id )
 
                 }
                 if (index === 7 && item.id === 3) {
-                  console.log(item.id + "LOL3")
-                  navigate("/descLePPersonalisable")
+                  console.log(item.id )
+                  //navigate("/descLePPersonalisable")
                 }
                 if (index === 7 && item.id === 4) {
-                  console.log(item.id + "LOL4")
+                  console.log(item.id)
 
                 }
                 if (index === 7 && item.id === 5) {
-                  console.log(item.id + "LOL5")
-                  navigate("/descNutrition")
+                  console.log(item.id )
+                  //navigate("/descNutrition")
 
                 }
                 if (index === 7 && item.id === 6) {
-                  console.log(item.id + "LOL6")
-                  navigate("/descPDMusclePerso")
+                  console.log(item.id )
+                  //navigate("/descPDMusclePerso")
 
                 }
                 if (index === 7 && item.id === 7) {
-                  console.log(item.id + "LOL7")
+                  console.log(item.id)
                   navigate("/descPDMuscle")
                 }
                 if (index === 7 && item.id === 8) {
-                  console.log(item.id + "LOL8")
+                  console.log(item.id )
                   navigate("/descStreetWorkout")
 
                 }
@@ -174,8 +180,6 @@ export const FormationPrincipal = (props) => {
       </div>
       ))}
       </AnimatePresence>
-      <button className="arrow arrow-right" onClick={() => { handleRightClick(); paginate(1); }}>▶</button>
-
       <div className="containerSliderFormationP">
         <div className="sliderFormationP">
           <AnimatePresence initial={false} custom={direction}>

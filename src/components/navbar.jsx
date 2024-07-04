@@ -81,7 +81,7 @@ export const Navbar = () => {
                   <Logocnm />              
               </Link>
               <div className='BOXNAVBARRE2'/>
-              <Link to="/shop"> 
+              <Link to="/*"> 
                   <Moreoffre /> 
               </Link>
               <div className='BOXNAVBARRE3'/>

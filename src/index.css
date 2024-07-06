@@ -31,7 +31,6 @@ time, mark, audio, video, button  {
 
 
 html {
- background: url("./assets/testecentre.jpg") no-repeat top;
   background-color: #D3D3D3;
   overflow-y: hidden;
   overflow: hidden;
@@ -387,6 +386,24 @@ body {
 
   }
 }
+@media screen and (max-width: 425px) {
+  .LogoCnmAfterStartContainer {
+    position: absolute;
+    top: 50%; left: 46.6%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    margin-top: 0vh;
+    z-index: -3;
+  }
+  .LogoCnmAfterStart {
+    width: 100vh;
+    height: 6.7vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+  }
+}
 /*------------------------------------------------------------------------------------------------*/
 
 /*Rectangle Mid Formation*/
@@ -718,8 +735,8 @@ body {
     position: absolute;
     width: 100px;
     height: 41px;
-    left: 44.2%;
-    top: 55%;
+    left: 45.7%;
+    top: 56%;
     background: transparent;
   
   }

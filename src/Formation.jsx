@@ -25,7 +25,7 @@ export const FORMATIONPRINCIPAL = [
         id: 1,
         formationName: "Principal1",
         price: 1999.0,
-        formationImage:MID,
+        formationImage:Entertainment,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
@@ -44,7 +44,7 @@ export const FORMATIONPRINCIPAL = [
         id: 3,
         formationName: "Principal3",
         price: 3999.0,
-        formationImage:MID,
+        formationImage:Entertainment,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"

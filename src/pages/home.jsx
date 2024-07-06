@@ -205,7 +205,7 @@ export const Home = () => {
             <motion.div
               className="BlurLogoAfterStart"
               initial={{ filter: "blur(0px)"}}
-              animate={{ filter: "blur(3.5px)", opacity: 0.4}}
+              animate={{ filter: "blur(.5px)", opacity: 0.9}}
               transition={{
                 duration: 1.7,
                 delay: -0.5,
@@ -216,7 +216,7 @@ export const Home = () => {
               className="LogoCnmAfterStart"
               src={LogoApresL_intro}
               initial={{ opacity: 0, scale: 1, y: "-2.2%"}}
-              animate={{ opacity: 0.8, scale: 0.7, y: "-2.2%"}}
+              animate={{ opacity: 0.8, scale: 0.9, y: "-2.2%"}}
               transition={{
                 duration: 1.2,
                 delay: -0.3,

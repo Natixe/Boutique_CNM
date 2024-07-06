@@ -116,6 +116,7 @@ export const FormationPrincipal = (props) => {
     <>
       <div className='ContainerArrow'>
         <button className="arrow arrow-left" onClick={() => { handleLeftClick(); paginate(-1); }}>◀</button>
+        <div className='BOXarrow'></div>
         <button className="arrow arrow-right" onClick={() => { handleRightClick(); paginate(1); }}>▶</button>
       </div>
       <AnimatePresence>

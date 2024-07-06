@@ -55,36 +55,50 @@
 @media screen and (max-width: 768px) {
   .FormationRectangle {
     position: absolute;
-    width: 184px;
-    height: 230px;
+    width: 148px;
+    height: 185px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: -3;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 425px) {
   .FormationRectangle {
     position: absolute;
-    width: 120px;
-    height: 150px;
+    width: 108px;
+    height: 135px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: -3;
   }
 }
-  
+@media screen and (max-width: 320px) {
+  .FormationRectangle {
+    position: absolute;
+    width: 100px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+  }
+}
 .arrow-left {
   top: 74vh;
   left: 79vh;
   z-index: -2;
+  pointer-events:fill;
+
 }
 
 .arrow-right {
   top: 74vh;
   right: 78vh;
   z-index: -2;
+  pointer-events:fill;
+
 }
 
 .ContainerArrow{
@@ -98,13 +112,22 @@
   flex-wrap: nowrap;
   pointer-events:none;
 
+
 }
 
 .arrow{
   background: none;
   border: none;
   color: aliceblue;
+  pointer-events:fill;
+
 }
+.BOXarrow{
+  height: 100%;
+  width: 80%;
+  
+}
+
 @media screen and (max-width: 1440px) {
   .arrow-left {
     top: 76vh;
@@ -195,13 +218,81 @@
   .ContainerArrow{
     display: flex;
     height: 56%;
-    margin-left: 0.4%;
+    margin-left: 1.2%;
     width: 210px;
     z-index: -2;
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: nowrap;
 
+  }
+
+  .BOXarrow{
+    height: 100%;
+    width: 80%;
+    margin-left: 7%;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .arrow-left {
+    top: 74vh;
+    left: 85vh;
+    z-index: -2;
+  }
+  
+  .arrow-right {
+    top: 74vh;
+    right: 82.5vh;
+    z-index: -2;
+  }
+  .ContainerArrow{
+    display: flex;
+    height: 50%;
+    margin-left: 3.4%;
+    width: 210px;
+    z-index: -2;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+  }
+
+  .BOXarrow{
+    height: 100%;
+    width: 80%;
+    margin-left: 7%;
+  }
+  
+}
+@media screen and (max-width: 425px) {
+  .arrow-left {
+    top: 74vh;
+    left: 85vh;
+    z-index: -2;
+  }
+  
+  .arrow-right {
+    top: 74vh;
+    right: 82.5vh;
+    z-index: -2;
+  }
+  .ContainerArrow{
+    display: flex;
+    height: 50%;
+    margin-left: 5.8%;
+    width: 150px;
+    z-index: -2;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+  }
+
+  .BOXarrow{
+    height: 100%;
+    width: 80%;
+    margin-left: 7%;
   }
   
 }

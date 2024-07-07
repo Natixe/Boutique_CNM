@@ -32,7 +32,6 @@ time, mark, audio, video, button  {
 
 html {
   background-color: #D3D3D3;
-  overflow-y: hidden;
   overflow: hidden;
 
 
@@ -48,7 +47,6 @@ body {
   right: -30px;
   padding-right: 15px;
   z-index: -1;
-  overflow: hidden;
 
 }
 
@@ -386,7 +384,7 @@ body {
 
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   .LogoCnmAfterStartContainer {
     position: absolute;
     top: 50%; left: 46.6%;
@@ -541,23 +539,8 @@ body {
   }  
 }
 
-@media screen and (max-width: 431px) {
-  .containerFormationRectangle {
-    position: absolute;
-    width: 180vw;
-    height: 70vh;
-    top: 50%; left: 45%;
-    transform: translateY(-50%);
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0vh;
-    z-index: -3;
-  
-  }  
-}
-@media screen and (max-width: 425px) {
+
+@media screen and (max-width: 430px) {
   .containerFormationRectangle {
     position: absolute;
     width: 180vw;
@@ -579,7 +562,7 @@ body {
     position: absolute;
     width: 180vw;
     height: 70vh;
-    top: 50%; left: 44.3%;
+    top: 50%; left: 45.5%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     display: flex;
@@ -591,12 +574,12 @@ body {
   }  
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 390px) {
   .containerFormationRectangle {
     position: absolute;
     width: 180vw;
     height: 70vh;
-    top: 50%; left: 43.7%;
+    top: 50%; left: 45%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     display: flex;
@@ -694,9 +677,9 @@ body {
   .containerSliderFormationP {
     z-index: 20;
     position: absolute;
-    width: 145px;
-    height: 50px;
-    left: 45.1%;
+    width: 165px;
+    height: 55px;
+    left: 45.2%;
     top: 54%;
     background: transparent;
   
@@ -716,20 +699,7 @@ body {
   }
   
 }
-@media screen and (max-width: 425px) {
-  .containerSliderFormationP {
-    z-index: 20;
-    position: absolute;
-    width: 120px;
-    height: 50px;
-    left: 44.2%;
-    top: 55%;
-    background: transparent;
-  
-  }
-  
-}
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
   .containerSliderFormationP {
     z-index: 20;
     position: absolute;

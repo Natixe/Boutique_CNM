@@ -205,7 +205,7 @@ export const Home = () => {
             <motion.div
               className="BlurLogoAfterStart"
               initial={{ filter: "blur(0px)"}}
-              animate={{ filter: "blur(.5px)", opacity: 0.9}}
+              animate={{ filter: "blur(3.5px)", opacity: 0.5}}
               transition={{
                 duration: 1.7,
                 delay: -0.5,

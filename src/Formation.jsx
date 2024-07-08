@@ -71,7 +71,7 @@ export const FORMATIONPRINCIPAL = [
         id: 6,
         formationName: "Principal6",
         price: 5999.0,
-        formationImage:MID,
+        formationImage:Entertainment,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"

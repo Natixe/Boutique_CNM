@@ -27,7 +27,7 @@ import MID from '../../assets/FormationCarte0.png';
 const images = [
   StreetWorkoutTitle,
   PDMuscleTitle,
-  MID,
+  null,
   null,
   null,
   null,

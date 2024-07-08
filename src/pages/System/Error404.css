@@ -97,3 +97,252 @@
     letter-spacing: -0.005em;
 
 }
+
+@media screen and (max-width: 1024px) {
+    .TextButton404{
+        font-family: 'Myriad Apple';
+        font-size: 15px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+    
+    }
+    .TitleError404{
+        font-family: 'Myriad Apple';
+        font-size: 35px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .SubTitleError404 {
+        font-family: 'Myriad Apple';
+        font-size: 25px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .E404{
+        font-family: 'Myriad Apple';
+        font-size: 45px;
+        line-height: 1.0714285714;
+        font-weight: 700;
+        letter-spacing: -0.005em;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .TextButton404{
+        font-family: 'Myriad Apple';
+        font-size: 14px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+    
+    }
+    .TitleError404{
+        font-family: 'Myriad Apple';
+        font-size: 30px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .SubTitleError404 {
+        font-family: 'Myriad Apple';
+        font-size: 20px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .E404{
+        font-family: 'Myriad Apple';
+        font-size: 40px;
+        line-height: 1.0714285714;
+        font-weight: 700;
+        letter-spacing: -0.005em;
+    }
+    .ContainerE404{
+        display: flex;
+        width: 50%;
+        height: 20%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+    .TextButton404{
+        font-family: 'Myriad Apple';
+        font-size: 13px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+    
+    }
+    .TitleError404{
+        font-family: 'Myriad Apple';
+        font-size: 25px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .SubTitleError404 {
+        font-family: 'Myriad Apple';
+        font-size: 15px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .E404{
+        font-family: 'Myriad Apple';
+        font-size: 35px;
+        line-height: 1.0714285714;
+        font-weight: 700;
+        letter-spacing: -0.005em;
+    }
+    .ContainerE404{
+        display: flex;
+        width: 70%;
+        height: 20%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .ContainerButton404{
+        width: 80%;
+        height: 35%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .TextButton404{
+        font-family: 'Myriad Apple';
+        font-size: 13px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+    
+    }
+    .TitleError404{
+        font-family: 'Myriad Apple';
+        font-size: 23px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .SubTitleError404 {
+        font-family: 'Myriad Apple';
+        font-size: 13px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .E404{
+        font-family: 'Myriad Apple';
+        font-size: 33px;
+        line-height: 1.0714285714;
+        font-weight: 700;
+        letter-spacing: -0.005em;
+    }
+    .ContainerE404{
+        display: flex;
+        width: 80%;
+        height: 20%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .ContainerButton404{
+        width: 90%;
+        height: 35%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width: 320px) {
+    .TextButton404{
+        font-family: 'Myriad Apple';
+        font-size: 13px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+    
+    }
+    .TitleError404{
+        font-family: 'Myriad Apple';
+        font-size: 22px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .SubTitleError404 {
+        font-family: 'Myriad Apple';
+        font-size: 13px;
+        line-height: 1.0714285714;
+        font-weight: 600;
+        letter-spacing: -0.005em;
+        color: #929292;
+        text-align: left;
+    }
+    .E404{
+        font-family: 'Myriad Apple';
+        font-size: 30px;
+        line-height: 1.0714285714;
+        font-weight: 700;
+        letter-spacing: -0.005em;
+    }
+    .ContainerE404{
+        display: flex;
+        width: 90%;
+        height: 20%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .ContainerButton404{
+        width: 100%;
+        height: 35%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .Error404{
+        height: 70%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #D76350;
+    }
+}

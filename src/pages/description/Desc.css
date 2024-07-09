@@ -346,7 +346,7 @@ color: #141417;*/
   }
   .Description {
     width: 100%;
-    height: 2050px;
+    height: 2600px;
     display: inline-block;
   }
   .ContainerDesc{
@@ -408,6 +408,7 @@ color: #141417;*/
     flex-wrap: nowrap;
   }
   .ButtonAddToCard{
+    color: #141417;
     font-family: 'Myriad Apple';
     font-size: 19px;
     line-height: 1.381002381;
@@ -419,7 +420,13 @@ color: #141417;*/
     border-radius: 10px;
   }
 }
-
+@media screen and (max-width: 820px) {
+  .Description {
+    width: 100%;
+    height: 2500px;
+    display: inline-block;
+  }
+}
 @media screen and (max-width: 768px) {
   .ContainerFormationImg{
     width: 550px;
@@ -436,7 +443,7 @@ color: #141417;*/
   }
   .Description {
     width: 100%;
-    height: 2000px;
+    height: 2200px;
     display: inline-block;
   }
   .ContainerDesc{
@@ -498,6 +505,7 @@ color: #141417;*/
     flex-wrap: nowrap;
   }
   .ButtonAddToCard{
+    color: #141417;
     font-family: 'Myriad Apple';
     font-size: 18px;
     line-height: 1.381002381;
@@ -567,7 +575,6 @@ color: #141417;*/
 
 @media screen and (max-width: 430px) {
   .ContainerFormationImg{
-    background-color: #FF8C78;
     width: 200px;
     height: 500px;
     display: flex;
@@ -582,7 +589,7 @@ color: #141417;*/
   }
   .Description {
     width: 100%;
-    height: 2150px;
+    height: 2250px;
     display: inline-block;
   }
   .ContainerDesc{
@@ -644,6 +651,7 @@ color: #141417;*/
     flex-wrap: nowrap;
   }
   .ButtonAddToCard{
+    color: #141417;
     font-family: 'Myriad Apple';
     font-size: 14px;
     line-height: 1.381002381;
@@ -708,4 +716,310 @@ color: #141417;*/
     align-items: center;
     justify-content: center;
 }
+}
+
+@media screen and (max-width: 390px) {
+  .ContainerFormationImg{
+    width: 180px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+  }
+  .BOXImgFormation {
+    width: 10px;
+    height: 437.5px;
+  }
+  .Description {
+    width: 100%;
+    height: 2200px;
+    display: inline-block;
+  }
+  .ContainerDesc{
+    height: 50%;
+    width: 95%;
+    
+  }
+  .Desc {
+    font-family: 'Myriad Apple';
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: .005em;
+    display: block;
+    text-align: left;
+    word-wrap: break-word;
+    border-top: 1px solid hsla(0, 6%, 90%, 0.829);
+    border-bottom: 1px solid hsla(0, 6%, 90%, 0.829);
+    color: #ffff;
+  
+  }
+  .card {
+    position: absolute;
+    width: 144px;
+    height: 180px;
+    background: grey;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.5s, opacity 0.5s;
+    will-change: transform;
+    border: 5px solid white;
+    cursor: grab;
+    overflow: hidden;
+    touch-action: none;
+  }  
+  .ContainerTitleDesc {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .ContainerPriceDesc {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .ContainerAddToCar {
+    height: 15%;  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .ButtonAddToCard{
+    color: #141417;
+    font-family: 'Myriad Apple';
+    font-size: 14px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+    width: 55%;
+    height: 45%;
+    background-color: #D76350;
+    border-radius: 10px;
+  }
+  .DescDown {
+    height: 90%;
+    width: 100%;
+  }
+  .texteDescAvantage{
+    font-family: 'Myriad Apple';
+    font-size: 12px;
+    line-height: 2.2;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: white;
+  
+  }
+  .texteDesc{
+    font-family: 'Myriad Apple';
+    font-size: 12px;
+    line-height: 1.50;
+    font-weight: 500;
+    letter-spacing: -0.022em;
+    color: white;
+  
+  }
+  .DescTitleBack {
+    font-family: 'Myriad Apple';
+    font-size: 25px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: #FF8E7A;
+  }
+  .TitleDesc2{
+    font-family: 'Myriad Apple';
+    font-size: 18px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
+    color: #FF8E7A;
+
+  }
+  .TitleDesc {
+    font-family: 'Myriad Apple';
+    font-size: 5.5vw;
+    line-height: 120%;
+    font-weight: 600;
+    color: #FF8C78;
+  }
+  .MarketingInfoDesc {
+    border-left: 1px solid hsl(0, 4%, 90%);
+    width: 45%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .Description {
+    width: 100%;
+    height: 2300px;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 330px) {
+  .ContainerFormationImg{
+    width: 160px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+  }
+  .BOXImgFormation {
+    width: 10px;
+    height: 437.5px;
+  }
+  .Description {
+    width: 100%;
+    height: 2200px;
+    display: inline-block;
+  }
+  .ContainerDesc{
+    height: 50%;
+    width: 100%;
+    
+  }
+  .Desc {
+    font-family: 'Myriad Apple';
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: .005em;
+    display: block;
+    text-align: left;
+    word-wrap: break-word;
+    border-top: 1px solid hsla(0, 6%, 90%, 0.829);
+    border-bottom: 1px solid hsla(0, 6%, 90%, 0.829);
+    color: #ffff;
+  
+  }
+  .card {
+    position: absolute;
+    width: 136px;
+    height: 170px;
+    background: grey;
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.5s, opacity 0.5s;
+    will-change: transform;
+    border: 5px solid white;
+    cursor: grab;
+    overflow: hidden;
+    touch-action: none;
+  }  
+  .ContainerTitleDesc {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .ContainerPriceDesc {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .ContainerAddToCar {
+    margin-top: 38%;
+    height: 15%;  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .ButtonAddToCard{
+    color: #141417;
+    font-family: 'Myriad Apple';
+    font-size: 14px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+    width: 75%;
+    height: 45%;
+    background-color: #D76350;
+    border-radius: 10px;
+  }
+  .DescDown {
+    height: 90%;
+    width: 100%;
+  }
+  .texteDescAvantage{
+    font-family: 'Myriad Apple';
+    font-size: 11px;
+    line-height: 2.2;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: white;
+  
+  }
+  .texteDesc{
+    font-family: 'Myriad Apple';
+    font-size: 11px;
+    line-height: 1.50;
+    font-weight: 500;
+    letter-spacing: -0.022em;
+    color: white;
+  
+  }
+  .DescTitleBack {
+    font-family: 'Myriad Apple';
+    font-size: 20px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: #FF8E7A;
+  }
+  .TitleDesc2{
+    font-family: 'Myriad Apple';
+    font-size: 15px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
+    color: #FF8E7A;
+
+  }
+  .AvantageInfoTitle{
+    font-family: 'Myriad Apple';
+    font-size: 20px;
+    line-height: 1.1428571429;
+    font-weight: 600;
+    letter-spacing: .007em;
+    color: #FF8E7A;
+  
+  }
+  .TitleDesc {
+    font-family: 'Myriad Apple';
+    font-size: 6.4vw;
+    line-height: 120%;
+    font-weight: 600;
+    color: #FF8C78;
+  }
+  .MarketingInfoDesc {
+    border-left: 1px solid hsl(0, 4%, 90%);
+    width: 45%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

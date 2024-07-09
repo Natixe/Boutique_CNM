@@ -5,6 +5,7 @@ import { ShopContext } from "../../../context/shop-contexte";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import PDMuscleMFG from '../../../assets/PDMuscleAssets/PDMuscleMFG.webp';
+import "../Desc.css";
 
 // Calculate X-axis rotation based on mouse position
 const calcX = (y, ly) => -(y - ly - window.innerHeight / 40) / 40;
@@ -116,9 +117,9 @@ export const DescPDMuscle = () => {
           <div className='DescDown'>
             <div className='ContainerDesc'>
               <p className='Desc'>
-              Cette formation de musculation est conçue pour maximiser la prise de muscle grâce à un programme structuré sur une semaine. Chaque jour cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur limite.<br/>
+              Cette formation de musculation est conçue pour maximiser la prise de muscle grâce à un programme structuré. Chaque jour cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur limite<br/>
               <br/>
-              Ce programme détaillé assure un développement musculaire équilibré, optimisant chaque répétition et repos pour des résultats rapides et efficaces. Suivez ce guide et dépassez vos limites pour des muscles plus forts et mieux définis.</p>
+              Ce programme détaillé assure un développement musculaire équilibré, optimisant chaque répétition et repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour des muscles plus forts et mieux définis.</p>
             </div>
             <div className='ContainerAddToCar'>
               <motion.button
@@ -137,20 +138,6 @@ export const DescPDMuscle = () => {
                 Ajouter au PANIER
               </motion.button>
               <div className='BOXPAY'></div>
-              <motion.button 
-                
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => addToCartPrincipal(7)} 
-                className='ButtonAddToPaypal'
-                >
-                ?
-              </motion.button>
             </div>
           </div>
         </div>
@@ -178,7 +165,6 @@ export const DescPDMuscle = () => {
               <div className='texteDesc'>
                 Amélioration de la Condition Physique :&nbsp; En combinant des exercices de force, de flexibilité et de cardio, ce programme booste votre endurance et votre agilité.<br/>
                 Brûlage de Graisses :&nbsp; Les mouvements intenses et dynamiques aident à augmenter votre métabolisme, facilitant la perte de graisse tout en construisant du muscle.<br/>
-                Renforcement du Cœur et de l’Esprit :&nbsp; En relevant les défis physiques du Street Workout, vous renforcez non seulement votre corps mais aussi votre discipline mentale et votre résilience.<br/>
                 <br/>
               </div>
               <div>

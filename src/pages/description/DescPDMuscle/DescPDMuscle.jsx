@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useContext } from 'react';
-import "./DescPDMuscle.css";
 import { useSpring, animated, to } from '@react-spring/web';
 import { useGesture } from 'react-use-gesture';
 import { ShopContext } from "../../../context/shop-contexte";

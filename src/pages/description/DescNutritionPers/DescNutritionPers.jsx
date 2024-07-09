@@ -1,5 +1,5 @@
 import React from 'react'
-import "./DescNutritionPers.css";
+
 
 
 export const DescNutritionPers = () => {

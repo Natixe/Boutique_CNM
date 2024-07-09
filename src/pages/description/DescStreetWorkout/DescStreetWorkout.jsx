@@ -139,20 +139,7 @@ export const DescStreetWorkout = () => {
                 Ajouter au PANIER
               </motion.button>
               <div className='BOXPAY'></div>
-              <motion.button 
-                
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => addToCartPrincipal(8)} 
-                className='ButtonAddToPaypal'
-                >
-                ?
-              </motion.button>
+
             </div>
           </div>
         </div>

@@ -12,11 +12,10 @@ import MID from './assets/FormationCarte0.png';
 
 import StreetWorkoutMF from './assets/StreetWorkoutAssets/Street_WorkoutMF.webp';
 import PDMuscleMF from './assets/PDMuscleAssets/PDMuscleMF.webp';
-import PDMusclePersoMF from './assets/PDMusclePersoAssets/PDMusclePersoMF.webp';
 import NutritionMF from './assets/NutritionAssets/NutritionMF.webp';
 import NutritionPersoMF from './assets/NutritionPersoAssets/NutritionPersoMF.webp';
 import LePPersonalisableMF from './assets/LePPersonalisableAssets/LePPersonalisableMF.webp';
-
+import PDDébutantMF from './assets/PDDébutantAssets/PDDébutantMF.webp';
 import Entertainment from "./assets/Entertainment.webp";
 
 
@@ -69,12 +68,12 @@ export const FORMATIONPRINCIPAL = [
     },
     {
         id: 6,
-        formationName: "Principal6",
-        price: 5999.0,
-        formationImage:Entertainment,
+        formationName: "Le Débutant",
+        price: 39.99,
+        formationImage:PDDébutantMF,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "descripton"
+        formationDescription : "Un programme débutant, conçu par des pros, pour muscler et perdre du gras, adaptable à vos objectifs."
     },
     {
         id: 7,

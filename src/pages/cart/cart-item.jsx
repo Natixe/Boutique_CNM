@@ -25,8 +25,8 @@ export const CartItem = (props) => {
               whileTap={{ scale: 0.8 }}
               className="CartInputRemove"
               onClick={() => {
-                /*removeFromCart(id);
-                removeFromCartPrincipal(id);*/
+                removeFromCart(id);
+                removeFromCartPrincipal(id);
               }}>
                 <span>-</span>
               </motion.button>

@@ -16,7 +16,7 @@ import RectangleFormation7 from '../../assets/FormationCarte7.png';
 
 import PDMuscleTitle from '../../assets/PDMuscleAssets/PDMuscleTitle.svg';
 import StreetWorkoutTitle from '../../assets/StreetWorkoutAssets/Street_WorkoutTitle.svg';
-import PDMusclePersoTitle from '../../assets/PDMusclePersoAssets/PDMusclePersoTitle.svg';
+import PDDébutantTitle from '../../assets/PDDébutantAssets/PDDébutantTitle.svg';
 import NutritionTitle from '../../assets/NutritionAssets/NutritionTitle.svg';
 import NutritionPersoTitle from '../../assets/NutritionPersoAssets/NutritionPersoTitle.svg';
 import LePPersonalisableTitle from '../../assets/LePPersonalisableAssets/LePPersonalisableTitle.svg';
@@ -164,7 +164,7 @@ export const FormationPrincipal = (props) => {
                 }
                 if (index === 7 && item.id === 6) {
                   console.log(item.id )
-                  //navigate("/descPDMusclePerso")
+                  navigate("/DescPDDébutant")
 
                 }
                 if (index === 7 && item.id === 7) {

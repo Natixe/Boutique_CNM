@@ -10,7 +10,7 @@ import { ShopContextProvider } from "./context/shop-contexte";
 
 import { DescStreetWorkout } from "./pages/description/DescStreetWorkout/DescStreetWorkout";
 import { DescPDMuscle } from "./pages/description/DescPDMuscle/DescPDMuscle";
-import { DescPDMusclePerso } from "./pages/description/DescPDMusclePerso/DescPDMusclePerso";
+import { DescPDDébutant } from "./pages/description/DescPDDébutant/DescPDDébutant";
 import { DescNutrition } from "./pages/description/DescNutrition/DescNutrition";
 import { DescNutritionPers  } from "./pages/description/DescNutritionPers/DescNutritionPers";
 
@@ -34,7 +34,7 @@ function App() {
             
             <Route path="/descStreetWorkout" element={<DescStreetWorkout />}  />{/*8*/}
             <Route path="/descPDMuscle" element={<DescPDMuscle />}  />{/*7*/}
-            <Route path="/descPDMusclePerso" element={<DescPDMusclePerso />}  />{/*6*/}
+            <Route path="/descPDDébutant" element={<DescPDDébutant />}  />{/*6*/}
             <Route path="/descNutrition" element={<DescNutrition />}  />{/*5*/}
             <Route path="/descNutritionPers" element={<DescNutritionPers />}  />{/*4*/}
             <Route path="/descLePPersonalisable" element={<DescLePPersonalisable />}  />{/*3*/}

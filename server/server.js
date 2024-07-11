@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const { VITE_PAYPAL_CLIENT_ID_PRODUCTION, PAYPAL_CLIENT_SECRET_PRODUCTION, PORT = 8888 } = process.env;
-const base = "https://api-m.paypal.com";
+const base = "https://api-m.sandbox.paypal.com";
 const app = express();
 
 const clientBuildPath = path.join(__dirname, "../src");

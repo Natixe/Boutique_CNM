@@ -589,12 +589,6 @@ color: #141417;*/
 
   }
 }
-
-
-
-
-
-
 @media screen and (max-width: 430px) {
   .ContainerFormationImg{
     width: 200px;
@@ -615,7 +609,7 @@ color: #141417;*/
     display: inline-block;
   }
   .ContainerDesc{
-    height: 50%;
+    height: 54%;
     width: 95%;
     
   }
@@ -669,7 +663,7 @@ color: #141417;*/
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
   }
   .ButtonAddToCard{
@@ -911,6 +905,33 @@ color: #141417;*/
     align-content: flex-start;
   }
 }
+
+@media screen and (max-width: 360px) {
+  .ContainerDesc {
+      height: 55%;
+      width: 95%;
+  }
+  .ContainerAddToCar {
+    height: 15%;
+    width: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .ButtonAddToCard {
+    color: #141417;
+    font-family: 'Myriad Apple';
+    font-size: 14px;
+    line-height: 1.381002381;
+    font-weight: 600;
+    letter-spacing: .011em;
+    width: 65%;
+    height: 45%;
+    background-color: #D76350;
+    border-radius: 10px;
+  }
+}
 @media screen and (max-width: 330px) {
   .ContainerFormationImg{
     width: 160px;
@@ -1064,31 +1085,5 @@ color: #141417;*/
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-}
-@media screen and (max-width: 360px) {
-  .ContainerDesc {
-      height: 55%;
-      width: 95%;
-  }
-  .ContainerAddToCar {
-    height: 15%;
-    width: 105%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  .ButtonAddToCard {
-    color: #141417;
-    font-family: 'Myriad Apple';
-    font-size: 14px;
-    line-height: 1.381002381;
-    font-weight: 600;
-    letter-spacing: .011em;
-    width: 65%;
-    height: 45%;
-    background-color: #D76350;
-    border-radius: 10px;
   }
 }

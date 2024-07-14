@@ -469,7 +469,7 @@ color: #141417;*/
     display: inline-block;
   }
   .ContainerDesc{
-    height: 50%;
+    height: 65%;
     width: 95%;
   }
   .Desc {
@@ -522,7 +522,7 @@ color: #141417;*/
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     flex-wrap: nowrap;
   }
   .ButtonAddToCard{
@@ -538,7 +538,7 @@ color: #141417;*/
     border-radius: 10px;
   }
   .DescDown {
-    height: 90%;
+    height: 70%;
     width: 100%;
     display: flex;
     align-content: flex-start;
@@ -610,10 +610,9 @@ color: #141417;*/
     height: 2250px;
     display: inline-block;
   }
-  .ContainerDesc{
-    height: 54%;
+  .ContainerDesc {
+    height: 70%;
     width: 95%;
-    
   }
   .Desc {
     font-family: 'Myriad Apple';
@@ -681,7 +680,7 @@ color: #141417;*/
     border-radius: 10px;
   }
   .DescDown {
-    height: 90%;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -741,7 +740,7 @@ color: #141417;*/
 
 @media screen and (max-width: 395px) {
   .DescDown {
-    height: 90%;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -767,7 +766,7 @@ color: #141417;*/
     display: inline-block;
   }
   .ContainerDesc{
-    height: 50%;
+    height: 65%;
     width: 95%;
     
   }
@@ -899,16 +898,20 @@ color: #141417;*/
     width: 105%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     flex-wrap: nowrap;
   }
   .DescDown {
-    height: 90%;
+    height: 70%;
     width: 100%;
     display: flex;
     align-content: flex-start;
     flex-direction: column;
   }
+  .ContainerDesc {
+    height: 65%;
+    width: 95%;
+}
 }
 
 @media screen and (max-width: 360px) {
@@ -957,7 +960,7 @@ color: #141417;*/
     display: inline-block;
   }
   .ContainerDesc{
-    height: 65%;
+    height: 80%;
     width: 100%;
     
   }
@@ -1027,7 +1030,7 @@ color: #141417;*/
     border-radius: 10px;
   }
   .DescDown {
-    height: 90%;
+    height: 70%;
     width: 100%;
     display: flex;
     align-content: flex-start;

@@ -431,6 +431,7 @@ color: #141417;*/
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   .ContainerAddToCar{
     height: 35%;
@@ -541,6 +542,7 @@ color: #141417;*/
     width: 100%;
     display: flex;
     align-content: flex-start;
+    flex-direction: column;
   }
   .ButtonAddToPaypal{
     font-family: 'Myriad Apple';
@@ -683,6 +685,7 @@ color: #141417;*/
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   .texteDescAvantage{
     font-family: 'Myriad Apple';
@@ -743,6 +746,7 @@ color: #141417;*/
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    flex-direction: column;
   }
   .ContainerFormationImg{
     width: 180px;
@@ -903,6 +907,7 @@ color: #141417;*/
     width: 100%;
     display: flex;
     align-content: flex-start;
+    flex-direction: column;
   }
 }
 
@@ -1026,6 +1031,7 @@ color: #141417;*/
     width: 100%;
     display: flex;
     align-content: flex-start;
+    flex-direction: column;
   }
   .texteDescAvantage{
     font-family: 'Myriad Apple';

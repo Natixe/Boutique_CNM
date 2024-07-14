@@ -4,7 +4,7 @@ import { useGesture } from 'react-use-gesture';
 import { ShopContext } from "../../../context/shop-contexte";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import PDDébutantMFG from '../../../assets/PDDébutantAssets/PDDébutantMFG.webp';
+import PriseMasse from '../../../assets/PriseDeMasseAssets/PriseDeMasseMFG.webp';
 import "../Desc.css";
 
 // Calculate X-axis rotation based on mouse position
@@ -15,7 +15,7 @@ const calcY = (x, lx) => (x - lx - window.innerWidth / 40) / 40;
 
 
 
-export const DescPDDébutant = () => {
+export const DescPriseMasse = () => {
   const { addToCartPrincipal, cartItemsPrincipal } = useContext(ShopContext);
   const navigate = useNavigate();
 
@@ -94,7 +94,7 @@ export const DescPDDébutant = () => {
               >
                 <img 
                   className="BOX" 
-                  src={PDDébutantMFG}
+                  src={PriseMasse}
                 ></img>
               </animated.div>
             </div>
@@ -108,19 +108,18 @@ export const DescPDDébutant = () => {
               initial={{ color: '#000000' }} 
               animate={{ color: '#FF8C78' }}
               transition={{ duration: 3, loop: Infinity, ease: "linear" }}
-              >Le Débutant ®</motion.p>
+              >Prise de Masse®</motion.p>
             </div>
             <div className='ContainerPriceDesc'>
-              <p className='PriceDesc'>39.99€</p>
+              <p className='PriceDesc'>29.99€</p>
             </div>
           </div>
           <div className='DescDown'>
             <div className='ContainerDesc'>
               <p className='Desc'>
-              Cette formation de musculation est conçue par des professionnels pour maximiser la prise de muscle grâce à un programme structuré. Chaque jour cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur limite.<br/>
+              Le programme de prise de masse est spécialement conçu pour favoriser une augmentation significative de la masse musculaire et de la force. Grâce à une combinaison de conseils nutritionnels détaillés et d'un plan d'entraînement intensif, ce programme garantit des résultats optimaux.<br/>
               <br/>
-              Ce programme détaillé, adapté aux débutants, assure un développement musculaire équilibré, optimisant chaque répétition et repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour des muscles plus forts et mieux définis.</p>
-              <br/>
+              Rejoignez notre programme dès maintenant et accédez à nos formations personnalisables pour une prise de masse propre et efficace. Ensemble, atteignons vos objectifs de force et de performance.</p>
             </div>
             <div className='ContainerAddToCar'>
               <motion.button
@@ -133,7 +132,7 @@ export const DescPDDébutant = () => {
                 }
                 onClick={() => {
                   navigate("/cart");
-                  addToCartPrincipal(6);
+                  addToCartPrincipal(2);
                 }}
                 className='ButtonAddToCard'>
                 Ajouter au PANIER
@@ -152,30 +151,26 @@ export const DescPDDébutant = () => {
           </div>
           <div className='textInfoDesc'>
             <div className='texteDesc'>
-            Découvrez notre programme pour débutants conçu pour ceux qui ont peu ou pas d'expérience sportive. En 8 semaines, gagnez en force, musclez-vous et perdez du gras pour obtenir un corps qui vous plaît. Écrit par des professionnels, ce programme peut se combiner avec nos autres offres de sèche ou prise de masse, disponibles sur notre site. Profitez de séances intenses et rapides, adaptées à votre niveau, pour des résultats efficaces et durables.<br/>
+            Découvrez notre programme Prise de Masse, spécialement conçu pour augmenter votre masse musculaire, votre force et améliorer vos performances globales. Avec 40 conseils essentiels, ce programme vous guide à travers une prise de masse propre et efficace.<br/>
               <br/>
-              <h1 className='TitleDesc2'>Pourquoi choisir notre programme pour les débutants ?<br/></h1>
+              <h1 className='TitleDesc2'>Pourquoi choisir notre programme Prise de Masse ?<br/></h1>
               <br/>
               <div className='texteDesc'>
-              Ce programme, spécialement conçu pour les débutants, s'adresse à ceux qui n'ont jamais pratiqué ou peu pratiqué d'activité sportive.<br/>  
-              À travers des gains musculaires et une perte de gras, vous pourrez vous forger un corps qui vous plaît.<br/> 
-              <br/> 
-              Écrit par des professionnels spécialisés, ce programme a été réfléchi pour vous offrir une expérience agréable et efficace. 
-              Les séances sont courtes mais intenses, avec un accent particulier sur l'hypertrophie musculaire et la force fonctionnelle.<br/>  
-              Chaque session est structurée pour inclure des exercices variés et progressifs, tels que des séries dégressives pour maximiser les résultats. 
-              En plus des exercices pour les pectoraux, épaules et biceps, le programme intègre des journées dédiées au dos, triceps et trapèzes, ainsi qu'aux quadriceps, ischio-jambiers et mollets. 
-              Vous bénéficierez d'une approche équilibrée et progressive, visant à améliorer votre posture, votre force et la définition musculaire.<br/>  
-              Le programme peut également être combiné avec notre offre de sèche ou prise de masse, disponible sur notre site.
+              Vous apprendrez à gérer un surplus calorique modéré, à augmenter votre apport en protéines, et à équilibrer vos macronutriments pour des résultats optimaux. <br/>
+              Profitez d’un plan nutritionnel détaillé incluant des sources variées de protéines, de glucides complexes, et de lipides sains pour nourrir vos muscles et maximiser votre récupération. <br/>
+              En complément, des exercices de musculation ciblés et un suivi rigoureux vous aideront à atteindre vos objectifs.<br/>
+              Des exercices composés et des techniques de surcharge progressive sont utilisés pour garantir un développement musculaire équilibré et une puissance accrue des membres inférieurs.<br/>
+              <br/>
               </div>
-              <h1 className='TitleDesc2'>Les Avantages du Programme débutants :<br/></h1>
+              <h1 className='TitleDesc2'>Les Avantages de Norte Prise de Masse :<br/></h1>
               <br/>
               <div className='texteDesc'>
-                Le Programme Débutants est conçu spécialement pour ceux qui n'ont jamais ou peu pratiqué d'activité sportive.<br/>
-                Il offre une approche complète pour obtenir des gains musculaires et perdre du gras, vous aidant à sculpter un corps qui vous plaît.<br/>
+                Augmentation de la Masse Musculaire :&nbsp; Notre programme est conçu pour maximiser l'hypertrophie musculaire en utilisant des techniques d'entraînement avancées et une alimentation adaptée. Vous verrez une croissance significative de vos muscles en peu de temps.<br/>
+                Amélioration de la Force Fonctionnelle :&nbsp; En plus d'augmenter la masse musculaire, notre programme se concentre sur l'amélioration de la force fonctionnelle, ce qui vous permet d'effectuer vos activités quotidiennes avec plus d'efficacité et de puissance.<br/>
                 <br/>
               </div>
               <div>
-              Rejoignez notre formation et profitez d'un accompagnement personnalisé et atteignez vos objectifs de manière efficace et sécurisée. Transformez votre physique et boostez votre confiance grâce à un parcours sportif adapté à votre niveau et à vos ambitions.
+              Rejoignez notre formation Prise de Masse et découvrez comment exploiter pleinement votre potentiel, dépasser vos limites et obtenir des résultats impressionnants. Chaque séance est une étape vers un corps plus fort,et en meilleure santé. Transformez votre routine d'entraînement et voyez la différence !
               </div>
             </div>
 
@@ -188,12 +183,11 @@ export const DescPDDébutant = () => {
             <div className='AvantageInfoDesc'>
                 <div className='AvantageInfoTitle'>Avantages</div>
                 <div className='texteDescAvantageBOX'></div>
-                <div className='texteDescAvantage'>Musculation Progressive :&nbsp; Idéal pour les novice, favorisant une croissance musculaire équilibrée.</div>
-                <div className='texteDescAvantage'>Perte de Graisse :&nbsp; Des exercices qui aident à brûler les graisses tout en gagnant en muscle.</div>
+                <div className='texteDescAvantage'>Hypertrophie Musculaire Maximale :&nbsp; Favorise une croissance rapide des muscles.</div>
+                <div className='texteDescAvantage'>Posture et Stabilité :&nbsp; Renforce les muscles posturaux, réduisant les douleurs dorsales.</div>
                 <div className='texteDescAvantage'>Développement :&nbsp; Assure un développement harmonieux de tous les groupes musculaires.</div>
-                <div className='texteDescAvantage'>Flexibilité :&nbsp;Peut être combiné avec nos programmes de sèche ou de prise de masse.</div>
                 <div className='texteDescAvantage'>Adaptabilité :&nbsp;Exercices pour ajuster l'intensité, permettant progression individuelle.</div>
-                <div className='texteDescAvantage'>Encadrement Professionnel :&nbsp;Conçu par des experts en fitness, garantissant sécurité et efficacité.</div>
+                <div className='texteDescAvantage'>Le Plaisir de le Variété :&nbsp;Diversité des exercices et routines maintient l'intérêt et l'excitation.</div>
             </div>
             <div className='leplusInfoDesc'>
 

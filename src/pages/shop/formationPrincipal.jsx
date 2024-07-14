@@ -6,19 +6,11 @@ import { useNavigate } from "react-router-dom";
 
 import "./formationPrincipal.css";
 
-import RectangleFormation1 from '../../assets/FormationCarte1.png';
-import RectangleFormation2 from '../../assets/FormationCarte2.png';
-import RectangleFormation3 from '../../assets/FormationCarte3.png';
-import RectangleFormation4 from '../../assets/FormationCarte4.png';
-import RectangleFormation5 from '../../assets/FormationCarte5.png';
-import RectangleFormation6 from '../../assets/FormationCarte6.png';
-import RectangleFormation7 from '../../assets/FormationCarte7.png';
-
 import PDMuscleTitle from '../../assets/PDMuscleAssets/PDMuscleTitle.svg';
 import StreetWorkoutTitle from '../../assets/StreetWorkoutAssets/Street_WorkoutTitle.svg';
 import PDDébutantTitle from '../../assets/PDDébutantAssets/PDDébutantTitle.svg';
 import NutritionTitle from '../../assets/NutritionAssets/NutritionTitle.svg';
-import NutritionPersoTitle from '../../assets/NutritionPersoAssets/NutritionPersoTitle.svg';
+
 import LePPersonalisableTitle from '../../assets/LePPersonalisableAssets/LePPersonalisableTitle.svg';
 import MID from '../../assets/FormationCarte0.png';
 
@@ -138,28 +130,27 @@ export const FormationPrincipal = (props) => {
                 backgroundSize: 'cover',
                 cursor: index === 7 ? 'pointer' : 'default',
               }}
-                                /*navigate("/cart")
-                                addToCartPrincipal(item.id);
-                                console.log(item.id)*/
               onClick={() => {
                 if (index === 7 && item.id === 1) {
                   console.log(item.id )
                 }
                 if (index === 7 && item.id === 2) {
                   console.log(item.id )
+                  navigate("/descPriseMasse")
 
                 }
                 if (index === 7 && item.id === 3) {
                   console.log(item.id )
-                  //navigate("/descLePPersonalisable")
+                  navigate("/descSeche")
                 }
                 if (index === 7 && item.id === 4) {
                   console.log(item.id)
+                  navigate("/descPertedePoid")
 
                 }
                 if (index === 7 && item.id === 5) {
                   console.log(item.id )
-                  //navigate("/descNutrition")
+                  navigate("/desPDMuscleMaison")
 
                 }
                 if (index === 7 && item.id === 6) {
@@ -169,7 +160,7 @@ export const FormationPrincipal = (props) => {
                 }
                 if (index === 7 && item.id === 7) {
                   console.log(item.id)
-                  navigate("/descPDMuscle")
+                  navigate("/descPDMuscleSalle")
                 }
                 if (index === 7 && item.id === 8) {
                   console.log(item.id )

@@ -1,20 +1,12 @@
 
-
-import Image1 from './assets/FormationCarte1.png';
-import Image2 from './assets/NutritionPersoMF1.webp';
-import Image3 from './assets/FormationCarte3.png';
-import Image4 from './assets/FormationCarte4.png';
-import Image5 from './assets/FormationCarte5.png';
-import Image6 from './assets/FormationCarte6.png';
-import Image7 from './assets/FormationCarte7.png';
-import Image8 from './assets/FormationCarte8.png';
 import MID from './assets/FormationCarte0.png';
 
 import StreetWorkoutMF from './assets/StreetWorkoutAssets/Street_WorkoutMF.webp';
 import PDMuscleMF from './assets/PDMuscleAssets/PDMuscleMF.webp';
-import NutritionMF from './assets/NutritionAssets/NutritionMF.webp';
-import NutritionPersoMF from './assets/NutritionPersoAssets/NutritionPersoMF.webp';
-import LePPersonalisableMF from './assets/LePPersonalisableAssets/LePPersonalisableMF.webp';
+import PerteDePoidMF from './assets/PertedePoidAssets/PertedePoidMF.webp';
+import PriseDeMasse from './assets/PriseDeMasseAssets/PriseDeMasseMF.webp';
+
+
 import PDDébutantMF from './assets/PDDébutantAssets/PDDébutantMF.webp';
 import Entertainment from "./assets/Entertainment.webp";
 
@@ -32,39 +24,39 @@ export const FORMATIONPRINCIPAL = [
     },
     {
         id: 2,
-        formationName: "Principal2",
-        price: 2999.0,
-        formationImage:Entertainment,
+        formationName: "Prise De Masse",
+        price: 29.99,
+        formationImage:PriseDeMasse,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "descripton"
+        formationDescription : "Transforme ton corps avec notre PDM, augmentez ta force et ta masse musculaire"
     },
     {
         id: 3,
-        formationName: "Principal3",
-        price: 3999.0,
+        formationName: "Seche",
+        price: 29.99,
         formationImage:Entertainment,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "descripton"
+        formationDescription : "Transforme ton corps avec notre sèche, brûle les graisses, garde tes muscles!"
     },
     {
         id: 4,
-        formationName: "Principal4",
-        price: 4999.0,
-        formationImage:Entertainment,
+        formationName: "Perte de Poid",
+        price: 39.99,
+        formationImage:PerteDePoidMF,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "descripton"
+        formationDescription : "Perte de poids par des experts, rapide et efficace, adapté à tous niveaux."
     },
     {
         id: 5,
-        formationName: "Principal5",
-        price: 5999.0,
-        formationImage:Entertainment,
+        formationName: "Prise de Muscle à la maison",
+        price: 39.99,
+        formationImage:MID,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "descripton"
+        formationDescription : "Ecrit par des professionnels pour bâtir une base solide."
     },
     {
         id: 6,
@@ -73,16 +65,16 @@ export const FORMATIONPRINCIPAL = [
         formationImage:PDDébutantMF,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "Un programme débutant, conçu par des pros, pour muscler et perdre du gras, adaptable à vos objectifs."
+        formationDescription : "Conçu par des pros, pour muscler et perdre du gras, adaptable à vos objectifs."
     },
     {
         id: 7,
-        formationName: "Prise de Muscle",
+        formationName: "Prise de Muscle à la salle",
         price: 39.99,
         formationImage:PDMuscleMF,
         blur: true,
         formationDescriptionLongue : "descriptonLongue",
-        formationDescription : "Programme de musculatio Prise de Muscle, conçue pour transformer votre physique et optimiser votre croissance musculaire."
+        formationDescription : "Conçue pour transformer votre physique et optimiser votre croissance musculaire."
     },
     {
         id: 8,
@@ -100,7 +92,7 @@ export const FORMATIONS = [
         id: 9,
         formationName: "muscu1",
         price: 1999.0,
-        formationImage:Image1,
+        formationImage:Entertainment,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
@@ -108,7 +100,7 @@ export const FORMATIONS = [
         id: 10,
         formationName: "muscu2",
         price: 2999.0,
-        formationImage:Image1,
+        formationImage:Entertainment,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
@@ -116,7 +108,7 @@ export const FORMATIONS = [
         id: 11,
         formationName: "muscu3",
         price: 3999.0,
-        formationImage:Image1,
+        formationImage:Entertainment,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
@@ -124,7 +116,7 @@ export const FORMATIONS = [
         id: 12,
         formationName: "muscu4",
         price: 4999.0,
-        formationImage:Image1,
+        formationImage:Entertainment,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
@@ -132,7 +124,7 @@ export const FORMATIONS = [
         id: 13,
         formationName: "muscu5",
         price: 5999.0,
-        formationImage:Image1,
+        formationImage:Entertainment,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     },
@@ -140,7 +132,7 @@ export const FORMATIONS = [
         id: 14,
         formationName: "muscu6",
         price: 5999.0,
-        formationImage:Image1,
+        formationImage:Entertainment,
         formationDescriptionLongue : "descriptonLongue",
         formationDescription : "descripton"
     }

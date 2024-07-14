@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './ImageSlider.css';
-import RectangleFormation1 from '../assets/FormationCarte1.png';
-import RectangleFormation2 from '../assets/FormationCarte2.png';
-import RectangleFormation3 from '../assets/FormationCarte3.png';
-import RectangleFormation4 from '../assets/FormationCarte4.png';
-import RectangleFormation5 from '../assets/FormationCarte5.png';
 import IMG_3885 from '../assets/IMG_3885.jpg';
 
 const images = [
-    RectangleFormation1,
-    RectangleFormation2,
-    RectangleFormation3,
-    RectangleFormation4,
-    RectangleFormation5,
     IMG_3885
 ];
 

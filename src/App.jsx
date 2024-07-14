@@ -9,10 +9,13 @@ import { Checkout } from "./pages/checkout/checkout";
 import { ShopContextProvider } from "./context/shop-contexte";
 
 import { DescStreetWorkout } from "./pages/description/DescStreetWorkout/DescStreetWorkout";
-import { DescPDMuscle } from "./pages/description/DescPDMuscle/DescPDMuscle";
+import { DescPDMuscleSalle } from "./pages/description/DescMuscleSalle/DescPDMuscleSalle";
 import { DescPDDébutant } from "./pages/description/DescPDDébutant/DescPDDébutant";
-import { DescNutrition } from "./pages/description/DescNutrition/DescNutrition";
-import { DescNutritionPers  } from "./pages/description/DescNutritionPers/DescNutritionPers";
+import { DesPDMuscleMaison } from "./pages/description/DesMuscleMaison/DesPDMuscleMaison";
+import { DescPertedePoid } from "./pages/description/DescPertedePoid/DescPertedePoid";
+import { DescSeche } from "./pages/description/DescSeche/DescSeche";
+import { DescPriseMasse } from "./pages/description/DescPriseMasse/DescPriseMasse";
+
 
 import { DescLePPersonalisable } from "./pages/description/DescLePPersonalisable/DescLePPersonalisable";
 
@@ -33,11 +36,12 @@ function App() {
             <Route path="/checkout" element={<Checkout />}  />
             
             <Route path="/descStreetWorkout" element={<DescStreetWorkout />}  />{/*8*/}
-            <Route path="/descPDMuscle" element={<DescPDMuscle />}  />{/*7*/}
+            <Route path="/descPDMuscleSalle" element={<DescPDMuscleSalle />}  />{/*7*/}
             <Route path="/descPDDébutant" element={<DescPDDébutant />}  />{/*6*/}
-            <Route path="/descNutrition" element={<DescNutrition />}  />{/*5*/}
-            <Route path="/descNutritionPers" element={<DescNutritionPers />}  />{/*4*/}
-            <Route path="/descLePPersonalisable" element={<DescLePPersonalisable />}  />{/*3*/}
+            <Route path="/desPDMuscleMaison" element={<DesPDMuscleMaison />}  />{/*5*/}
+            <Route path="/descPertedePoid" element={<DescPertedePoid />}  />{/*4*/}
+            <Route path="/descSeche" element={<DescSeche />}  />{/*3*/}
+            <Route path="/descPriseMasse" element={<DescPriseMasse />}  />{/*2*/}
 
 
             <Route path="/payPalError" element={<PayPalError />}  />{/*System*/}

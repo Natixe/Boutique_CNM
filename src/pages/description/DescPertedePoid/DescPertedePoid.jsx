@@ -4,7 +4,7 @@ import { useGesture } from 'react-use-gesture';
 import { ShopContext } from "../../../context/shop-contexte";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import PDDébutantMFG from '../../../assets/PDDébutantAssets/PDDébutantMFG.webp';
+import PertedePoidMFG from '../../../assets/PertedePoidAssets/PertedePoidMFG.webp';
 import "../Desc.css";
 
 // Calculate X-axis rotation based on mouse position
@@ -15,7 +15,7 @@ const calcY = (x, lx) => (x - lx - window.innerWidth / 40) / 40;
 
 
 
-export const DescPDDébutant = () => {
+export const DescPertedePoid = () => {
   const { addToCartPrincipal, cartItemsPrincipal } = useContext(ShopContext);
   const navigate = useNavigate();
 
@@ -94,7 +94,7 @@ export const DescPDDébutant = () => {
               >
                 <img 
                   className="BOX" 
-                  src={PDDébutantMFG}
+                  src={PertedePoidMFG}
                 ></img>
               </animated.div>
             </div>
@@ -108,7 +108,7 @@ export const DescPDDébutant = () => {
               initial={{ color: '#000000' }} 
               animate={{ color: '#FF8C78' }}
               transition={{ duration: 3, loop: Infinity, ease: "linear" }}
-              >Le Débutant ®</motion.p>
+              >Perte de Poid®</motion.p>
             </div>
             <div className='ContainerPriceDesc'>
               <p className='PriceDesc'>39.99€</p>
@@ -117,10 +117,9 @@ export const DescPDDébutant = () => {
           <div className='DescDown'>
             <div className='ContainerDesc'>
               <p className='Desc'>
-              Cette formation de musculation est conçue par des professionnels pour maximiser la prise de muscle grâce à un programme structuré. Chaque jour cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur limite.<br/>
+              Ce programme de perte de poids à la salle est conçu pour maximiser la combustion des graisses et le gain musculaire. Chaque séance cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour repousser vos limites.<br/>
               <br/>
-              Ce programme détaillé, adapté aux débutants, assure un développement musculaire équilibré, optimisant chaque répétition et repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour des muscles plus forts et mieux définis.</p>
-              <br/>
+              Ce plan détaillé assure un développement musculaire harmonieux, optimisant chaque répétition et période de repos pour des résultats rapides et efficaces. En suivant ce guide, vous dépasserez vos limites pour obtenir le corps dont vous rêvez.</p>
             </div>
             <div className='ContainerAddToCar'>
               <motion.button
@@ -133,7 +132,7 @@ export const DescPDDébutant = () => {
                 }
                 onClick={() => {
                   navigate("/cart");
-                  addToCartPrincipal(6);
+                  addToCartPrincipal(4);
                 }}
                 className='ButtonAddToCard'>
                 Ajouter au PANIER
@@ -152,30 +151,26 @@ export const DescPDDébutant = () => {
           </div>
           <div className='textInfoDesc'>
             <div className='texteDesc'>
-            Découvrez notre programme pour débutants conçu pour ceux qui ont peu ou pas d'expérience sportive. En 8 semaines, gagnez en force, musclez-vous et perdez du gras pour obtenir un corps qui vous plaît. Écrit par des professionnels, ce programme peut se combiner avec nos autres offres de sèche ou prise de masse, disponibles sur notre site. Profitez de séances intenses et rapides, adaptées à votre niveau, pour des résultats efficaces et durables.<br/>
+            Plongez dans notre programme chaque session est soigneusement planifiée pour que vous puissiez brûler des calories tout en construisant du muscle, garantissant ainsi une transformation physique équilibrée et durable. Adoptez ce programme, mettez votre corps à l'épreuve, et observez des résultats spectaculaires en un temps record.<br/>
               <br/>
-              <h1 className='TitleDesc2'>Pourquoi choisir notre programme pour les débutants ?<br/></h1>
+              <h1 className='TitleDesc2'>Pourquoi choisir notre programme Perte de Poids ?<br/></h1>
               <br/>
               <div className='texteDesc'>
-              Ce programme, spécialement conçu pour les débutants, s'adresse à ceux qui n'ont jamais pratiqué ou peu pratiqué d'activité sportive.<br/>  
-              À travers des gains musculaires et une perte de gras, vous pourrez vous forger un corps qui vous plaît.<br/> 
-              <br/> 
-              Écrit par des professionnels spécialisés, ce programme a été réfléchi pour vous offrir une expérience agréable et efficace. 
-              Les séances sont courtes mais intenses, avec un accent particulier sur l'hypertrophie musculaire et la force fonctionnelle.<br/>  
-              Chaque session est structurée pour inclure des exercices variés et progressifs, tels que des séries dégressives pour maximiser les résultats. 
-              En plus des exercices pour les pectoraux, épaules et biceps, le programme intègre des journées dédiées au dos, triceps et trapèzes, ainsi qu'aux quadriceps, ischio-jambiers et mollets. 
-              Vous bénéficierez d'une approche équilibrée et progressive, visant à améliorer votre posture, votre force et la définition musculaire.<br/>  
-              Le programme peut également être combiné avec notre offre de sèche ou prise de masse, disponible sur notre site.
+                Notre programme Perte de Poids débute avec des sessions axées sur le renforcement global de la force, incluant pectoraux, épaules et biceps, via des exercices variés et progressifs. Ces sessions optimisent l'hypertrophie musculaire et améliorent la force fonctionnelle.<br/>
+                Nous utilisons des techniques de séries dégressives pour maximiser la croissance musculaire et des seance de Cardio pour la perde de masse grasse rapide.
+                Le programme inclut aussi des journées dédiées au dos, triceps et trapèzes, mettant l'accent sur des mouvements de tirage et de poussée pour sculpter ces muscles clés. Cela améliore la posture, la force et la définition musculaire.
+                Les jambes sont travaillées intensivement avec des exercices composés et de surcharge progressive pour un développement équilibré et une puissance accrue des membres inférieurs. Des jours spécifiques sont réservés aux quadriceps, ischio-jambiers et mollets.
+                <br/>
               </div>
-              <h1 className='TitleDesc2'>Les Avantages du Programme débutants :<br/></h1>
+              <h1 className='TitleDesc2'>Les Avantages de Perte de Poids:<br/></h1>
               <br/>
               <div className='texteDesc'>
-                Le Programme Débutants est conçu spécialement pour ceux qui n'ont jamais ou peu pratiqué d'activité sportive.<br/>
-                Il offre une approche complète pour obtenir des gains musculaires et perdre du gras, vous aidant à sculpter un corps qui vous plaît.<br/>
+                Amélioration de la Condition Physique :&nbsp; En combinant des exercices de force, de flexibilité et de cardio, ce programme booste votre endurance et votre agilité.<br/>
+                Brûlage de Graisses :&nbsp;  Les mouvements intenses et dynamiques augmentent votre métabolisme, facilitant la perte de graisse tout en construisant du muscle.<br/>
                 <br/>
               </div>
               <div>
-              Rejoignez notre formation et profitez d'un accompagnement personnalisé et atteignez vos objectifs de manière efficace et sécurisée. Transformez votre physique et boostez votre confiance grâce à un parcours sportif adapté à votre niveau et à vos ambitions.
+              Rejoignez notre formation Perte de Poids et découvrez comment exploiter pleinement votre potentiel, dépasser vos limites et obtenir des résultats impressionnants. Chaque séance est une étape vers un corps plus fort, plus défini et en meilleure santé. Transformez votre routine d'entraînement et voyez la différence !
               </div>
             </div>
 
@@ -188,12 +183,12 @@ export const DescPDDébutant = () => {
             <div className='AvantageInfoDesc'>
                 <div className='AvantageInfoTitle'>Avantages</div>
                 <div className='texteDescAvantageBOX'></div>
-                <div className='texteDescAvantage'>Musculation Progressive :&nbsp; Idéal pour les novice, favorisant une croissance musculaire équilibrée.</div>
-                <div className='texteDescAvantage'>Perte de Graisse :&nbsp; Des exercices qui aident à brûler les graisses tout en gagnant en muscle.</div>
+                <div className='texteDescAvantage'>Hypertrophie Musculaire Maximale :&nbsp; Favorise une croissance rapide des muscles.</div>
+                <div className='texteDescAvantage'>Posture et Stabilité :&nbsp; Renforce les muscles posturaux, réduisant les douleurs dorsales.</div>
                 <div className='texteDescAvantage'>Développement :&nbsp; Assure un développement harmonieux de tous les groupes musculaires.</div>
-                <div className='texteDescAvantage'>Flexibilité :&nbsp;Peut être combiné avec nos programmes de sèche ou de prise de masse.</div>
+                <div className='texteDescAvantage'>Brûlage de Graisses :&nbsp;Mouvements intenses, facilitant perte de graisse et gain de muscle.</div>
                 <div className='texteDescAvantage'>Adaptabilité :&nbsp;Exercices pour ajuster l'intensité, permettant progression individuelle.</div>
-                <div className='texteDescAvantage'>Encadrement Professionnel :&nbsp;Conçu par des experts en fitness, garantissant sécurité et efficacité.</div>
+                <div className='texteDescAvantage'>Le Plaisir de le Variété :&nbsp;Diversité des exercices et routines maintient l'intérêt et l'excitation.</div>
             </div>
             <div className='leplusInfoDesc'>
 

@@ -15,7 +15,7 @@ const calcY = (x, lx) => (x - lx - window.innerWidth / 40) / 40;
 
 
 
-export const DescPDMuscle = () => {
+export const DesPDMuscleMaison = () => {
   const { addToCartPrincipal, cartItemsPrincipal } = useContext(ShopContext);
   const navigate = useNavigate();
 
@@ -108,7 +108,7 @@ export const DescPDMuscle = () => {
               initial={{ color: '#000000' }} 
               animate={{ color: '#FF8C78' }}
               transition={{ duration: 3, loop: Infinity, ease: "linear" }}
-              >Prise de Muscle ®</motion.p>
+              >Prise de Muscle Maison®</motion.p>
             </div>
             <div className='ContainerPriceDesc'>
               <p className='PriceDesc'>39.99€</p>
@@ -117,9 +117,9 @@ export const DescPDMuscle = () => {
           <div className='DescDown'>
             <div className='ContainerDesc'>
               <p className='Desc'>
-              Cette formation de musculation est conçue pour maximiser la prise de muscle grâce à un programme structuré. Chaque jour cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur limite<br/>
+              Ce programme à la maison est conçu pour maximiser la prise de muscle grâce à une approche structurée. Chaque séance cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur maximum.<br/>
               <br/>
-              Ce programme détaillé assure un développement musculaire équilibré, optimisant chaque répétition et repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour des muscles plus forts et mieux définis.</p>
+              Ce plan détaillé assure un développement musculaire équilibré, optimisant chaque répétition et période de repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour obtenir des muscles plus forts et mieux définis.</p>
             </div>
             <div className='ContainerAddToCar'>
               <motion.button
@@ -132,7 +132,7 @@ export const DescPDMuscle = () => {
                 }
                 onClick={() => {
                   navigate("/cart");
-                  addToCartPrincipal(7);
+                  addToCartPrincipal(5);
                 }}
                 className='ButtonAddToCard'>
                 Ajouter au PANIER
@@ -151,20 +151,25 @@ export const DescPDMuscle = () => {
           </div>
           <div className='textInfoDesc'>
             <div className='texteDesc'>
-            Découvrez notre formation de musculation Prise de Muscle, conçue pour transformer votre physique et optimiser votre croissance musculaire. Ce programme intensif de sept jours est structuré pour cibler efficacement tous les principaux groupes musculaires, en alternant entre jours d'entraînement intensif et jours de repos stratégiques.<br/>
+            Plongez dans notre programme intensif de musculation Prise de Muscle à domicile, conçu pour métamorphoser votre corps et maximiser la croissance musculaire. Ce plan sur sept jours cible efficacement chaque groupe musculaire majeur, en combinant des séances intensives avec des jours de repos calculés.<br/>
               <br/>
               <h1 className='TitleDesc2'>Pourquoi choisir notre programme  Prise de Muscle ?<br/></h1>
               <br/>
               <div className='texteDesc'>
-                Vous commencerez par des sessions axées sur le renforcement du haut du corps, notamment les pectoraux, épaules et biceps, avec une variété d'exercices stimulants et progressifs. <br/>Ces sessions sont conçues pour maximiser l'hypertrophie musculaire et améliorer votre force fonctionnelle. Les techniques de séries dégressives sont intégrées pour pousser vos muscles à leur maximum et favoriser une croissance rapide et efficace.             
-                <br/>Le programme inclut également des journées dédiées à l'entraînement du dos, des triceps et des trapèzes, mettant l'accent sur des mouvements de tirage et de poussée pour sculpter et définir ces muscles clés. &nbsp;<br/>Ces séances visent à améliorer la posture, la force et la définition musculaire.
-                <br/>Les jambes ne sont pas en reste, avec des jours spécifiques pour travailler intensément les quadriceps, ischio-jambiers et mollets. &nbsp;<br/>Des exercices composés et des techniques de surcharge progressive sont utilisés pour garantir un développement musculaire équilibré et une puissance accrue des membres inférieurs.
+              Vous commencerez par des sessions axées sur le renforcement du haut du corps, notamment les pectoraux, épaules et biceps, avec une variété d'exercices stimulants et progressifs. <br/>
+              Ces sessions sont conçues pour maximiser l'hypertrophie musculaire et améliorer votre force fonctionnelle. 
+              Les techniques de séries dégressives sont intégrées pour pousser vos muscles à leur maximum et favoriser une croissance rapide et efficace.<br/> 
+              Le programme inclut également des journées dédiées à l'entraînement du dos, des triceps et des trapèzes, mettant l'accent sur des mouvements de tirage et de poussée pour sculpter et définir ces muscles clés.<br/> 
+              Ces séances visent à améliorer la posture, la force et la définition musculaire. 
+              Les jambes ne sont pas en reste, avec des jours spécifiques pour travailler intensément les quadriceps, ischio-jambiers et mollets. <br/>
+              Des exercices composés et des techniques de surcharge progressive sont utilisés pour garantir un développement musculaire équilibré et une puissance accrue des membres inférieurs.<br/>
+              <br/>
               </div>
               <h1 className='TitleDesc2'>Les Avantages de Prise de Muscle:<br/></h1>
               <br/>
               <div className='texteDesc'>
                 Amélioration de la Condition Physique :&nbsp; En combinant des exercices de force, de flexibilité et de cardio, ce programme booste votre endurance et votre agilité.<br/>
-                Brûlage de Graisses :&nbsp; Les mouvements intenses et dynamiques aident à augmenter votre métabolisme, facilitant la perte de graisse tout en construisant du muscle.<br/>
+                Brûlage de Graisses :&nbsp;  Les mouvements intenses et dynamiques augmentent votre métabolisme, facilitant la perte de graisse tout en construisant du muscle.<br/>
                 <br/>
               </div>
               <div>

@@ -114,12 +114,11 @@ color: #141417;*/
 
 }
 
-.ContainerDesc{
-  height: 60%;
-  width: 100%;
+.ContainerDesc {
+  height: 100%;
+  width: 95%;
   position: relative;
   z-index: 1;
-  
 }
 .ContainerAddToCar{
   height: 40%;
@@ -351,13 +350,12 @@ color: #141417;*/
     height: 2600px;
     display: inline-block;
   }
-  .ContainerDesc{
-    height: 50%;
+  .ContainerDesc {
+    height: 100%;
     width: 95%;
     position: relative;
     z-index: 1;
-    
-  }
+}
   .Desc {
     font-family: 'Myriad Apple';
     font-size: 19px;
@@ -433,11 +431,12 @@ color: #141417;*/
     display: inline-block;
   }
   .DescDown {
-    height: 90%;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
   }
   .ContainerAddToCar{
     height: 35%;
@@ -476,12 +475,12 @@ color: #141417;*/
     height: 2200px;
     display: inline-block;
   }
-  .ContainerDesc{
-    height: 65%;
+  .ContainerDesc {
+    height: 100%;
     width: 95%;
     position: relative;
     z-index: 1;
-  }
+}
   .Desc {
     font-family: 'Myriad Apple';
     font-size: 18px;
@@ -553,8 +552,9 @@ color: #141417;*/
     height: 70%;
     width: 100%;
     display: flex;
-    align-content: flex-start;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
   }
   .ButtonAddToPaypal{
     font-family: 'Myriad Apple';
@@ -623,11 +623,11 @@ color: #141417;*/
     display: inline-block;
   }
   .ContainerDesc {
-    height: 73%;
+    height: 100%;
     width: 95%;
     position: relative;
     z-index: 1;
-  }
+}
   .Desc {
     font-family: 'Myriad Apple';
     font-size: 15px;
@@ -701,6 +701,7 @@ color: #141417;*/
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
   }
   .texteDescAvantage{
     font-family: 'Myriad Apple';
@@ -760,8 +761,8 @@ color: #141417;*/
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
     flex-direction: column;
+    align-items: center;
   }
   .ContainerFormationImg{
     width: 180px;
@@ -781,12 +782,12 @@ color: #141417;*/
     height: 2250px;
     display: inline-block;
   }
-  .ContainerDesc{
-    height: 65%;
+  .ContainerDesc {
+    height: 100%;
     width: 95%;
     position: relative;
     z-index: 1;
-  }
+}
   .Desc {
     font-family: 'Myriad Apple';
     font-size: 13px;
@@ -926,11 +927,12 @@ color: #141417;*/
     height: 70%;
     width: 100%;
     display: flex;
-    align-content: flex-start;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
   }
   .ContainerDesc {
-    height: 65%;
+    height: 100%;
     width: 95%;
     position: relative;
     z-index: 1;
@@ -939,11 +941,11 @@ color: #141417;*/
 
 @media screen and (max-width: 360px) {
   .ContainerDesc {
-      height: 68%;
-      width: 95%;
-      position: relative;
-      z-index: 1;
-  }
+    height: 100%;
+    width: 95%;
+    position: relative;
+    z-index: 1;
+}
   .ContainerAddToCar {
     height: 15%;
     width: 105%;
@@ -986,13 +988,12 @@ color: #141417;*/
     height: 2200px;
     display: inline-block;
   }
-  .ContainerDesc{
-    height: 80%;
-    width: 100%;
+  .ContainerDesc {
+    height: 100%;
+    width: 95%;
     position: relative;
     z-index: 1;
-    
-  }
+}
   .Desc {
     font-family: 'Myriad Apple';
     font-size: 13px;
@@ -1064,8 +1065,9 @@ color: #141417;*/
     height: 70%;
     width: 100%;
     display: flex;
-    align-content: flex-start;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
   }
   .texteDescAvantage{
     font-family: 'Myriad Apple';

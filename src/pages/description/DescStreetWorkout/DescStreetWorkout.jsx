@@ -121,25 +121,24 @@ export const DescStreetWorkout = () => {
               Découvrez notre programme de musculation Street Workout, conçu pour transformer votre corps en seulement cinq jours par semaine. Chaque séance, ne durant jamais plus de 1h30, est axée sur la prise de muscle avec des exercices efficaces et variés.<br/>
               <br/>
               Rejoignez-nous pour atteindre vos objectifs de musculation avec des séances dynamiques et complètes, adaptées à tous les niveaux. Transformez votre corps et dépassez vos limites avec notre programme Street Workout !</p>
-            </div>
-            <div className='ContainerAddToCar'>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.90 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => {
-                  navigate("/cart");
-                  addToCartPrincipal(8);
-                }}
-                className='ButtonAddToCard'>
-                Ajouter au PANIER
-              </motion.button>
-              <div className='BOXPAY'></div>
-
+              <div className='ContainerAddToCar'>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.90 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17 }
+                  }
+                  onClick={() => {
+                    navigate("/cart");
+                    addToCartPrincipal(8);
+                  }}
+                  className='ButtonAddToCard'>
+                  Ajouter au PANIER
+                </motion.button>
+                <div className='BOXPAY'></div>
+              </div>
             </div>
           </div>
         </div>

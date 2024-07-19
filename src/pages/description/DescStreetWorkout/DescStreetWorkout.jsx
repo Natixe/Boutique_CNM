@@ -137,12 +137,10 @@ export const DescStreetWorkout = () => {
                   className='ButtonAddToCard'>
                   Ajouter au PANIER
                 </motion.button>
-                <div className='BOXPAY'></div>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
       <div className='ContainerInfoDesc'>
         <div className='InfoDesc'>

@@ -120,24 +120,23 @@ export const DesPDMuscleMaison = () => {
               Ce programme à la maison est conçu pour maximiser la prise de muscle grâce à une approche structurée. Chaque séance cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur maximum.<br/>
               <br/>
               Ce plan détaillé assure un développement musculaire équilibré, optimisant chaque répétition et période de repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour obtenir des muscles plus forts et mieux définis.</p>
-            </div>
-            <div className='ContainerAddToCar'>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.90 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => {
-                  navigate("/cart");
-                  addToCartPrincipal(5);
-                }}
-                className='ButtonAddToCard'>
-                Ajouter au PANIER
-              </motion.button>
-              <div className='BOXPAY'></div>
+              <div className='ContainerAddToCar'>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.90 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17 }
+                  }
+                  onClick={() => {
+                    navigate("/cart");
+                    addToCartPrincipal(5);
+                  }}
+                  className='ButtonAddToCard'>
+                  Ajouter au PANIER
+                </motion.button>
+              </div>
             </div>
           </div>
         </div>

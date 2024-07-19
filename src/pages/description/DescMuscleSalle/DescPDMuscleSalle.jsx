@@ -120,24 +120,23 @@ export const DescPDMuscleSalle = () => {
               Cette formation de musculation est conçue pour maximiser la prise de muscle grâce à un programme structuré. Chaque jour cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour pousser vos muscles à leur limite<br/>
               <br/>
               Ce programme détaillé assure un développement musculaire équilibré, optimisant chaque répétition et repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour des muscles plus forts et mieux définis.</p>
-            </div>
-            <div className='ContainerAddToCar'>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.90 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => {
-                  navigate("/cart");
-                  addToCartPrincipal(7);
-                }}
-                className='ButtonAddToCard'>
-                Ajouter au PANIER
-              </motion.button>
-              <div className='BOXPAY'></div>
+              <div className='ContainerAddToCar'>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.90 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17 }
+                  }
+                  onClick={() => {
+                    navigate("/cart");
+                    addToCartPrincipal(7);
+                  }}
+                  className='ButtonAddToCard'>
+                  Ajouter au PANIER
+                </motion.button>
+              </div>
             </div>
           </div>
         </div>

@@ -120,24 +120,23 @@ export const DescPertedePoid = () => {
               Ce programme de perte de poids à la salle est conçu pour maximiser la combustion des graisses et le gain musculaire. Chaque séance cible des groupes musculaires spécifiques avec des exercices variés et des séries dégressives pour repousser vos limites.<br/>
               <br/>
               Ce plan détaillé assure un développement musculaire harmonieux, optimisant chaque répétition et période de repos pour des résultats rapides et efficaces. En suivant ce guide, vous dépasserez vos limites pour obtenir le corps dont vous rêvez.</p>
-            </div>
-            <div className='ContainerAddToCar'>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.90 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => {
-                  navigate("/cart");
-                  addToCartPrincipal(4);
-                }}
-                className='ButtonAddToCard'>
-                Ajouter au PANIER
-              </motion.button>
-              <div className='BOXPAY'></div>
+              <div className='ContainerAddToCar'>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.90 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17 }
+                  }
+                  onClick={() => {
+                    navigate("/cart");
+                    addToCartPrincipal(4);
+                  }}
+                  className='ButtonAddToCard'>
+                  Ajouter au PANIER
+                </motion.button>
+              </div>            
             </div>
           </div>
         </div>

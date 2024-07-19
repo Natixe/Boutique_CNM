@@ -63,6 +63,14 @@ export const ShopContextProvider = (props) => {
     setCartItemsPrincipal((prev) => ({ ...prev, [itemId]: Math.max((prev[itemId] || 1) - 1, 0) }));
   };
 
+  const removeFromCartFully = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: Math.max((prev[itemId] || 1) - 100, 0) }));
+  };
+
+  const removeFromCartPrincipalFully = (itemId) => {
+    setCartItemsPrincipal((prev) => ({ ...prev, [itemId]: Math.max((prev[itemId] || 1) - 100, 0) }));
+  };
+
   const updateCartItemCount = (newAmount, itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
@@ -70,7 +78,8 @@ export const ShopContextProvider = (props) => {
   const updateCartItemCountPrincipal = (newAmount, itemId) => {
     setCartItemsPrincipal((prev) => ({ ...prev, [itemId]: newAmount }));
   };
-
+  console.log(cartItems)
+  console.log(cartItemsPrincipal)
   const contextValue = {
     cartItems,
     cartItemsPrincipal,
@@ -80,6 +89,8 @@ export const ShopContextProvider = (props) => {
     addToCartPrincipal,
     removeFromCart,
     removeFromCartPrincipal,
+    removeFromCartFully,
+    removeFromCartPrincipalFully,
     updateCartItemCount,
     updateCartItemCountPrincipal,
   };

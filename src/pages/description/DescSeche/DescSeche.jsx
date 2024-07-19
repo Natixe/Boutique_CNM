@@ -120,24 +120,23 @@ export const DescSeche = () => {
               Notre programme Sèche est conçu pour vous aider à atteindre vos objectifs de perte de poids et de tonification en un temps record. Avec un plan d'entraînement intensif et un guide nutritionnel personnalisé, notre programme vise à transformer votre corps tout en améliorant votre bien-être général. Que vous soyez débutant ou athlète confirmé, nous adaptons nos méthodes pour garantir des résultats optimaux.<br/>
               <br/>
               Ce plan détaillé assure un développement musculaire équilibré, optimisant chaque répétition et période de repos pour des résultats rapides et efficaces. Suivez ce guide, dépassez vos limites pour obtenir des muscles plus forts et mieux définis.</p>
-            </div>
-            <div className='ContainerAddToCar'>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.90 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => {
-                  navigate("/cart");
-                  addToCartPrincipal(3);
-                }}
-                className='ButtonAddToCard'>
-                Ajouter au PANIER
-              </motion.button>
-              <div className='BOXPAY'></div>
+              <div className='ContainerAddToCar'>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.90 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17 }
+                  }
+                  onClick={() => {
+                    navigate("/cart");
+                    addToCartPrincipal(3);
+                  }}
+                  className='ButtonAddToCard'>
+                  Ajouter au PANIER
+                </motion.button>
+              </div>            
             </div>
           </div>
         </div>

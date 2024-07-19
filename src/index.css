@@ -49,6 +49,7 @@ body {
 
 }
 
+
 /*------------------------------------------------------------------------------------------------*/
 
 /*Logo au debut au centre qui disparrait vers le bas*/
@@ -268,8 +269,8 @@ body {
     transform-style: preserve-3d;
     will-change: transform;
     scale: 0.7;
-    opacity: 0.2;
-    filter: blur(3.5px);
+    /*opacity: 0.2;
+    filter: blur(3.5px);*/
     transform: translateY(-2.2%);
 
   }

@@ -120,24 +120,23 @@ export const DescPriseMasse = () => {
               Le programme de prise de masse est spécialement conçu pour favoriser une augmentation significative de la masse musculaire et de la force. Grâce à une combinaison de conseils nutritionnels détaillés et d'un plan d'entraînement intensif, ce programme garantit des résultats optimaux.<br/>
               <br/>
               Rejoignez notre programme dès maintenant et accédez à nos formations personnalisables pour une prise de masse propre et efficace. Ensemble, atteignons vos objectifs de force et de performance.</p>
-            </div>
-            <div className='ContainerAddToCar'>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.90 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17 }
-                }
-                onClick={() => {
-                  navigate("/cart");
-                  addToCartPrincipal(2);
-                }}
-                className='ButtonAddToCard'>
-                Ajouter au PANIER
-              </motion.button>
-              <div className='BOXPAY'></div>
+              <div className='ContainerAddToCar'>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.90 }}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 17 }
+                  }
+                  onClick={() => {
+                    navigate("/cart");
+                    addToCartPrincipal(2);
+                  }}
+                  className='ButtonAddToCard'>
+                  Ajouter au PANIER
+                </motion.button>
+              </div>            
             </div>
           </div>
         </div>

@@ -40,6 +40,7 @@ time, mark, audio, video, button  {
 .containercartItem{
   width: 60%;
   height: 55%;
+  margin-bottom: 5%;
 }
 
 .cartItem {
@@ -224,7 +225,6 @@ time, mark, audio, video, button  {
   height: 100%;
 }
 
-
 .TextDescriptionCartPanier {
   position: static;
   color: #1D1D1F;
@@ -387,3 +387,260 @@ height: 60vh;*/
 .Clear{
   width: 100%;
 }
+
+@media screen and (max-width: 1440px) {
+  .Box1cart{
+    height: 100%;
+    width: 22%;
+  }
+  .DescriptionFormation {
+    width: 30%;
+  } 
+  .TextDescriptionFormation {
+    font-size: 12px;
+  }
+  .BOX2description {
+    width: 11.5%;
+  }
+  .BOX3description {
+    width: 11.2%;
+  }
+  .BOX4description {
+    width: 11.8%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .TotalcheckoutPrix{
+    font-size: 21px;
+  }
+  .Totalcheckout{
+    font-size: 21px;
+  }
+  .containercartItem {
+    width: 70%;
+    height: 55%;
+    margin-bottom: 5%;
+  }
+  .formationImage {
+    width: 60px;
+    height: 75px;
+  }
+  .TextDescriptionCartPanier {
+    font-size: 30px;
+  }
+  .TextDescriptionCartPrix {
+    font-size: 18px;
+  }
+  .TextDescriptionCartTotal {
+    font-size: 18px;
+  }
+  .TextDescriptionViderPanier {
+    font-size: 14px;
+  }
+  .DescriptionFormation {
+    width: 30%;
+  } 
+  .TextDescriptionFormation {
+    font-size: 12px;
+  }
+  .Box1cart{
+    width: 25.5%;
+  }
+  .Box2cart{
+    width: 14.5%;
+  }
+  .Box3cart{
+    width: 10.8%;
+  }
+  .BOX2description {
+    width: 11.5%;
+  }
+  .BOX3description {
+    width: 10.2%;
+  }
+  .BOX4description {
+    width: 11.8%;
+  }
+}
+@media screen and (max-width: 834px) {
+  .formationImage {
+    width: 55px;
+    height: 68.75px;
+  }
+  .TextDescriptionCartPanier {
+    font-size: 25px;
+  }
+  .TextDescriptionCartPrix {
+    font-size: 15px;
+  }
+  .TextDescriptionCartTotal {
+    font-size: 15px;
+  }
+  .TextDescriptionViderPanier {
+    font-size: 13px;
+  }
+  .TextDescriptionFormation {
+    font-size: 11px;
+  }
+  .containercartItem {
+    width: 78%;
+    height: 55%;
+    margin-bottom: 5%;
+  }
+  .DescriptionFormation {
+    width: 36%;
+  } 
+  .Box1cart{
+    width: 24.7%;
+  }
+  .Box2cart{
+    width: 14.5%;
+  }
+  .Box3cart{
+    width: 10.8%;
+  }
+  .BOX2description {
+    width: 7.5%;
+  }
+  .BOX3description {
+    width: 9.5%;
+  }
+  .BOX4description {
+    width: 12.6%;
+  }
+  .price {
+    font-size: 16px;
+  }
+  .contHandler {
+    width: 100px;
+  }
+  .DescriptionFormation {
+    width: 32%;
+  }
+  .ButtonPayementText {
+    font-size: 17px;
+  }
+  .ButtonContinuerAchatsText {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .Items {
+    border-top: 1px solid hsl(0, 4%, 90%);
+    flex-direction: row;
+    display: flex;
+    border-bottom: 1px solid hsl(0, 4%, 90%);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .containercartItem {
+    width: 85%;
+    height: 55%;
+    margin-bottom: 5%;
+  }
+  .descriptionTop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .descriptionBottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+  .DescriptionFormation {
+    width: 70%;
+  }
+  .DescriptionFormation {
+    width: 77%;
+  }
+  .BOX1description {
+    width: 2%;
+    height: 20px;
+    background-color: #666666;
+  }
+  .BOX2description {
+    width: 4%;
+  }
+  .BOX3description {
+    width: 8%;
+    height: 20px;
+    background-color: #666666;
+  }
+  .BOX4description {
+    width: 45%;
+    height: 20px;
+    background-color: #666666;
+  } 
+  .contHandler {
+    width: 100px;
+  }
+  .checkout {
+    width: 100%;
+    height: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: flex-start;
+  }
+  .TotalcheckoutConteiner {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      flex-wrap: nowrap;
+  }
+  .ContainerButtonCart {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .ButtonContinuerAchats {
+    width: 85%;
+    height: 35%;
+    border-radius: 12px;
+    background-color: #C25B4B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ButtonPayement {
+    width: 89%;
+    height: 36%;
+    border-radius: 12px;
+    background-color: #141417;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .descriptionBottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .DescriptionCart {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+

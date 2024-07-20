@@ -1,7 +1,8 @@
-import React, {useContext} from 'react'
+import React, { useState, useEffect, useContext } from 'react';
 import { FORMATIONS } from '../../Formation'
 import { ShopContext } from "../../context/shop-contexte"
-import { CartItem } from "./cart-item"
+import { CartItemPc } from "./cart-item-pc"
+import { ReponsiveItem } from "./Reponsive-Item"
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
 import { FORMATIONPRINCIPAL } from "../../Formation"
@@ -12,6 +13,19 @@ export const Cart = () => {
   const totalAmount = getTotalCartAmount()
   const totalAmountPrincipal = getTotalCartAmountPrincipal()
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 490);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 490);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <motion.div 
@@ -22,7 +36,17 @@ export const Cart = () => {
       {(totalAmount + totalAmountPrincipal) > 0 ? (
         <div className='containercartItem'>
           <div className='cartItem'>
+            {isMobile ? (
             <p className="DescriptionCart">
+              <div className='ContainerCartPanier'>
+                <b className="TextDescriptionCartPanier">VOTRE PANIER</b>
+              </div>
+              <div className='ContainerViderPanier'>
+                <b className="TextDescriptionViderPanier">Vider le panier</b>
+              </div>
+            </p>
+            ) : (
+              <p className="DescriptionCart">
               <div className='ContainerCartPanier'>
                 <b className="TextDescriptionCartPanier">VOTRE PANIER</b>
               </div>
@@ -38,54 +62,84 @@ export const Cart = () => {
               <div className='ContainerViderPanier'>
                 <b className="TextDescriptionViderPanier">Vider le panier</b>
               </div>
-            </p>
+            </p> 
+            )}
             <div className='cartItem'>
-              {FORMATIONS.map((formation) => {
-              if (cartItems[formation.id] !== 0) {
-                return <CartItem key={`formation-${formation.id}`} data={formation} />;
-              }
-              return null;
-              })}
-              {FORMATIONPRINCIPAL.map((formation) => {
-                if (cartItemsPrincipal[formation.id] !== 0) {
-                  return <CartItem key={`formationprincipal-${formation.id}`} data={formation} />;
-                }
-                return null;
-              })}
+              <ReponsiveItem/>
             </div>
-            <div className="ContainerCheckout">
-              <div div className='checkout'>
-                <div className='TotalcheckoutConteiner'>
-                  <p className='TotalcheckoutPrix'> Prix : </p>
-                  <p className='Totalcheckout'> {totalAmount + totalAmountPrincipal} € </p>
-                </div>
-                <div className='ContainerButtonCart'>
-                  <motion.div 
-                    onClick={() => {
-                      navigate("/*");
-                    }}
-                    whileHover={{ scale: 1.05}}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    className='ButtonContinuerAchats'
+            <>
+            {isMobile ? (
+              <div className="ContainerCheckout">
+                <div div className='checkout'>
+                  <div className='TotalcheckoutConteiner'>
+                    <p className='TotalcheckoutPrix'> Prix : </p>
+                    <p className='Totalcheckout'> {totalAmount + totalAmountPrincipal} € </p>
+                  </div>
+                  <div className='ContainerButtonCart'>
+                    <motion.div 
+                      onClick={() => {
+                        navigate("/*");
+                      }}
+                      whileHover={{ scale: 1.05}}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                      className='ButtonContinuerAchats'
 
-                  > 
-                    <p className='ButtonContinuerAchatsText'>Voir d'autres produits</p>
-                  </motion.div>
-                  <motion.div
-                    onClick={() => {
-                      navigate("/checkout");
-                    }}
-                    className='ButtonPayement'
-                    whileHover={{ scale: 1.07}}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  >
-                    <p className='ButtonPayementText'>Payement</p>
-                  </motion.div>
+                    > 
+                      <p className='ButtonContinuerAchatsText'>Voir d'autres produits</p>
+                    </motion.div>
+                    <motion.div
+                      onClick={() => {
+                        navigate("/checkout");
+                      }}
+                      className='ButtonPayement'
+                      whileHover={{ scale: 1.07}}
+                      whileTap={{ scale: 0.9 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    >
+                      <p className='ButtonPayementText'>Je commande !</p>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
-            </div>
+
+            ) : (
+
+              <div className="ContainerCheckout">
+                <div div className='checkout'>
+                  <div className='TotalcheckoutConteiner'>
+                    <p className='TotalcheckoutPrix'> Prix : </p>
+                    <p className='Totalcheckout'> {totalAmount + totalAmountPrincipal} € </p>
+                  </div>
+                  <div className='ContainerButtonCart'>
+                    <motion.div 
+                      onClick={() => {
+                        navigate("/*");
+                      }}
+                      whileHover={{ scale: 1.05}}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                      className='ButtonContinuerAchats'
+
+                    > 
+                      <p className='ButtonContinuerAchatsText'>Voir d'autres produits</p>
+                    </motion.div>
+                    <motion.div
+                      onClick={() => {
+                        navigate("/checkout");
+                      }}
+                      className='ButtonPayement'
+                      whileHover={{ scale: 1.07}}
+                      whileTap={{ scale: 0.9 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    >
+                      <p className='ButtonPayementText'>Je commande !</p>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            )}
+            </>
           </div>
         </div>
       ) : (

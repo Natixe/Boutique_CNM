@@ -4,25 +4,35 @@ import { ShopContext } from "../../context/shop-contexte"
 import { motion, AnimatePresence } from "framer-motion";
 import Clear from "../../assets/Clear.svg";
 
-export const CartItem = (props) => {
+export const CartItemMobile = (props) => {
     const { id, formationName, price, formationImage, formationDescription } = props.data
     const { cartItems, cartItemsPrincipal, removeFromCartFully, removeFromCartPrincipalFully, removeFromCart, removeFromCartPrincipal, updateCartItemCount, updateCartItemCountPrincipal } = useContext(ShopContext)
-    
+
   return (
     <div className='Items'>
-        <div className="ContainerformationImage">
-          <img className="formationImage" src={formationImage}/>
-        </div>
-        <div className='description'>
-            <div className="BOX1description"> </div>
-            <p className="DescriptionFormation">
-                <b className="TextDescriptionFormation"> {formationName}, {formationDescription}</b>
-            </p>
-            <div className="BOX2description"> </div>
-
-            <p className="price">{price}€</p>
-            <div className="BOX3description"> </div>
-
+        <div className='descriptionTop'>
+          <div className="ContainerformationImage">
+            <img className="formationImage" src={formationImage}/>
+          </div>
+          <div className="BOX1description"> </div>
+          <p className="DescriptionFormation">
+              <b className="TextDescriptionFormation"> {formationName}, {formationDescription}</b>
+          </p>
+          <div className="BOX2description"> </div>
+          <motion.button
+            whileHover={{ scale: 0.95 }}
+            whileTap={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }} 
+            className="ClearContainer"
+            onClick={() => {
+              removeFromCartFully(id);
+              removeFromCartPrincipalFully(id);
+            }}>
+              <img src={Clear} className="Clear"/>
+          </motion.button>
+          <div className="BOX3description"> </div>
+        </div>              
+        <div className='descriptionBottom'>
             <div className="contHandler">
               
               <motion.button 
@@ -59,21 +69,8 @@ export const CartItem = (props) => {
               }}>
                 <span>+</span>
               </motion.button>
-
             </div>
-            <div className="BOX4description"> </div>
-            <motion.button
-              whileHover={{ scale: 0.95 }}
-              whileTap={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }} 
-              className="ClearContainer"
-
-              onClick={() => {
-                removeFromCartFully(id);
-                removeFromCartPrincipalFully(id);
-              }}>
-                <img src={Clear} className="Clear"/>
-            </motion.button>
+            <p className="price">{price}€</p>
         </div>
     </div>
   )

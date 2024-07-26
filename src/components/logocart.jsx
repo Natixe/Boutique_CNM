@@ -48,7 +48,7 @@ export const Cart = () => {
   return (
     <> 
      {showAnimationCart && (
-      <div>
+      <>
         {/*Intro Nav Bar*/}
         {/*Cart en haut a droite*/}
         {showAnimeLogoLeftUpsetCart && (    
@@ -84,11 +84,10 @@ export const Cart = () => {
             alt=""             
           />
         </motion.div>       
-        )}  
-      </div> 
+        )} 
+      </>  
     )}
     {!showAnimationCart && (
-      <div>
         <motion.div className="CartContainer">     
           <motion.img
             className="Cart"
@@ -103,7 +102,6 @@ export const Cart = () => {
             alt=""             
           />
         </motion.div> 
-      </div>
     )}       
     </>
   )

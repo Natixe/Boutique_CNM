@@ -562,7 +562,6 @@ height: 60vh;*/
   .BOX1description {
     width: 2%;
     height: 20px;
-    background-color: #666666;
   }
   .BOX2description {
     width: 4%;
@@ -570,12 +569,10 @@ height: 60vh;*/
   .BOX3description {
     width: 8%;
     height: 20px;
-    background-color: #666666;
   }
   .BOX4description {
     width: 45%;
     height: 20px;
-    background-color: #666666;
   } 
   .contHandler {
     width: 100px;

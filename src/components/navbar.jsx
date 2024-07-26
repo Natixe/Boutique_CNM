@@ -9,39 +9,43 @@ import "./navbar.css";
 import { Logocnm } from "./logocnm";
 import { Moreoffre } from "./moreoffre";
 import { Cart } from "./logocart";
-
+import {MenuHamburger} from "../components/MenuHamburger/MenuHamburger";
 
 export const Navbar = () => {
 
-    const [showAnimationNavBar, setShowAnimationNavBar] = useState(false);
-    const [showNavBar, setshowNavBar] = useState(false);
-
-    useEffect(() => {
-        // Vérifie si l'animation a déjà été jouée
-        const hasPlayedAnimationHome = localStorage.getItem('hasPlayedAnimationHome');
-        if (!hasPlayedAnimationHome) {
-          setShowAnimationNavBar(true);
-        }
-        }, []);
-
-
-    console.log(showAnimationNavBar +  " navbar3")
-
-    useEffect(() => {
-          const timerNavBar = setTimeout(() => {
-            setshowNavBar(true);
-          }, 100);
-    
-          return () => {
-            clearTimeout(timerNavBar);
-          };
-
-      }, []);
-
-
-
+  const [showAnimationNavBar, setShowAnimationNavBar] = useState(false);
+  const [showNavBar, setshowNavBar] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 490);
   const [NavInContainer, setNavInContainer] = useState('BNavInContainer');
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 490);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
+      // Vérifie si l'animation a déjà été jouée
+      const hasPlayedAnimationHome = localStorage.getItem('hasPlayedAnimationHome');
+      if (!hasPlayedAnimationHome) {
+        setShowAnimationNavBar(true);
+      }
+      }, []);
+  useEffect(() => {
+        const timerNavBar = setTimeout(() => {
+          setshowNavBar(true);
+        }, 100);
+  
+        return () => {
+          clearTimeout(timerNavBar);
+        };
+
+    }, []);
   useEffect(() => {
       const timer = setTimeout(() => {
           setNavInContainer('NavInContainer');
@@ -55,40 +59,47 @@ export const Navbar = () => {
     {showAnimationNavBar &&(
       <div className='nav'>
           <div className={NavInContainer}>
-              <div className='BOXNAVBARRE1'/>
               <Link to="/">
                   <Logocnm />              
               </Link>
-              <div className='BOXNAVBARRE2'/>
-              <Link to="/shop"> 
-                  <Moreoffre /> 
-              </Link>
-              <div className='BOXNAVBARRE3'/>
-              <Link to="/cart">
-                  <Cart />              
-              </Link>
-              <div className='BOXNAVBARRE4'/>
+              {isMobile ? (
+                <div className='RightNavBarre'>
+                  <MenuHamburger />
+                </div>
+              ) : (
+                <div className='RightNavBarre'>
+                  <Link to="/shop" className='ButtonShopNav'> 
+                      <Moreoffre /> 
+                  </Link>
+                  <Link to="/cart" className='ButtonShopCart'>
+                      <Cart />              
+                  </Link>
+                </div>
+              )}
           </div>
-
       </div>
     )}
     {!showAnimationNavBar &&(
       <div className='nav'>
         {showNavBar &&(
           <div className="NavInContainer">
-              <div className='BOXNAVBARRE1'/>
               <Link to="/">
                   <Logocnm />              
               </Link>
-              <div className='BOXNAVBARRE2'/>
-              <Link to="/*"> 
-                  <Moreoffre /> 
-              </Link>
-              <div className='BOXNAVBARRE3'/>
-              <Link to="/cart">
-                  <Cart />              
-              </Link>
-              <div className='BOXNAVBARRE4'/>
+              {isMobile ? (
+                <div className='RightNavBarre'>
+                  <MenuHamburger />
+                </div>
+              ) : (
+                <div className='RightNavBarre'>
+                  <Link to="/shop" className='ButtonShopNav'> 
+                      <Moreoffre /> 
+                  </Link>
+                  <Link to="/cart" className='ButtonShopCart'>
+                      <Cart />              
+                  </Link>
+                </div>
+              )}
           </div>
         )}
       </div>

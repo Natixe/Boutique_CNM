@@ -117,3 +117,32 @@ li {
   width: 350px;
 
 }
+@media screen and (max-width: 375px) {
+  .ContainerLink{
+    pointer-events:none;
+    position: absolute;
+    z-index: 40;
+    left: -292px;
+    top: 134px;
+    width: 375px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .ContainerLink{
+    pointer-events: none;
+    position: absolute;
+    z-index: 40;
+    left: -250px;
+    top: 134px;
+    width: 320px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

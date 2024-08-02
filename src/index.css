@@ -252,7 +252,7 @@ body {
 
   .LogoCnmAfterStart {
     width: 100vh;
-    height: 20vh;
+    height: 16vh;
     contain-intrinsic-block-size: auto 100px;
     transform-style: preserve-3d;
     will-change: transform;
@@ -276,13 +276,63 @@ body {
   }
 }
 
+@media screen and (max-width: 1440px) {
+
+  .LogoCnmAfterStartpostIntro {
+    width: 100vh;
+    height: 17vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    scale: 0.7;
+    /*opacity: 0.2;
+    filter: blur(3.5px);*/
+    transform: translateY(-2.2%);
+
+  }
+}
+@media screen and (max-width: 1024px) {
+
+  .LogoCnmAfterStartpostIntro {
+    width: 100vh;
+    height: 19vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    scale: 0.7;
+    transform: translateY(-2.2%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .LogoCnmAfterStartpostIntro {
+    width: 100vh;
+    height: 12.5vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    scale: 0.7;
+    transform: translateY(-2.2%);
+  }
+
+  .LogoCnmAfterStartContainer {
+    position: absolute;
+    top: 53%;
+    left: 48%;
+    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    margin-top: 0vh;
+    z-index: -3;
+  }
+}
 
 /*1441PX MAX*/
 
 @media screen and (max-width: 1441px) {
   .LogoCnmAfterStartContainer {
     position: absolute;
-    top: 50%; left: 49%;
+    top: 52%; left: 48%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
@@ -295,7 +345,7 @@ body {
 
   .LogoCnmAfterStart {
     width: 100vh;
-    height: 18vh;
+    height: 14vh;
     contain-intrinsic-block-size: auto 100px;
     transform-style: preserve-3d;
     will-change: transform;
@@ -340,11 +390,21 @@ body {
 
   }
 }
+@media screen and (max-width: 1024px) {
 
+  .LogoCnmAfterStart {
+    width: 100vh;
+    height: 15vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+  }
+}
 @media screen and (max-width: 1280px) {
   .LogoCnmAfterStartContainer {
     position: absolute;
-    top: 53%; left: 49%;
+    top: 53%; left: 48%;
     transform: translateY(-50%);
     transform: translate(-50%, -50%);
     margin-top: 0vh;
@@ -357,7 +417,7 @@ body {
 
   .LogoCnmAfterStart {
     width: 100vh;
-    height: 12vh;
+    height: 10vh;
     contain-intrinsic-block-size: auto 100px;
     transform-style: preserve-3d;
     will-change: transform;
@@ -400,6 +460,26 @@ body {
     transform-style: preserve-3d;
     will-change: transform;
 
+  }
+}
+@media screen and (max-width: 380px) {
+
+  .LogoCnmAfterStart {
+    width: 100vh;
+    height: 5.7vh;
+    contain-intrinsic-block-size: auto 100px;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+  }
+}
+@media screen and (max-width: 330px) {
+  .LogoCnmAfterStart {
+      width: 100vh;
+      height: 4.7vh;
+      contain-intrinsic-block-size: auto 100px;
+      transform-style: preserve-3d;
+      will-change: transform;
   }
 }
 /*------------------------------------------------------------------------------------------------*/

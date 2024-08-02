@@ -16,6 +16,7 @@ export const CartItemInfoCheckout = (props) => {
                 <b className="TextDescriptionFormationInfo"> {formationName}</b>
             </p>
             <p className="price">{price}€</p>
+            <div className="BOXCHECKOUT01"></div>
             <div className="contHandler">
               <input
                 type="string"

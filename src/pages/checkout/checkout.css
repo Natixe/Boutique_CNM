@@ -147,3 +147,10 @@
     letter-spacing: 0;
     line-height: 1.4705882353;
 }
+
+.BOXCHECKOUT01{
+    width: 10%;
+    height: 5%;
+    background-color: blueviolet;
+    color: blueviolet;
+}

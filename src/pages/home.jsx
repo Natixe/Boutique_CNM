@@ -196,7 +196,7 @@ export const Home = () => {
             <motion.div
               className="BlurLogoAfterStart"
               initial={{ filter: "blur(0px)"}}
-              animate={{ filter: "blur(0.5px)", opacity: 1}}
+              animate={{ filter: "blur(3.5px)", opacity: 1}}
               transition={{
                 duration: 1.7,
                 delay: -0.5,
@@ -221,9 +221,28 @@ export const Home = () => {
     )}
 
       {!showAnimationHome && (
-        <div className="LogoCnmAfterStartContainer">
-          <img className="LogoCnmAfterStartpostIntro" src={LogoApresL_intro}/>
-        </div>
+        <motion.div 
+        className="LogoCnmAfterStartContainer"
+        initial={{ filter: "blur(0px)"}}
+        animate={{ filter: "blur(3.5px)"}}
+        transition={{
+          duration: 1.7,
+          delay: -0.5,
+          ease: [0.66, 0, 0.78, 0.9]
+        }}
+        >
+          <motion.img 
+          className="LogoCnmAfterStartpostIntro" 
+          src={LogoApresL_intro}
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1, }}
+          transition={{
+            duration: 1.2,
+            delay: -0.3,
+            ease: [0.37, 0, 0.37, 1]
+          }}
+          />
+        </motion.div>
       )}    
       {/* --------------------------------------- */}
       {/* Rectangle formation mid */} 

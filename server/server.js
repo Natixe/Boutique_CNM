@@ -3,11 +3,12 @@ import fetch from "node-fetch";
 import "dotenv/config";
 import path from "path";
 import { fileURLToPath } from 'url';
+import nodemailer from 'nodemailer';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const { VITE_PAYPAL_CLIENT_ID_PRODUCTION, PAYPAL_CLIENT_SECRET_PRODUCTION, PORT = 8888 } = process.env;
+const { VITE_PAYPAL_CLIENT_ID_PRODUCTION, PAYPAL_CLIENT_SECRET_PRODUCTION, PORT = 8888, IONOS_EMAIL_PASSWORD } = process.env;
 const base = "https://api-m.sandbox.paypal.com";
 const app = express();
 
@@ -73,22 +74,43 @@ const handleResponse = async (response) => {
   }
 };
 
+
 const createOrder = async (cart) => {
   try {
-    const accessToken = await generateAccessToken();
+    // Log the cart object to see its structure
+    console.log("Received cart:", cart);
 
-    const items = cart.map(item => ({
-      name: item.name,
-      quantity: item.quantity.toString(),
-      unit_amount: item.unit_amount,
-    }));
-    
-    const totalAmount = items.reduce((total, item) => total + parseFloat(item.unit_amount.value) * parseInt(item.quantity), 0).toFixed(2);
+    // Ensure cart is an array; if not, transform it appropriately
+    const cartArray = Array.isArray(cart) ? cart : Object.values(cart);
+
+    if (cartArray.length === 0) {
+      throw new Error("Cart is empty");
+    }
+
+    // Log each item in the cartArray to check its structure
+    cartArray.forEach(item => console.log(item));
+
+    const items = cartArray.map(item => {
+      // Validate item properties before accessing them
+      if (!item.name || !item.quantity || !item.unit_amount) {
+        throw new Error("Invalid cart item: missing name, quantity, or unit amount");
+      }
+
+      return {
+        name: item.name,
+        quantity: item.quantity.toString(),
+        unit_amount: item.unit_amount,
+      };
+    });
+
+    const totalAmount = items.reduce((total, item) =>
+      total + parseFloat(item.unit_amount.value) * parseInt(item.quantity), 0
+    ).toFixed(2);
 
     const response = await fetch(`${base}/v2/checkout/orders`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${accessToken}`,
+        Authorization: `Bearer ${await generateAccessToken()}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -121,6 +143,8 @@ const createOrder = async (cart) => {
     throw error;
   }
 };
+
+
 
 app.post("/api/orders", async (req, res) => {
   try {
@@ -156,10 +180,20 @@ const captureOrder = async (orderID) => {
 app.post("/api/orders/:orderID/capture", async (req, res) => {
   try {
     const { orderID } = req.params;
+
+    if (!orderID) {
+      throw new Error("Order ID is missing in request parameters.");
+    }
+
     const orderData = await captureOrder(orderID);
+    if (!orderData) {
+      throw new Error("Failed to retrieve order data.");
+    }
+
     res.status(201).json(orderData);
   } catch (error) {
-    res.status(500).json({ error: "Failed to capture order." });
+    console.error("Error capturing order:", error);
+    res.status(500).json({ error: error.message || "Failed to capture order." });
   }
 });
 
@@ -210,3 +244,40 @@ app.listen(PORT, () => {
   console.log(`Node server listening at http://0.0.0.0:${PORT}/`);
 });
 //
+
+
+const sendConfirmationEmail = async (email, orderData) => {
+  try {
+    let transporter = nodemailer.createTransport({
+      host: "smtp.ionos.fr", // Ionos SMTP server
+      port: 465,
+      secure: true, // true for 465, false for other ports
+      auth: {
+        user: "hello@cnm-nutrisport.com",
+        pass: IONOS_EMAIL_PASSWORD, // Ionos email password
+      },
+    });
+    const mailOptions = {
+      from: '"CNM Nutrisport" <hello@cnm-nutrisport.com>',
+      to: email,
+      subject: "Order Confirmation - CNM Nutrisport",
+      text: `Thank you for your purchase! Your order ID is ${orderData.id}.`,
+      html: `<p>Thank you for your purchase! Your order ID is <b>${orderData.id}</b>.</p>`,
+    };
+
+    let info = await transporter.sendMail(mailOptions);
+    console.log("Confirmation email sent: %s", info.messageId);
+  } catch (error) {
+    console.error("Failed to send confirmation email:", error);
+  }
+};
+
+app.post("/api/send-confirmation-email", async (req, res) => {
+  const { email, orderData } = req.body;
+  try {
+    await sendConfirmationEmail(email, orderData);
+    res.status(200).json({ message: "Confirmation email sent" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to send confirmation email" });
+  }
+});

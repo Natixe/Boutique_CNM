@@ -1,22 +1,21 @@
-
 {
   "name": "boutique-cnm",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "main": "server/server.js",
-"scripts": {
-  "client-dev": "vite",
-  "server-dev": "nodemon server/server.js",
-  "start": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
-  "prod": "npm run client-build && node server/server.js",
-  "client-build": "vite build",
-  "client-preview": "vite preview",
-  "format": "npx prettier --write **/*.{js,jsx,md}",
-  "format:check": "npx prettier --check **/*.{js,jsx,md}",
-  "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-  "preview": "vite preview"
-  },  
+  "scripts": {
+    "client-dev": "vite",
+    "server-dev": "nodemon server/server.js",
+    "start": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
+    "prod": "npm run client-build && node server/server.js",
+    "client-build": "vite build",
+    "client-preview": "vite preview",
+    "format": "npx prettier --write **/*.{js,jsx,md}",
+    "format:check": "npx prettier --check **/*.{js,jsx,md}",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@paypal/paypal-js": "^8.1.0",
     "@paypal/react-paypal-js": "^8.5.0",
@@ -25,6 +24,7 @@
     "express": "^4.19.2",
     "framer-motion": "^11.3.22",
     "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0",

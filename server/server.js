@@ -2,8 +2,6 @@ import express from "express";
 import fetch from "node-fetch";
 import "dotenv/config";
 import path from "path";
-import fs from "fs";
-import archiver from "archiver";
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +12,7 @@ const base = "https://api-m.sandbox.paypal.com";
 const app = express();
 
 const clientBuildPath = path.join(__dirname, "../src");
+
 app.use(express.static(clientBuildPath));
 app.use(express.json());
 
@@ -164,7 +163,7 @@ app.post("/api/orders/:orderID/capture", async (req, res) => {
   }
 });
 
-app.post("/api/download", async (req, res) => {
+{/*app.post("/api/download", async (req, res) => {
   const { cartItems, cartItemsPrincipal } = req.body;
 
   // Debugging log
@@ -199,7 +198,7 @@ app.post("/api/download", async (req, res) => {
   });
 
   await archive.finalize();
-});
+});*/}
 
 // Catch-all handler to serve the React app for any other routes
 app.get('*', (req, res) => {

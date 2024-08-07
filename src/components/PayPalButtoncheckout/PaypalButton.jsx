@@ -28,6 +28,8 @@ export const PaypalButton = () => {
     price: (totalAmount + totalAmountPrincipal),
   };
   console.log(cartItems, cartItemsPrincipal)
+
+  {/*
   const downloadFiles = async () => {
     try {
       const response = await fetch("/api/download", {
@@ -54,7 +56,7 @@ export const PaypalButton = () => {
       console.error(error);
       setMessage(`Could not download files...${error.message}`);
     }
-  };
+  }; */}
 
   return (
     <div className="App">
@@ -110,8 +112,6 @@ export const PaypalButton = () => {
                 const transaction = orderData.purchase_units[0].payments.captures[0];
                 setMessage(`Transaction ${transaction.status}: ${transaction.id}. See console for all available details`);
                 console.log("Capture result", orderData, JSON.stringify(orderData, null, 2));
-
-                await downloadFiles();
               }
             } catch (error) {
               console.error(error);

@@ -74,24 +74,18 @@ const handleResponse = async (response) => {
   }
 };
 
-
 const createOrder = async (cart) => {
   try {
-    // Log the cart object to see its structure
     console.log("Received cart:", cart);
-
-    // Ensure cart is an array; if not, transform it appropriately
     const cartArray = Array.isArray(cart) ? cart : Object.values(cart);
 
     if (cartArray.length === 0) {
       throw new Error("Cart is empty");
     }
 
-    // Log each item in the cartArray to check its structure
     cartArray.forEach(item => console.log(item));
 
     const items = cartArray.map(item => {
-      // Validate item properties before accessing them
       if (!item.name || !item.quantity || !item.unit_amount) {
         throw new Error("Invalid cart item: missing name, quantity, or unit amount");
       }
@@ -144,11 +138,9 @@ const createOrder = async (cart) => {
   }
 };
 
-
-
 app.post("/api/orders", async (req, res) => {
   try {
-    const { cart } = req.body;
+    const { cart, email } = req.body;
     const orderData = await createOrder(cart);
     res.status(201).json(orderData);
   } catch (error) {
@@ -197,66 +189,18 @@ app.post("/api/orders/:orderID/capture", async (req, res) => {
   }
 });
 
-{/*app.post("/api/download", async (req, res) => {
-  const { cartItems, cartItemsPrincipal } = req.body;
-
-  // Debugging log
-  console.log("Received cartItems:", cartItems);
-  console.log("Received cartItemsPrincipal:", cartItemsPrincipal);
-  
-  const cartItemsArray = Object.entries(cartItems).map(([id, quantity]) => ({ id: Number(id), quantity }));
-  const cartItemsPrincipalArray = Object.entries(cartItemsPrincipal).map(([id, quantity]) => ({ id: Number(id), quantity }));
-  
-  // Filter out items with quantity > 0
-  const items = [...cartItemsArray, ...cartItemsPrincipalArray].filter(item => item.quantity > 0);
-  const downloadPath = path.join(__dirname, "../Download");
-
-  const archive = archiver("zip");
-  res.attachment("Formations-CNM.zip");
-
-  archive.on("error", (err) => {
-    console.error("Archive error:", err);
-    res.status(500).send({ error: err.message });
-  });
-
-  archive.pipe(res);
-
-  items.forEach((item) => {
-    const filePath = path.join(downloadPath, `${item.id}`);
-    if (fs.existsSync(filePath)) {
-      console.log(`Adding file to archive: ${filePath}`);
-      archive.directory(filePath, false);
-    } else {
-      console.error(`File not found: ${filePath}`);
-    }
-  });
-
-  await archive.finalize();
-});*/}
-
-// Catch-all handler to serve the React app for any other routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(clientBuildPath, 'index.html'));
-});
-
-app.listen(PORT, () => {
-  console.log(`Node server listening at http://localhost:${PORT}/`);
-  console.log(`Node server listening at http://0.0.0.0:${PORT}/`);
-});
-//
-
-
 const sendConfirmationEmail = async (email, orderData) => {
   try {
     let transporter = nodemailer.createTransport({
-      host: "smtp.ionos.fr", // Ionos SMTP server
+      host: "smtp.ionos.fr",
       port: 465,
-      secure: true, // true for 465, false for other ports
+      secure: true,
       auth: {
         user: "hello@cnm-nutrisport.com",
-        pass: IONOS_EMAIL_PASSWORD, // Ionos email password
+        pass: IONOS_EMAIL_PASSWORD,
       },
     });
+
     const mailOptions = {
       from: '"CNM Nutrisport" <hello@cnm-nutrisport.com>',
       to: email,
@@ -280,4 +224,13 @@ app.post("/api/send-confirmation-email", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Failed to send confirmation email" });
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(clientBuildPath, 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Node server listening at http://localhost:${PORT}/`);
+  console.log(`Node server listening at http://0.0.0.0:${PORT}/`);
 });

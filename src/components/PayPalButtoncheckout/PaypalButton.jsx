@@ -2,8 +2,8 @@ import React, { useState, useContext } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { ShopContext } from "../../context/shop-contexte";
 import "./PaypalButton.css";
-import { FORMATIONS } from "../../Formation"
-import { FORMATIONPRINCIPAL } from "../../Formation"
+import { FORMATIONS } from "../../Formation";
+import { FORMATIONPRINCIPAL } from "../../Formation";
 
 function Message({ content }) {
   return <p>{content}</p>;
@@ -40,11 +40,9 @@ export const PaypalButton = () => {
     return true;
   };
 
-  // Helper function to create the cart data structure
   const createOrderData = () => {
-    // Transform cartItems into an array of objects with the necessary data
     const cartItemsArray = Object.entries(cartItems).map(([id, quantity]) => {
-      const itemInfo = FORMATIONS.find((product) => product.id === Number(id))
+      const itemInfo = FORMATIONS.find((product) => product.id === Number(id));
       return {
         name: itemInfo.formationName,
         quantity: quantity,
@@ -53,9 +51,8 @@ export const PaypalButton = () => {
           value: itemInfo.price.toFixed(2),
         },
       };
-    }).filter(item => item.quantity > 0); // Filter out items with quantity 0
+    }).filter(item => item.quantity > 0);
 
-    // Transform cartItemsPrincipal similarly
     const cartItemsPrincipalArray = Object.entries(cartItemsPrincipal).map(([id, quantity]) => {
       const itemInfo = FORMATIONPRINCIPAL.find((product) => product.id === Number(id));
       return {
@@ -66,12 +63,10 @@ export const PaypalButton = () => {
           value: itemInfo.price.toFixed(2),
         },
       };
-    }).filter(item => item.quantity > 0); // Filter out items with quantity 0
+    }).filter(item => item.quantity > 0);
 
-    // Combine both arrays
     return [...cartItemsArray, ...cartItemsPrincipalArray];
   };
-  console.log(buyerEmail)
 
   return (
     <div className="App">
@@ -92,14 +87,14 @@ export const PaypalButton = () => {
           createOrder={async () => {
             if (!handleBeforeCreateOrder()) return "";
 
-            const cart = createOrderData(); // Generate the cart data
+            const cart = createOrderData();
 
             try {
               const response = await fetch("/api/orders", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                  cart: cart, // Send the structured cart
+                  cart: cart,
                   email: buyerEmail,
                 }),
               });
@@ -128,7 +123,6 @@ export const PaypalButton = () => {
               setMessage(`Transaction ${transaction.status}: ${transaction.id}. See console for details`);
               console.log("Capture result", orderData, JSON.stringify(orderData, null, 2));
 
-              // Send confirmation email
               await fetch("/api/send-confirmation-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
